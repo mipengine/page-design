@@ -1,0 +1,7 @@
+ {
+    "title": "登录 - 博客模板",
+    "extensions": [
+        "mip-login"
+    ],
+    "extend": "./blog.json"
+}
