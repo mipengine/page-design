@@ -1,0 +1,70 @@
+{
+  "name": "page-design",
+  "version": "0.0.1",
+  "description": "使用 MIP 组件和 mag design 构建精美的 MIP 页面",
+  "scripts": {
+    "lint": "fecs check tools/ --rule",
+    "dev": "gulp --gulpfile tools/gulpfile.js dev",
+    "build": "gulp --gulpfile tools/gulpfile.js build",
+    "preinstall": "node tools/check-node-version.js",
+    "commitmsg": "validate-commit-msg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mipengine/page-design.git"
+  },
+  "keywords": [
+    "MIP",
+    "MIP模板",
+    "MIP组件",
+    "UI组件",
+    "模板"
+  ],
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "test",
+        "chore",
+        "revert",
+        "release"
+      ]
+    }
+  },
+  "contributors": [
+    {
+      "name": "momofan",
+      "email": "lilangbo111@163.com"
+    },
+    {
+      "name": "xuexb",
+      "email": "fe.xiaowu@gmail.com"
+    }
+  ],
+  "author": "mipengine <mip-support@baidu.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mipengine/page-design/issues"
+  },
+  "homepage": "https://github.com/mipengine/page-design#readme",
+  "devDependencies": {
+    "art-template": "^4.12.2",
+    "fecs": "1.4.x",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-connect": "^5.0.0",
+    "gulp-copy": "^1.0.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-mip-validator": "xuexb/gulp-mip-validator",
+    "gulp-rename": "^1.2.2",
+    "gulp-zip": "^4.0.0",
+    "husky": "^0.14.3",
+    "less": "^2.7.3",
+    "run-sequence": "^2.2.0",
+    "validate-commit-msg": "^2.14.0"
+  }
+}
