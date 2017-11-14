@@ -38,25 +38,25 @@ $ npm run lint
 │   ├── components                  - 组件目录
 │   │   └── button
 │   │       ├── button.json         - 组件配置数据
-│   │       ├── button.less         - 组件样式
+│   │       ├── button.styl         - 组件样式
 │   │       ├── button.tpl          - 组件预览模板
 │   │       └── code.tpl            - 组件查看代码
 │   ├── templates                   - 模板目录
 │   │   └── blog
 │   │       ├── _test.tpl           - 模板内部 include 子文件
 │   │       ├── blog.json           - 模板配置数据
-│   │       ├── blog.less           - 模板样式
+│   │       ├── blog.styl           - 模板样式
 │   │       ├── blog.tpl            - 模板代码
 │   │       ├── login.json
-│   │       ├── login.less
+│   │       ├── login.styl
 │   │       └── login.tpl
 │   └── www                         - 网站模板
 │       ├── source                  - 网站源模板
 │       │   ├── inc                 - 网站内部包含 include 子文件
-│       │   ├── ├── nav.less
+│       │   ├── ├── nav.styl
 │       │   │   └── _nav.tpl
 │       │   ├── index.json          - 首页配置数据
-│       │   ├── index.less          - 首页样式
+│       │   ├── index.styl          - 首页样式
 │       │   └── index.tpl           - 首页模板
 │       └── static                  - 静态文件，将直接发布到 /dist/ 目录
 │           └── favicon.ico
@@ -68,19 +68,19 @@ $ npm run lint
 ### 目录结构
 
 - `src/templates/模板名/模板名.tpl`           - 模板 HTML 代码
-- `src/templates/模板名/模板名.less`          - 模板样式代码
+- `src/templates/模板名/模板名.styl`          - 模板样式代码
 - `src/templates/模板名/模板名.json`          - 模板配置数据
 - `src/components/组件名/组件名.tpl`          - 组件 HTML 代码
-- `src/components/组件名/组件名.less`         - 组件样式代码
+- `src/components/组件名/组件名.styl`         - 组件样式代码
 - `src/components/组件名/组件名.json`         - 组件配置数据
 - `src/components/组件名/组件名.code.tpl`     - 组件预览的代码
 
 注意：
 
 1. `文件名.tpl` 将使用 `文件名.json` 的数据去渲染。
-1. `文件名.less` 将在编译时自动插入到 `文件名.tpl` 的 `<head>` 标签内。
+1. `文件名.styl` 将在编译时自动插入到 `文件名.tpl` 的 `<head>` 标签内。
 1. 如果是文件名包含子文件，请使用以 `_` 开头的文件名，编译将忽略这些文件。
-1. `less` 文件中的引用请使用相对路径。
+1. `styl` 文件中的引用请使用相对路径。
 1. 如果有图片资源请在文件夹内创建 `img` 目录，并使用相对路径引用。
 
 ### 模板语法
