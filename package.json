@@ -63,8 +63,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-zip": "^4.0.0",
     "husky": "^0.14.3",
-    "less": "^2.7.3",
     "run-sequence": "^2.2.0",
+    "stylus": "^0.54.5",
     "validate-commit-msg": "^2.14.0"
   }
 }

@@ -6,7 +6,7 @@
 'use strict';
 
 const path = require('path');
-const less = require('less');
+const stylus = require('stylus');
 const util = require('./util');
 
 /**
@@ -18,7 +18,7 @@ const util = require('./util');
  * @return {Object}
  */
 module.exports = (filepath, type) => {
-    const csspath = filepath.replace(path.extname(filepath), '.less');
+    const csspath = filepath.replace(path.extname(filepath), '.styl');
     const jsonpath = filepath.replace(path.extname(filepath), '.json');
     const cssSource = util.readFileSync(csspath);
     let json = util.readJsonSync(jsonpath);
@@ -39,10 +39,16 @@ module.exports = (filepath, type) => {
         return json;
     }
 
-    return less.render(cssSource, {
-        paths: [path.dirname(filepath)]
-    }).then(result => {
-        json.style = result.css;
-        return json;
+    return new Promise(resolve => {
+        stylus(cssSource)
+            .set('filename', path.basename(filepath))
+            .set('paths', [path.dirname(filepath)])
+            .render((err, css) => {
+                if (err) {
+                    return resolve(json);
+                }
+                json.style = css;
+                resolve(json);
+            });
     });
 };
