@@ -29,6 +29,13 @@ module.exports = (filepath, type) => {
         json = Object.assign(util.readJsonSync(extend), json);
     }
 
+    // 处理默认数据
+    json = Object.assign({
+        page: {},
+        extensions: [],
+        tags: []
+    }, json);
+
     // 处理组件依赖
     // 如果是官方内置组件，则不输出
     if (json.extensions && json.extensions.length) {

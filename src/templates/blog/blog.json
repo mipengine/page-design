@@ -4,9 +4,11 @@
         "blog",
         "小清新"
     ],
-    "title": "博客模板",
     "descriptions": "这是一个博客类型的模板",
     "extensions": [
         "mip-share"
-    ]
+    ],
+    "page": {
+        "title": "博客模板"
+    }
 }

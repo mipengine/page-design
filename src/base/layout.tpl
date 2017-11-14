@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ lang || 'zh-cn' }}" mip>
+<html lang="{{ page.lang || 'zh-cn' }}" mip>
 {{block 'head'}}{{include './inc/head.tpl'}}{{/block}}
 <body>
     {{block 'content'}}{{/block}}

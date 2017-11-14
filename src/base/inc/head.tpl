@@ -2,9 +2,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <title>{{ title || 'Hello World' }}</title>
+    <title>{{ page.title || 'Hello World' }}</title>
     <link rel="stylesheet" href="https://mipcache.bdstatic.com/static/v1/mip.css">
-    <link rel="canonical" href="{{ canonical || 'https://www.mipengine.org/' }}">
+    <link rel="canonical" href="{{ page.canonical || 'https://www.mipengine.org/' }}">
     {{if style}}
         <style mip-custom>
             {{ style }}
