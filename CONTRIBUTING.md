@@ -11,7 +11,7 @@ todo
 ### 常用脚本命令（ npm scripts ）
 
 ``` bash
-# 启动本地开发调试，将运行 web server 服务并且修改浏览器实时生效
+# 启动本地开发调试，将运行 web server 服务并修改浏览器实时生效
 $ npm run dev
 
 # 编译为 html ，将产出 dist/ 目录
@@ -29,38 +29,42 @@ $ npm run lint
 
 ```
 ├── dist                            - 产出 html 目录
-├── src                             - 模板源代码
+├── src
 │   ├── base                        - 基础模板
-│   │   ├── inc                     - 基础模板 include 子文件
-│   │   ├── components.tpl          - 组件基础模板
-│   │   ├── layout.tpl              - 基础模板
-│   │   └── templates.tpl           - 模板继承的模板
+│   │   ├── components.tpl          - 组件（ `src/components` ）继承的基础模板
+│   │   ├── inc                     - 包含的子模板
+│   │   │   ├── head.tpl            - 头部 `<head>` 模板
+│   │   │   └── scripts.tpl         - 底部 `<script>` 模板
+│   │   ├── layout.tpl              - 主模板
+│   │   └── templates.tpl           - 模板 `src/templates` ）继承的基础模板
 │   ├── components                  - 组件目录
 │   │   └── button
-│   │       ├── button.json         - 组件配置数据
+│   │       ├── button.code.tpl     - 组件的查看代码
+│   │       ├── button.json         - 组件数据
 │   │       ├── button.styl         - 组件样式
-│   │       ├── button.tpl          - 组件预览模板
-│   │       └── code.tpl            - 组件查看代码
+│   │       └── button.tpl          - 组件模板
 │   ├── templates                   - 模板目录
 │   │   └── blog
-│   │       ├── _test.tpl           - 模板内部 include 子文件
-│   │       ├── blog.json           - 模板配置数据
-│   │       ├── blog.styl           - 模板样式
-│   │       ├── blog.tpl            - 模板代码
+│   │       ├── _test.tpl           - 被包含的模板，通常是多个文件引用的公用文件（不会编译产出 HTML 文件）
+│   │       ├── blog.json           - 配置数据
+│   │       ├── blog.styl           - 样式
+│   │       ├── blog.tpl            - 模板
+│   │       ├── img                 - 图片目录
+│   │       │   └── logo.png
 │   │       ├── login.json
 │   │       ├── login.styl
 │   │       └── login.tpl
-│   └── www                         - 网站模板
-│       ├── source                  - 网站源模板
-│       │   ├── inc                 - 网站内部包含 include 子文件
-│       │   ├── ├── nav.styl
-│       │   │   └── _nav.tpl
-│       │   ├── index.json          - 首页配置数据
-│       │   ├── index.styl          - 首页样式
-│       │   └── index.tpl           - 首页模板
-│       └── static                  - 静态文件，将直接发布到 /dist/ 目录
-│           └── favicon.ico
-└── tools                           - 打包工具
+│   └── www                         - 官网代码，下面的文件将编译到 / 根目录
+│       ├── _nav.tpl                - 被包含的模板，通常是多个文件引用的公用文件（不会编译产出 HTML 文件）
+│       ├── favicon.ico
+│       ├── img                     - 图片目录
+│       │   └── logo.png
+│       ├── index.json              - 主页数据
+│       ├── index.styl              - 主页样式
+│       ├── index.tpl               - 主页模板
+│       ├── nav.styl                - 导航样式
+│       └── templates.tpl           - 模板
+└── tools                           - 构建工具目录
 ```
 
 ## 开发模板和组件
