@@ -12,6 +12,5 @@ const config = require('./config');
 gulp.task('miphtml:validate', () => {
     return gulp
         .src(`${config.dest.path}/**/*.html`)
-        .pipe(validate())
-        .pipe(gulp.dest('../dist'));
+        .pipe(validate());
 });

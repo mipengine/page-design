@@ -59,7 +59,7 @@
     "gulp-connect": "^5.0.0",
     "gulp-copy": "^1.0.1",
     "gulp-htmlmin": "^3.0.0",
-    "gulp-mip-validator": "xuexb/gulp-mip-validator",
+    "gulp-mip-validator": "^1.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-zip": "^4.0.0",
     "husky": "^0.14.3",
