@@ -7,7 +7,7 @@
     <link rel="canonical" href="{{ page.canonical || 'https://www.mipengine.org/' }}">
     {{if style}}
         <style mip-custom>
-            {{ style }}
+            {{@ style }}
         </style>
     {{/if}}
     <noscript>
