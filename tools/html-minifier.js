@@ -6,6 +6,26 @@
 'use strict';
 
 const gulp = require('gulp');
-const rename = require('gulp-rename');
+const htmlminifier = require('gulp-htmlmin');
 const config = require('./config');
+
+/**
+ * 压缩配置
+ * @type {Object}
+ */
+const OPTIONS = {
+    collapseWhitespace: true,
+    removeComments: true,
+    removeScriptTypeAttributes: true,
+    removeStyleLinkTypeAttributes: true,
+    minifyJS: true,
+    minifyCSS: true
+};
+
+gulp.task('build:htmlminifier', ['build:archive-before'], () => {
+    return gulp
+        .src(config.src.archive + '/**/*.html')
+        .pipe(htmlminifier(OPTIONS))
+        .pipe(gulp.dest(config.dest.path));
+});
 

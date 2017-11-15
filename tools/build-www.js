@@ -6,12 +6,11 @@
 'use strict';
 
 const gulp = require('gulp');
-const copy = require('gulp-copy');
 const artTemplate = require('./art-template');
 const config = require('./config');
 const processor = require('./pre-processor');
 
-gulp.task('build:www', ['build:www-copy-static'], () => {
+gulp.task('build:www', ['build:www-static'], () => {
     return gulp
         .src(config.src.www)
         .pipe(artTemplate({
@@ -22,9 +21,8 @@ gulp.task('build:www', ['build:www-copy-static'], () => {
         .pipe(gulp.dest(config.dest.www));
 });
 
-gulp.task('build:www-copy-static', () => {
+gulp.task('build:www-static', () => {
     return gulp
         .src(config.src.wwwStatic)
-        .pipe(copy(config.dest.path))
         .pipe(gulp.dest(config.dest.path));
 });

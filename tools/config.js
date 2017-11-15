@@ -10,12 +10,24 @@ module.exports = {
         path: '../src',
         match: '../src/**/*',
         templates: '../src/templates/**/!(_*).tpl',
+        templatesStatic: [
+            '../src/templates/**/*',
+            '!../src/templates/**/*.{tpl,styl,json}'
+        ],
         components: [
             '../src/components/**/!(_*).tpl',
             '!../src/components/**/*.code.tpl'
         ],
-        www: '../src/www/source/**/!(_*).tpl',
-        wwwStatic: '../src/www/static/**/*'
+        componentsStatic: [
+            '../src/components/**/*',
+            '!../src/components/**/*.{tpl,styl,json}'
+        ],
+        www: '../src/www/**/!(_*).tpl',
+        wwwStatic: [
+            '../src/www/**/*',
+            '!../src/www/**/*.{tpl,styl,json}'
+        ],
+        archive: '../.archive'
     },
     dest: {
         path: '../dist',

@@ -10,7 +10,10 @@ const clean = require('gulp-clean');
 const config = require('./config');
 
 gulp.task('clean', () => {
-    return gulp.src(config.dest.path, {
+    return gulp.src([
+        config.dest.path,
+        config.src.archive
+    ], {
         read: false
     }).pipe(clean({
         force: true
