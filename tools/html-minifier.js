@@ -11,6 +11,8 @@ const config = require('./config');
 
 /**
  * 压缩配置
+ *
+ * @const
  * @type {Object}
  */
 const OPTIONS = {
