@@ -8,6 +8,7 @@
 const gulp = require('gulp');
 const connect = require('gulp-connect');
 const run = require('run-sequence');
+const gutil = require('gulp-util');
 const config = require('./config');
 
 require('./build');
@@ -22,7 +23,18 @@ gulp.task('dev', ['build:templates', 'build:components', 'build:www', 'webserver
     gulp.watch(['../src/components/**/*', '../src/base/**/*'], ['build:components']);
     gulp.watch(['../src/www/**/*', '../src/base/**/*'], ['build:www']);
     gulp.watch(config.dest.match, ['reload']);
+
+    /* eslint-disable no-console */
+    console.log(`
+本地启动服务成功：
+
+1. 开发官网页面，请打开： ${gutil.colors.green('http://localhost:8080')}
+2. 开发模板页面，请打开： ${gutil.colors.green('http://localhost:8080/html/templates/')}
+3. 开发组件页面，请打开： ${gutil.colors.green('http://localhost:8080/html/components/')}
+
+`);
 });
+/* eslint-enable no-console */
 
 gulp.task('build', () => {
     const task = [];
@@ -51,6 +63,7 @@ gulp.task('reload', () => {
 gulp.task('webserver', () => {
     return connect.server({
         root: config.dest.path,
+        port: 8080,
         livereload: true
     });
 });
