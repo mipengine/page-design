@@ -1,15 +1,5 @@
-<button class="mag-button">
-    按钮 - button
-</button>
+<button>按钮</button>
 
-<a class="mag-button" href="#">
-    按钮 - a
-</a>
+<span class="btn">按钮</span>
 
-<button class="mag-button" disabled>
-    禁用按钮 - button
-</button>
-
-<a class="mag-button mag-button-disabled" disabled href="#">
-    禁用按钮 - a
-</a>
+<a href="#" class="btn">按钮</a>

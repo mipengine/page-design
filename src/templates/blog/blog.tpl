@@ -1,7 +1,10 @@
 {{extend '../../base/templates.tpl'}}
 
 {{block 'content'}}
-    {{include './_test.tpl'}}
+<h1>博客模板主页</h1>
 
-    <mip-img src="./img/logo.png" width="427" height="224"></mip-img>
+<ul>
+    <li><a href="./about.html">关于我</a></li>
+    <li><a href="./login.html">登录</a></li>
+</ul>
 {{/block}}

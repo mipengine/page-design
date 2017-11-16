@@ -1,5 +1,30 @@
-{{extend '../base/layout.tpl'}}
+{{extend './_inc/layout.tpl'}}
 
 {{block 'content'}}
-    我是模板页面。。。
+<div class="templates">
+    <h1>模板列表</h1>
+
+    <div class="templates-list">
+        <dl>
+            {{each templatesList}}
+                <dt><h2>#{{ $index + 1 }} {{ $value.title }}</h2></dt>
+                <dd>
+                    {{each $value.templates $val}}
+                        <ul>
+                            <li>名称：{{ $val.title }}</li>
+                            <li>描述：{{ $val.descriptions }}</li>
+                            <li>
+                                <mip-img src="/html/{{ $val.img }}" width="200" height="300"></mip-img>
+                            </li>
+                            <li>
+                                <a href="/html/{{ $val.url }}" data-type="mip" target="_blank">预览</a>
+                            </li>
+                            <li><a href="/archive/{{ $val.name }}.zip">下载</a></li>
+                        </ul>
+                    {{/each}}
+                </dd>
+            {{/each}}
+        </dl>
+    </div>
+</div>
 {{/block}}

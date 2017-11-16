@@ -1,0 +1,14 @@
+{{extend '../../base/components.tpl'}}
+
+{{block 'content'}}
+    <h3>按钮样式</h3>
+    <p>
+        <button class="btn-outline">线性按钮</button>
+    </p>
+    <p>
+        <button class="btn-block">块级按钮</button>
+    </p>
+    <p>
+        <button class="btn-pill">圆角按钮</button>
+    </p>
+{{/block}}

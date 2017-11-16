@@ -1,0 +1,6 @@
+ {
+    "extend": "./blog.json",
+    "page": {
+        "title": "关于我 - 博客模板"
+    }
+}

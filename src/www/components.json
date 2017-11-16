@@ -1,0 +1,45 @@
+{
+    "extend": [
+        "./_inc/nav.json"
+    ],
+    "page": {
+        "title": "组件"
+    },
+    "componentsList": [
+        {
+            "title": "按钮",
+            "components": [
+                {
+                    "iframe": {
+                        "url": "components/button/button.html",
+                        "height": 200
+                    }
+                },
+                {
+                    "iframe": {
+                        "url": "components/button/button-style.html",
+                        "height": 200
+                    }
+                },
+                {
+                    "iframe": {
+                        "url": "components/button/button-size.html",
+                        "height": 260
+                    }
+                }
+            ]
+        },
+
+        {
+            "title": "表单元素",
+            "components": [
+                {
+                    "iframe": {
+                        "url": "components/select/select.html",
+                        "height": 100
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{{extend '../../base/templates.tpl'}}
+
+{{block 'content'}}
+<h1>关于我</h1>
+<p>
+    这是一个模板的 Demo 模板。
+</p>
+{{/block}}
