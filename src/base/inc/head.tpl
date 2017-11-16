@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     {{block 'title'}}<title>{{ page.title || 'Hello World' }}</title>{{/block}}
     <link rel="stylesheet" href="https://mipcache.bdstatic.com/static/v1/mip.css">
-    <link rel="stylesheet" href="/css/mag-design.min.css">
+    <link rel="stylesheet" href="//unpkg.com/mip-mag-design">
     <link rel="canonical" href="{{ page.canonical || 'https://www.mipengine.org/' }}">
     {{block 'style'}}
     {{if style}}
