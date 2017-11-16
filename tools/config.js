@@ -9,22 +9,37 @@ module.exports = {
     src: {
         path: '../src',
         match: '../src/**/*',
-        templates: '../src/templates/**/!(_*).tpl',
+        templates: [
+            '../src/templates/**/!(_*).tpl',
+            '!../src/templates/_*',
+            '!../src/templates/_**/*'
+        ],
         templatesStatic: [
             '../src/templates/**/*',
+            '!../src/templates/_*',
+            '!../src/templates/_**/*',
             '!../src/templates/**/*.{tpl,styl,json}'
         ],
         components: [
             '../src/components/**/!(_*).tpl',
+            '!../src/components/_*',
+            '!../src/components/_**/*',
             '!../src/components/**/*.code.tpl'
         ],
         componentsStatic: [
             '../src/components/**/*',
+            '!../src/components/_*',
+            '!../src/components/_**/*',
             '!../src/components/**/*.{tpl,styl,json}'
         ],
-        www: '../src/www/**/!(_*).tpl',
+        www: [
+            '../src/www/**/!(_*).tpl',
+            '!../src/www/_*',
+            '!../src/www/_**/*'
+        ],
         wwwStatic: [
             '../src/www/**/*',
+            '!../src/www/_*',
             '!../src/www/**/*.{tpl,styl,json}'
         ],
         archive: '../.archive'

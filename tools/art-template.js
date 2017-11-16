@@ -5,6 +5,9 @@
 
 'use strict';
 
+const hljs = require('highlight.js');
+const path = require('path');
+const util = require('./util');
 const artTemplate = require('art-template');
 const through2 = require('through2');
 const gutil = require('gulp-util');
@@ -13,6 +16,19 @@ const PluginError = gutil.PluginError;
 
 artTemplate.defaults.extname = '.tpl';
 artTemplate.defaults.minimize = false;
+
+artTemplate.defaults.imports.getComponentsCode = value => {
+    const filepath = path.resolve(__dirname, '../src/', value.replace('.html', '.code.tpl'));
+    const content = util.readFileSync(filepath);
+
+    if (!content) {
+        return '';
+    }
+
+    const mark = hljs.highlight('html', content).value;
+
+    return `<pre><code>${mark}</code></pre>`;
+};
 
 module.exports = options => {
     options = options || {};

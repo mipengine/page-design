@@ -7,6 +7,7 @@
 
 const path = require('path');
 const stylus = require('stylus');
+const autoprefixer = require('autoprefixer-stylus');
 const util = require('./util');
 
 /**
@@ -25,8 +26,15 @@ module.exports = (filepath, type) => {
 
     // json 数据继承
     if (json.extend) {
-        const extend = path.resolve(path.dirname(filepath), json.extend);
-        json = Object.assign(util.readJsonSync(extend), json);
+        let source = {};
+        if (!Array.isArray(json.extend)) {
+            json.extend = [json.extend];
+        }
+        json.extend.forEach(file => {
+            const clone = util.readJsonSync(path.resolve(path.dirname(filepath), file));
+            Object.assign(source, clone);
+        });
+        json = Object.assign(source, json);
     }
 
     // 处理默认数据
@@ -48,6 +56,7 @@ module.exports = (filepath, type) => {
 
     return new Promise(resolve => {
         stylus(cssSource)
+            .use(autoprefixer())
             .set('filename', path.basename(filepath))
             .set('paths', [path.dirname(filepath)])
             .render((err, css) => {

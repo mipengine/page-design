@@ -20,8 +20,7 @@ gulp.task('build:archive', () => {
 
 gulp.task('build:archive-task', () => {
     const baseDir = config.dest.templates.replace(config.dest.path, config.src.archive);
-    const dirs = util.getFolders(baseDir);
-    const tasks = dirs.map(name => {
+    const tasks = util.getFolders(baseDir).map(name => {
         return gulp
             .src(path.resolve(baseDir, name) + '/**/*')
             .pipe(zip(`${name}.zip`))
@@ -41,9 +40,7 @@ gulp.task('build:archive-before', () => {
 });
 
 gulp.task('build:archive-after', () => {
-    return gulp.src([
-        config.src.archive
-    ], {
+    return gulp.src(config.src.archive, {
         read: false
     }).pipe(clean({
         force: true

@@ -53,6 +53,7 @@
   "homepage": "https://github.com/mipengine/page-design#readme",
   "devDependencies": {
     "art-template": "^4.12.2",
+    "autoprefixer-stylus": "^0.14.0",
     "event-stream": "^3.3.4",
     "fecs": "1.4.x",
     "gulp": "^3.9.1",
@@ -62,6 +63,7 @@
     "gulp-mip-validator": "^1.0.0",
     "gulp-util": "^3.0.8",
     "gulp-zip": "^4.0.0",
+    "highlight.js": "^9.12.0",
     "husky": "^0.14.3",
     "run-sequence": "^2.2.0",
     "stylus": "^0.54.5",
