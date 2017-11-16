@@ -28,56 +28,58 @@ $ npm run lint
 ### 项目结构
 
 ```
-├── dist                            - 产出 html 目录
+├── dist                                    - 产出 html 目录
 ├── src
-│   ├── base                        - 基础模板
-│   │   ├── components.html          - 组件（ `src/components` ）继承的基础模板
-│   │   ├── inc                     - 包含的子模板
-│   │   │   ├── head.html            - 头部 `<head>` 模板
-│   │   │   └── scripts.html         - 底部 `<script>` 模板
-│   │   ├── layout.html              - 主模板
-│   │   └── templates.html           - 模板 `src/templates` ）继承的基础模板
-│   ├── components                  - 组件目录
-│   │   └── button
-│   │       ├── button.code.html     - 组件的查看代码
-│   │       ├── button.json         - 组件数据
-│   │       ├── button.styl         - 组件样式
-│   │       └── button.html          - 组件模板
-│   ├── templates                   - 模板目录
+│   ├── base                                - 基础模板
+│   │   ├── components.html                 - 组件（ `src/components` ）继承的基础模板
+│   │   ├── inc
+│   │   │   ├── head.html
+│   │   │   └── scripts.html
+│   │   ├── layout.html                     - 主模板
+│   │   └── templates.html                  - 模板 `src/templates` ）继承的基础模板
+│   ├── components                          - 组件目录
+│   │   ├── button
+│   │   │   ├── button-size.code.html
+│   │   │   ├── button-size.styl
+│   │   │   ├── button-size.html
+│   │   │   ├── button-size.json
+│   │   │   ├── button-style.code.html
+│   │   │   ├── button-style.html
+│   │   │   ├── button-style.json
+│   │   │   ├── button.code.html
+│   │   │   ├── button.html
+│   │   │   └── button.json
+│   │   └── select
+│   │       ├── select.code.html
+│   │       ├── select.html
+│   │       └── select.json
+│   ├── templates
 │   │   └── blog
-│   │       ├── _test.html           - 被包含的模板，通常是多个文件引用的公用文件（不会编译产出 HTML 文件）
-│   │       ├── blog.json           - 配置数据
-│   │       ├── blog.styl           - 样式
-│   │       ├── blog.html            - 模板
-│   │       ├── img                 - 图片目录
+│   │       ├── about.html
+│   │       ├── about.json
+│   │       ├── blog.html
+│   │       ├── blog.json
+│   │       ├── blog.styl
+│   │       ├── img
 │   │       │   └── logo.png
+│   │       ├── login.html
 │   │       ├── login.json
-│   │       ├── login.styl
-│   │       └── login.html
-│   └── www                         - 官网代码，下面的文件将编译到 / 根目录
-│       ├── _nav.html                - 被包含的模板，通常是多个文件引用的公用文件（不会编译产出 HTML 文件）
-│       ├── favicon.ico
-│       ├── img                     - 图片目录
-│       │   └── logo.png
-│       ├── index.json              - 主页数据
-│       ├── index.styl              - 主页样式
-│       ├── index.html               - 主页模板
-│       ├── nav.styl                - 导航样式
-│       └── templates.html           - 模板
-└── tools                           - 构建工具目录
+│   │       └── login.styl
+│   └── www                                 - 网站目录
+└── tools                                   - 构建工具目录
 ```
 
 ## 开发模板和组件
 
 ### 目录结构
 
-- `src/templates/模板名/模板名.html`           - 模板 HTML 代码
+- `src/templates/模板名/模板名.html`          - 模板 HTML 代码
 - `src/templates/模板名/模板名.styl`          - 模板样式代码
 - `src/templates/模板名/模板名.json`          - 模板配置数据
-- `src/components/组件名/组件名.html`          - 组件 HTML 代码
+- `src/components/组件名/组件名.html`         - 组件 HTML 代码
 - `src/components/组件名/组件名.styl`         - 组件样式代码
 - `src/components/组件名/组件名.json`         - 组件配置数据
-- `src/components/组件名/组件名.code.html`     - 组件预览的代码
+- `src/components/组件名/组件名.code.html`    - 组件预览的代码
 
 注意：
 
@@ -107,11 +109,11 @@ page.lang | 页面语言 | 字符串 | zh-cn
 
 注意：
 
-1. 如果以上内置变量不能满足需求，可以使用 `{{block 'head'}}{{/block'}}` 来覆盖默认的 `<head>` 标签。
+1. 如果以上内置变量不能满足需求，可以使用 `{{block 'head'}}{{/block'}}` 来覆盖默认的 `<head>` 标签，甚至你模板内可以自己创建一个主模板（ `layout.tpl` ）。
 1. 如果一个文件夹内有多个模板文件，对应的配置数据文件（ `文件名.json` ）内可以使用 `"extend": "./父文件.json"` 去继承同级的其他配置数据文件，并且支持以数组形式配置多个继承文件，需要注意的是继承是按引用文件顺序去覆盖。
 1. `src/components/组件名/组件名.code.html` 和 `src/components/组件名/组件名.html` 的区别：
     1. `组件名.code.html` - 用来在页面中点击 `预览代码` 按钮时的代码片段，一般只保留组件使用的代码。
-    1. `组件名.html` - 用来在页面中展示的代码，需要兼容 PC 端和移动端样式。
+    1. `组件名.html` - 用来在页面中展示的代码，需要兼容 PC 端和移动端样式，并且自身继承了 `base` 模板。
     
 
 ## 提交信息规范
