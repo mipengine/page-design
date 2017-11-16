@@ -7,8 +7,8 @@
 
 ## 架构设计
 
-1. 基于 [art-template](https://github.com/aui/art-template) 、JSON 数据配置、 [stylus](http://stylus-lang.com/) 、 [gulp](https://gulpjs.com/) 构建和编译
-1. 支持本地修改实时预览
+1. 基于 [art-template](https://github.com/aui/art-template) 、JSON 数据配置、 [stylus](http://stylus-lang.com/)（已加载 `autoprefixer` 插件） 、 [gulp](https://gulpjs.com/) 编译和构建
+1. 本地修改实时预览
 1. 本地开发使用源代码，编译生成压缩版代码
 1. 模板目录 `src/templates/*` 自动生成 `zip` 压缩包（包含源文件）
 
