@@ -10,7 +10,7 @@ module.exports = {
         path: '../src',
         match: '../src/**/*',
         templates: [
-            '../src/templates/**/!(_*).tpl',
+            '../src/templates/**/!(_*).html',
             '!../src/templates/_*',
             '!../src/templates/_**/*'
         ],
@@ -18,29 +18,29 @@ module.exports = {
             '../src/templates/**/*',
             '!../src/templates/_*',
             '!../src/templates/_**/*',
-            '!../src/templates/**/*.{tpl,styl,json}'
+            '!../src/templates/**/*.{html,styl,json}'
         ],
         components: [
-            '../src/components/**/!(_*).tpl',
+            '../src/components/**/!(_*).html',
             '!../src/components/_*',
             '!../src/components/_**/*',
-            '!../src/components/**/*.code.tpl'
+            '!../src/components/**/*.code.html'
         ],
         componentsStatic: [
             '../src/components/**/*',
             '!../src/components/_*',
             '!../src/components/_**/*',
-            '!../src/components/**/*.{tpl,styl,json}'
+            '!../src/components/**/*.{html,styl,json}'
         ],
         www: [
-            '../src/www/**/!(_*).tpl',
+            '../src/www/**/!(_*).html',
             '!../src/www/_*',
             '!../src/www/_**/*'
         ],
         wwwStatic: [
             '../src/www/**/*',
             '!../src/www/_*',
-            '!../src/www/**/*.{tpl,styl,json}'
+            '!../src/www/**/*.{html,styl,json}'
         ],
         archive: '../.archive'
     },

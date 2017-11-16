@@ -14,11 +14,11 @@ const gutil = require('gulp-util');
 
 const PluginError = gutil.PluginError;
 
-artTemplate.defaults.extname = '.tpl';
+artTemplate.defaults.extname = '.html';
 artTemplate.defaults.minimize = false;
 
 artTemplate.defaults.imports.getComponentsCode = value => {
-    const filepath = path.resolve(__dirname, '../src/', value.replace('.html', '.code.tpl'));
+    const filepath = path.resolve(__dirname, '../src/', value.replace('.html', '.code.html'));
     const content = util.readFileSync(filepath);
 
     if (!content) {
