@@ -11,7 +11,7 @@ todo
 ### 常用脚本命令（ npm scripts ）
 
 ``` bash
-# 启动本地开发调试，将运行 web server 服务并修改浏览器实时生效
+# 启动本地开发调试，将运行 web server 服务并修改浏览器实时生效，根据命令输出文本即可打开对应预览链接
 $ npm run dev
 
 # 编译为 html ，将产出 dist/ 目录
@@ -85,16 +85,23 @@ $ npm run lint
 
 1. `文件名.html` 将使用 `文件名.json` 的数据去渲染。
 1. `文件名.styl` 将在编译时自动插入到 `文件名.html` 的 `<head>` 标签内。
-1. 如果是文件名包含子文件，请使用以 `_` 开头的文件名，编译将忽略这些文件。
+1. 编译产出时将忽略以 `_` 开头的文件或文件夹。
 1. `styl` 文件中的引用请使用相对路径。
 1. 如果有图片资源请在文件夹内创建 `img` 目录，并使用相对路径引用。
+1. `src/components/组件名/组件名.code.html` 和 `src/components/组件名/组件名.html` 的区别：
+    1. `组件名.code.html` - 用来在页面中点击 `预览代码` 按钮时的代码片段，只是组件使用的代码，没有页面框架代码，如 `<html>` 、 `<head>` 等。
+    1. `组件名.html` - 用来在页面中展示的代码，需要兼容 PC 端和移动端样式，并且自身继承了 `base` 模板。
 
 ### 模板语法
 
-- 使用 [art-template](https://github.com/aui/art-template) 编译模板。
 - 模板需要继承 `{{extend '../../base/templates.html'}}` 主模板。
 - 组件需要继承 `{{extend '../../base/components.html'}}` 主模板。
 - 模板内代码需要在 `{{block 'content'}} 内容 {{/block}}` 中完成。
+- 其他语法请看 [art-template 模板引擎语法文档](https://aui.github.io/art-template/zh-cn/docs/syntax.html)
+
+### 样式语法
+
+基于 `stylus` 开发，已加载 `autoprefixer` 插件，语法请参考官网： <http://stylus-lang.com/> 。
 
 ### 配置数据
 
@@ -102,6 +109,7 @@ $ npm run lint
 
 变量名 | 说明 | 类型 | 默认值
 --- | --- | --- | ---
+extend | 继承的数据文件地址 | 数组、字符串 | -
 extensions | 依赖组件（只写组件名即可） | 数组 | `[]`
 page.title | 页面标题 | 字符串 | Hello World
 page.canonical | 页面 `canonical` 链接 | 字符串 | https://www.mipengine.org/
@@ -111,10 +119,33 @@ page.lang | 页面语言 | 字符串 | zh-cn
 
 1. 如果以上内置变量不能满足需求，可以使用 `{{block 'head'}}{{/block'}}` 来覆盖默认的 `<head>` 标签，甚至你模板内可以自己创建一个主模板（ `layout.tpl` ）。
 1. 如果一个文件夹内有多个模板文件，对应的配置数据文件（ `文件名.json` ）内可以使用 `"extend": "./父文件.json"` 去继承同级的其他配置数据文件，并且支持以数组形式配置多个继承文件，需要注意的是继承是按引用文件顺序去覆盖。
-1. `src/components/组件名/组件名.code.html` 和 `src/components/组件名/组件名.html` 的区别：
-    1. `组件名.code.html` - 用来在页面中点击 `预览代码` 按钮时的代码片段，一般只保留组件使用的代码。
-    1. `组件名.html` - 用来在页面中展示的代码，需要兼容 PC 端和移动端样式，并且自身继承了 `base` 模板。
-    
+
+### 在官网展示
+
+模板展示在 `src/www/templates.json` 中分类别去配置 `templatesList[].templates` ，字段有：
+
+```json
+{
+    "name": "模板名称（文件夹名）",
+    "title": "页面展示的标题",
+    "descriptions": "页面展示的描述",
+    "url": "预览链接入口，以 `src` 为基础路径，如： `templates/blog/blog.html`",
+    "img": "页面展示图片，以 `src` 为基础路径，如： `templates/blog/img/logo.png`"
+}
+```
+
+组件展示在 `src/www/components.json` 中分类别去配置 `componentsList[].components` ，字段有：
+
+```json
+{
+    "iframe": {
+        "url": "官网中展示预览的链接地址，以 `src` 为基础路径，如： `components/button/button.html`",
+        "height": 200
+    }
+}
+```
+
+注意：由于组件是单独的页面，会在官网组件页面中以 `<mip-iframe>` 形式去引用所以需要配置预览链接和容器的高度，而容器宽度默认为 `100%` 。
 
 ## 提交信息规范
 
