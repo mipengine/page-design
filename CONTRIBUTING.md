@@ -1,13 +1,33 @@
 # page-design 贡献指南
 
+非常感谢您关注 [mipengine/page-design](https://github.com/mipengine/page-design) 项目，在提交您的贡献之前，请务必认真阅读以下准则。
+
+- [问题反馈](#issue)
+- [开发设置](#dev)
+    - [常用脚本命令（ npm scripts ）](#npm-scripts)
+    - [代码风格](#code-spec)
+    - [项目结构](#dir-spec)
+- [开发模板和组件](#start)
+    - [目录结构](#start-dir)
+    - [模板语法](#tpl-syntax)
+    - [样式语法](#style-syntax)
+    - [配置数据](#json-syntax)
+    - [在官网展示](#showcase)
+- [提交信息规范](#commit-message-spec)
+- [提交请求（pull request）](#pull-request)
+
+<a id="issue"></a>
 ## 问题反馈
 
-todo
+- 请避免提交重复的 issue，在提交之前搜索现有的 issue 。
+- 请确定 issue 的类型，并在 issue 内容描述清晰，我们将根据内容对 issue 打上对应的 label 。
 
+<a id="dev"></a>
 ## 开发设置
 
 需要安装 [nodejs](https://nodejs.org/) 版本4+ ，下载项目到本地后安装依赖 `npm install` 。
 
+<a id="npm-scripts"></a>
 ### 常用脚本命令（ npm scripts ）
 
 ``` bash
@@ -21,10 +41,12 @@ $ npm run build
 $ npm run lint
 ```
 
+<a id="code-spec"></a>
 ### 代码风格
 
 基于 <https://github.com/ecomfe/spec> 风格编写代码，基于 <https://github.com/ecomfe/fecs/> 验证代码风格。
 
+<a id="dir-spec"></a>
 ### 项目结构
 
 ```
@@ -69,8 +91,10 @@ $ npm run lint
 └── tools                                   - 构建工具目录
 ```
 
+<a id="start"></a>
 ## 开发模板和组件
 
+<a id="start-dir"></a>
 ### 目录结构
 
 - `src/templates/模板名/模板名.html`          - 模板 HTML 代码
@@ -92,6 +116,7 @@ $ npm run lint
     1. `组件名.code.html` - 用来在页面中点击 `预览代码` 按钮时的代码片段，只是组件使用的代码，没有页面框架代码，如 `<html>` 、 `<head>` 等。
     1. `组件名.html` - 用来在页面中展示的代码，需要兼容 PC 端和移动端样式，并且自身继承了 `base` 模板。
 
+<a id="tpl-syntax"></a>
 ### 模板语法
 
 - 模板需要继承 `{{extend '../../base/templates.html'}}` 主模板。
@@ -99,10 +124,12 @@ $ npm run lint
 - 模板内代码需要在 `{{block 'content'}} 内容 {{/block}}` 中完成。
 - 其他语法请看 [art-template 模板引擎语法文档](https://aui.github.io/art-template/zh-cn/docs/syntax.html)
 
+<a id="style-syntax"></a>
 ### 样式语法
 
 基于 `stylus` 开发，已加载 `autoprefixer` 插件，语法请参考官网： <http://stylus-lang.com/> 。
 
+<a id="json-syntax"></a>
 ### 配置数据
 
 在 `src/[templates, components]/文件名/文件名.json` 中以 JSON 形式配置，模板变量如下：
@@ -120,6 +147,7 @@ page.lang | 页面语言 | 字符串 | zh-cn
 1. 如果以上内置变量不能满足需求，可以使用 `{{block 'head'}}{{/block'}}` 来覆盖默认的 `<head>` 标签，甚至你模板内可以自己创建一个主模板（ `layout.tpl` ）。
 1. 如果一个文件夹内有多个模板文件，对应的配置数据文件（ `文件名.json` ）内可以使用 `"extend": "./父文件.json"` 去继承同级的其他配置数据文件，并且支持以数组形式配置多个继承文件，需要注意的是继承是按引用文件顺序去覆盖。
 
+<a id="showcase"></a>
 ### 在官网展示
 
 模板展示在 `src/www/templates.json` 中分类别去配置 `templatesList[].templates` ，字段有：
@@ -147,6 +175,19 @@ page.lang | 页面语言 | 字符串 | zh-cn
 
 注意：由于组件是单独的页面，会在官网组件页面中以 `<mip-iframe>` 形式去引用所以需要配置预览链接和容器的高度，而容器宽度默认为 `100%` 。
 
+<a id="commit-message-spec"></a>
 ## 提交信息规范
 
 git commit 信息和 pull request 标题必须遵循 MIP 项目的 [提交信息规范](https://github.com/mipengine/spec/blob/master/docs/commit-message-spec.md) ，否则不予合入。
+
+
+<a id="pull-request"></a>
+### 提交请求（pull request）
+
+1. fork [mipengine/page-design](https://github.com/mipengine/page-design)
+1. 把个人仓库（repository）克隆到电脑上，并安装所依赖的插件（ `npm install` ）。
+1. 开始开发，使用 `npm run dev` 预览编辑的效果，编辑完成后，需要检查：
+    2. 运行 `npm run lint` 确保代码风格验证通过。
+    2. 运行 `npm run build` 确保编译产出成功。
+1. 推送（push）分支。
+1. 建立一个新的合并申请（pull request）并描述变动。
