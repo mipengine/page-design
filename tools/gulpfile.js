@@ -28,9 +28,9 @@ gulp.task('dev', ['build:templates', 'build:components', 'build:www', 'webserver
     console.log(`
 本地启动服务成功：
 
-1. 开发官网页面，预览页面： ${gutil.colors.green('http://localhost:8080')}
-2. 开发模板页面，预览页面： ${gutil.colors.green('http://localhost:8080/html/templates/')}
-3. 开发组件页面，预览页面： ${gutil.colors.green('http://localhost:8080/html/components/')}
+1. 开发官网页面，预览链接： ${gutil.colors.green('http://localhost:8080')}
+2. 开发模板页面，预览链接： ${gutil.colors.green('http://localhost:8080/html/templates/')}
+3. 开发组件页面，预览链接： ${gutil.colors.green('http://localhost:8080/html/components/')}
 
 `);
 });
