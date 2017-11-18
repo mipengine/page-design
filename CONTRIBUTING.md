@@ -186,8 +186,8 @@ git commit 信息和 pull request 标题必须遵循 MIP 项目的 [提交信息
 
 1. fork [mipengine/page-design](https://github.com/mipengine/page-design)
 1. 把个人仓库（repository）克隆到电脑上，并安装所依赖的插件（ `npm install` ）。
-1. 开始开发，使用 `npm run dev` 预览编辑的效果，编辑完成后，需要检查：
-    2. 运行 `npm run lint` 确保代码风格验证通过。
-    2. 运行 `npm run build` 确保编译产出成功。
+1. 开始开发，使用 `npm run dev` 空间里预览的效果，开发完成后，需要检查：
+    - 运行 `npm run lint` 确保代码风格验证通过。
+    - 运行 `npm run build` 确保编译产出成功。
 1. 推送（push）分支。
 1. 建立一个新的合并申请（pull request）并描述变动。
