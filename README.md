@@ -2,6 +2,7 @@
 
 [![MIP徽章](https://img.shields.io/badge/Powered%20by-MIP-brightgreen.svg)](https://www.mipengine.org)
 [![mag-design徽章](https://img.shields.io/badge/Design%20by-Mag-brightgreen.svg)](https://github.com/mipengine/mip-mag-design)
+[![Build Status](https://travis-ci.org/mipengine/page-design.svg?branch=master)](https://travis-ci.org/mipengine/page-design)
 
 通过 mag design 的输出，构建精美的 MIP 页面模板。
 
