@@ -8,17 +8,7 @@
 
 const fs = require('fs');
 const path = require('path');
-
-/**
- * 获取文件夹子目录
- *
- * @param  {string} dir 路径
- *
- * @return {Array}
- */
-exports.getFolders = dir => {
-    return fs.readdirSync(dir).filter(file => exports.isDirectory(path.join(dir, file)));
-};
+const deepassign = require('deep-assign');
 
 /**
  * 官方核心组件
@@ -105,4 +95,40 @@ exports.isDirectory = file => {
 
         return false;
     }
+};
+
+/**
+ * 获取文件夹子目录
+ *
+ * @param  {string} dir 路径
+ *
+ * @return {Array}
+ */
+exports.getFolders = dir => {
+    return fs.readdirSync(dir).filter(file => exports.isDirectory(path.join(dir, file)));
+};
+
+/**
+ * 递归合并 JSON 配置文件
+ *
+ * @param {string} filepath 文件路径
+ * @return {Object}
+ */
+exports.mergeJSON = filepath => {
+    let source = exports.readJsonSync(filepath);
+
+    if (!source.extend || !source.extend.length) {
+        return source;
+    }
+
+    let clone = {};
+    if (!Array.isArray(source.extend)) {
+        source.extend = [source.extend];
+    }
+    source.extend.forEach(uri => {
+        const extendFilePath = path.resolve(path.dirname(filepath), uri);
+        deepassign(clone, exports.mergeJSON(extendFilePath));
+    });
+
+    return deepassign(clone, source);
 };

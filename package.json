@@ -54,6 +54,7 @@
   "devDependencies": {
     "art-template": "^4.12.2",
     "autoprefixer-stylus": "^0.14.0",
+    "deep-assign": "^2.0.0",
     "event-stream": "^3.3.4",
     "fecs": "1.4.x",
     "gulp": "^3.9.1",
