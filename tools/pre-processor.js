@@ -22,20 +22,7 @@ module.exports = (filepath, type) => {
     const csspath = filepath.replace(path.extname(filepath), '.styl');
     const jsonpath = filepath.replace(path.extname(filepath), '.json');
     const cssSource = util.readFileSync(csspath);
-    let json = util.readJsonSync(jsonpath);
-
-    // json 数据继承
-    if (json.extend) {
-        let source = {};
-        if (!Array.isArray(json.extend)) {
-            json.extend = [json.extend];
-        }
-        json.extend.forEach(file => {
-            const clone = util.readJsonSync(path.resolve(path.dirname(filepath), file));
-            Object.assign(source, clone);
-        });
-        json = Object.assign(source, json);
-    }
+    let json = util.mergeJSON(jsonpath);
 
     // 处理默认数据
     json = Object.assign({

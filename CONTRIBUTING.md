@@ -122,6 +122,7 @@ $ npm run lint
 - 模板需要继承 `{{extend '../../base/templates.html'}}` 主模板。
 - 组件需要继承 `{{extend '../../base/components.html'}}` 主模板。
 - 模板内代码需要在 `{{block 'content'}} 内容 {{/block}}` 中完成。
+- 支持使用 `{{include './_inc/xx.html}}` 继承子模板。
 - 其他语法请看 [art-template 模板引擎语法文档](https://aui.github.io/art-template/zh-cn/docs/syntax.html)
 
 <a id="style-syntax"></a>
@@ -136,7 +137,7 @@ $ npm run lint
 
 变量名 | 说明 | 类型 | 默认值
 --- | --- | --- | ---
-extend | 继承的数据文件地址 | 数组、字符串 | -
+extend | 继承的数据文件地址，将按顺序的去合并数据，支持递归依赖 | 数组、字符串 | -
 extensions | 依赖组件（只写组件名即可） | 数组 | `[]`
 page.title | 页面标题 | 字符串 | Hello World
 page.canonical | 页面 `canonical` 链接 | 字符串 | https://www.mipengine.org/
@@ -145,7 +146,7 @@ page.lang | 页面语言 | 字符串 | zh-cn
 注意：
 
 1. 如果以上内置变量不能满足需求，可以使用 `{{block 'head'}}{{/block'}}` 来覆盖默认的 `<head>` 标签，甚至你模板内可以自己创建一个主模板（ `layout.tpl` ）。
-1. 如果一个文件夹内有多个模板文件，对应的配置数据文件（ `文件名.json` ）内可以使用 `"extend": "./父文件.json"` 去继承同级的其他配置数据文件，并且支持以数组形式配置多个继承文件，需要注意的是继承是按引用文件顺序去覆盖。
+1. `extend` 继承数据字段是为了解决一个行业模板内包含了多个页面文件，又存在一些公用的数据字段，可以使用该字段来继承一些公用的数据配置。支持继承多个文件、递归深度继承。
 
 <a id="showcase"></a>
 ### 在官网展示
