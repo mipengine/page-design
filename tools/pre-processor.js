@@ -37,7 +37,7 @@ module.exports = (filepath, type) => {
             json.extensions = [json.extensions];
         }
         json.extensions = json.extensions.filter(name => util.coreExtensions.indexOf(name) === -1);
-        if (!json.extensions.lenght) {
+        if (!json.extensions.length) {
             json.extensions = null;
         }
     }
