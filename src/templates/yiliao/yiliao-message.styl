@@ -1,0 +1,122 @@
+@import './_common/common.styl'
+@import './_common/message_tip.styl'
+
+
+.med-message-text {
+    position:relative;
+    margin-top:20px;
+}
+.med-message-text-left, .med-message-text-right {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+    top: 0;
+}
+
+.med-message-text-right{
+    right: 0;
+}
+
+.med-message-text-center,.med-message-img-center {
+    margin: 15px 70px;
+}
+
+.med-message-text-center-inner,.med-message-img-center-inner{
+    border: 1px solid #e9e9e9;
+    -webkit-border-radius: 6px;
+    padding: 8px 12px;
+    display: inline-block;
+    text-align: left;
+    word-wrap: break-word;
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 22px;
+    box-sizing: border-box;
+    position: relative;
+    min-width: 47px;
+}
+
+.mag-img-circle{
+    border-radius: 50%;
+}
+
+.med-message-user .med-message-text-center-inner,.med-message-user .med-message-img-center-inner{
+    background:#02b7ca;
+    color:#fff;
+    border:none;
+}
+
+.med-message-user .med-message-text-center,.med-message-user .med-message-img-center{
+    text-align: right;
+}
+
+.angle-border, .angle{
+    position: absolute;
+    top: 14px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-top: .07rem dotted transparent;
+    border-bottom: .07rem dotted transparent;
+}
+
+.med-message-doctor .angle-border{
+    right: -17px;
+    border-right: .07rem solid #fff;
+    z-index: 2;
+}
+.med-message-doctor .angle{
+    right: -16px;
+    border-right: .07rem solid #e2e2e2;
+}
+.med-message-user .angle{
+    left: -18px;
+    border-left: .07rem solid #02b7ca;
+    z-index: 1;
+}
+
+.med-message-img-audio-center{
+    max-width:100%;
+}
+.med-mip-audio-controller {
+    position:relative;
+}
+.mip-audio-play-pause{
+    max-width:100%;
+    width:60%;
+    height:40px;
+    display:inline-block;
+    position: relative;
+    border-radius: 3px;
+    background:#02b7ca;
+}
+.med-mip-audio-icon{
+    display:inline-block;
+    width:14px;
+    height:19px;
+    background: url(./img/audio.jpg) right center no-repeat;
+    background-size: cover;
+    margin: 13px 13px 0 0;
+}
+.med-mip-audio-time{
+    color:#999;
+}
+
+.med-message-doctor .med-mip-audio-icon{
+    display:inline-block;
+    width:14px;
+    height:19px;
+    background: url(./img/audio2.jpg) left center no-repeat;
+    background-size: cover;
+    margin: 13px 0 0 13px;
+}
+
+.med-message-doctor .mip-audio-play-pause{
+    background:#fff;
+    border:1px solid #efefef;
+}
+
+.mip-audio{
+    display:none;
+}

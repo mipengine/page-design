@@ -1,0 +1,22 @@
+{{extend '../../base/templates.html'}}
+
+{{block 'content'}}
+<div class="mag-container">
+    {{include './_common/article_title.html'}}
+    {{include './_common/article_info.html'}}
+
+    <!--自定义html标签内容-->
+    {{@page.htmlContent}}
+
+    <!--自定义标签-->
+    {{ if page.tags}}
+    <div class="med-article-tag mag-gap-top">
+        {{ each page.tags }}
+        <span class="tag">{{ $value }}</span>
+        {{/each}}
+    </div>
+    {{/if}}
+
+    <button class="med-ask-btn btn-block">快速咨询</button>
+</div>
+{{/block}}

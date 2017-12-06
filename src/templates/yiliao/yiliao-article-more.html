@@ -1,0 +1,21 @@
+{{extend '../../base/templates.html'}}
+
+{{block 'content'}}
+<div class="mag-container">
+    {{include './_common/article_title.html'}}
+    {{include './_common/article_info.html'}}
+
+    <mip-showmore maxheight='{{ page.maxHeight }}' animatetime='.3' id="med-showmore" bottomshadow='1' class="mag-gap-top">
+        <!--自定义html标签内容-->
+        {{@page.htmlContent}}
+    </mip-showmore>
+    
+    <div on="tap:med-showmore.toggle" data-closeclass="mip-showmore-open" data-closetext="收起" class="med-showmore-btn">
+        <span class="show">收起</span>
+        <span class="hidden">展开</span>
+    </div>
+
+
+    <button class="med-ask-btn btn-block">快速咨询</button>
+</div>
+{{/block}}

@@ -1,0 +1,37 @@
+{{extend '../../base/templates.html'}}
+
+{{block 'content'}}
+<div class="mag-container">
+    {{include './_common/article_title.html'}}
+    {{include './_common/article_info.html'}}
+
+    <mip-audio
+        src="https://mip-doc.bj.bcebos.com/guitar.mp3"
+        controls
+        customControls=".mip-audio-controller"
+        layout="container"
+    >
+        <div class="mip-audio-controller audio-player mag-gap-top-large">
+        <div class="audio-control mip-audio-play-pause mip-audio-stopped-icon">
+            <i class="mag-icon mag-icon-voice"></i>
+        </div>
+        <div class="audio-body">
+            <div class="audio-title">点击播放医生的语音回答</div>
+                <div class="audio-seekbar mip-audio-seekbar">
+                <div class="audio-seekbar-fill mip-audio-seekbar-fill"></div>
+            </div>
+            <div class="audio-progress">
+                <div class="mip-audio-time-current audio-time-current">00:00</div>
+                <div class="audio-time-total mip-audio-time-total">--:--</div>
+            </div>
+        </div>
+        </div>
+    </mip-audio>
+
+    <!--自定义html标签内容-->
+    <div class="article-audio-content">
+        {{@page.htmlContent}}
+    </div>
+    <button class="med-ask-btn btn-block">快速咨询</button>
+</div>
+{{/block}}

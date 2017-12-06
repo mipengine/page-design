@@ -1,0 +1,59 @@
+{
+    "extensions": ["mip-audio"],
+    "extend": [
+        "./_common/message_tip.json"
+    ],
+    "message": {
+        "tips": {
+            "text" : "医生回复仅为建议，进一步确诊请到线下医院",
+            "name" : "2017-08-9",
+            "views" : "2341人已阅读"
+        },
+        "messageList" : [
+            {
+                "type": "text",
+                "user": "user",
+                "content": "武汉长江大桥好长啊，哈哈哈哈哈武汉长江大桥好长啊，哈哈哈哈哈武汉长江大桥好长啊，哈哈哈哈哈武汉长江大桥好长啊，哈哈哈哈哈",
+                "avatar": "img/resize.jpg"
+            },
+            {
+                "type": "pic",
+                "user": "user",
+                "content": "img/resize.jpg",
+                "avatar": "img/resize.jpg"
+            },
+            {
+                "type": "audio",
+                "user": "user",
+                "content": "img/resize.jpg",
+                "avatar": "img/resize.jpg",
+                "time": "9'"
+            },
+            {
+                "type": "audio",
+                "user": "doctor",
+                "content": "img/resize.jpg",
+                "avatar": "img/resize.jpg",
+                "time": "10'"
+            },
+            {
+                "type": "text",
+                "user": "doctor",
+                "content": "我也母鸡啊",
+                "avatar": "img/resize.jpg"
+            },
+            {
+                "type": "text",
+                "user": "doctor",
+                "content": "我也母鸡啊",
+                "avatar": "img/resize.jpg"
+            },
+            {
+                "type": "text",
+                "user": "doctor",
+                "content": "我也母鸡啊我也母鸡啊我也母鸡啊我也母鸡啊我也母鸡啊我也母鸡啊我也母鸡啊我也母鸡啊我也母鸡啊我也母鸡啊",
+                "avatar": "img/resize.jpg"
+            }
+        ]
+    }
+}

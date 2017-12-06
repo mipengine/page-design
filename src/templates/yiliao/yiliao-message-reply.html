@@ -1,0 +1,106 @@
+{{extend '../../base/templates.html'}}
+
+{{block 'content'}}
+<div class="mag-container">
+    <!--友情提示-->
+    <div class="med-tips-container align-direction">
+        <p class="font-size-s c-color-gray align-direction">医生回复仅为建议，进一步确诊请到线下医院</p>
+        <div class="med-tips-info font-size-xs mag-gap-top"><span class="mag-gap-right-small">2014-09-29</span><span>2345人已阅读</span></div>
+    </div>
+
+    <!--消息对话-->
+    <div class="med-message-content">
+        <!--左侧文本消息-->
+        <section class="med-message-text med-message-doctor">
+            <div class="med-message-text-left">
+                <div class="angle-border"></div>
+                <div class="angle"></div>
+                
+                <div><mip-img src="img/resize.jpg" class="mag-img-circle"/></div>
+
+            </div>
+
+            <div class="med-message-text-center">
+                <div class="med-message-text-center-inner">武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊</div>
+            </div>
+
+            <div class="med-message-text-right">
+                <div><mip-img src="img/resize.jpg" class="mag-img-circle"/></div>
+            </div>
+        </section>
+
+        <section class="med-message-text med-message-user">
+
+            <div class="med-message-text-center">
+                <div class="med-message-text-center-inner">hahahahahahahtest</div>
+            </div>
+
+            <div class="med-message-text-right">
+                <div class="angle"></div>
+                <div><mip-img src="img/resize.jpg" class="mag-img-circle"/></div>
+            </div>
+        </section>
+
+        <!--图片消息-->
+        <section class="med-message-text med-message-user">
+            
+            <div class="med-message-img-center">
+                <div class="med-message-img-center-inner">
+                    <mip-img src="img/resize.jpg" />
+                </div>
+            </div>
+
+            <div class="med-message-text-right">
+                <div class="angle"></div>
+                <div><mip-img src="img/resize.jpg" class="mag-img-circle"/></div>
+            </div>
+        </section>
+
+        <section class="med-message-text med-message-doctor">
+            
+            <div class="med-message-img-center">
+                <div class="med-message-img-center-inner">
+                    <mip-img src="img/resize.jpg" />
+                </div>
+            </div>
+
+            <div class="med-message-text-left">
+                <div class="angle-border"></div>
+                <div class="angle"></div>
+                <div><mip-img src="img/resize.jpg" class="mag-img-circle"/></div>
+            </div>
+        </section>
+
+        <!--语音消息-->
+        <mip-audio
+            src="https://mip-doc.bj.bcebos.com/guitar.mp3"
+            controls
+            customControls=".mip-audio-controller"
+            layout="container"
+        >
+        <div class="mip-audio-controller audio-player">
+          <div class="audio-control mip-audio-play-pause mip-audio-stopped-icon">
+            <i class="mag-icon mag-icon-voice"></i>
+          </div>
+          <div class="audio-body">
+            <div class="audio-title">点击播放医生的语音回答</div>
+            <div class="audio-seekbar mip-audio-seekbar">
+              <div class="audio-seekbar-fill mip-audio-seekbar-fill"></div>
+            </div>
+            <div class="audio-progress">
+              <div class="mip-audio-time-current audio-time-current">00:00</div>
+              <div class="audio-time-total mip-audio-time-total">--:--</div>
+            </div>
+          </div>
+        </div>
+      </mip-audio>
+
+        
+    </div>
+
+
+
+
+    <button class="med-ask-btn btn-block">快速咨询</button>
+</div>
+{{/block}}

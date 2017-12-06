@@ -1,0 +1,48 @@
+{{extend '../../base/templates.html'}} {{block 'content'}}
+<div class="mag-container">
+    <!--主视频信息-->
+    <mip-video poster="{{ page.videoPoster }}" controls layout="{{ page.videoLayout }}" width="{{ page.videoWidth }}" height="{{ page.videoHeight }}"
+        src="{{ page.videoSrc }}" class="med-video-main">
+    </mip-video>
+
+    <!--标题信息-->
+    {{include './_common/article_title.html'}}
+
+    <!--医生信息-->
+    {{include './_common/article_info.html'}}
+
+    <!--详细描述-->
+    <div class="mag-gap-top mag-gap-bottom font-size-s mag-line-clamp{{ page.videoDetail.clamp }}">
+        {{ page.videoDetail.text }}
+    </div>
+
+    <!--相关视频-->
+    <div class="med-video-reco">
+        <h3 class="mag-gap-top">{{ page.videoReco.title }}</h3>
+
+        {{ each page.videoReco.list }}
+        <div class="mag-row mag-line-bottom med-video-item">
+            <div class="mag-span4 med-video-reco-left">
+                <a data-type="mip" data-title="{{ $value.hrefTitle }}" href="{{ $value.href }}">
+                    <mip-img src="{{ $value.imgUrl }}" />
+                    <div class="med-video-reco-time">
+                        <span class="med-video-reco-icon"></span>
+                        <span class="font-size-xs">{{ $value.time }}</span>
+                    </div>
+                </a>
+            </div>
+            <div class="mag-span8">
+                <a data-type="mip" data-title="{{ $value.hrefTitle }}" href="{{ $value.href }}">
+                    <p class="mag-line-clamp2">{{ $value.title }}</p>
+                    <p class="c-color-gray font-size-s">{{ $value.source }}
+                        <span class="mag-gap-left-small">{{ $value.number }}</span>
+                    </p>
+                </a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <button class="med-ask-btn btn-block">{{ page.button }}</button>
+</div>
+{{/block}}
