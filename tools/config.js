@@ -21,7 +21,7 @@ module.exports = {
             '!../**/*.{html,styl,json}'
         ],
         components: [
-            '../src/components/**/!(_*).html',
+            '../src/components/**/*.html',
             '!../**/*/_*',
             '!../**/*/_*/*',
             '!../**/*.code.html'
