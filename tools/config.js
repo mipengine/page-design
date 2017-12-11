@@ -10,37 +10,38 @@ module.exports = {
         path: '../src',
         match: '../src/**/*',
         templates: [
-            '../src/templates/**/!(_*).html',
-            '!../src/templates/_*',
-            '!../src/templates/_**/*'
+            '../src/templates/*/*.html',
+            '!../**/*/_*',
+            '!../**/*/_*/*'
         ],
         templatesStatic: [
             '../src/templates/**/*',
-            '!../src/templates/_*',
-            '!../src/templates/_**/*',
-            '!../src/templates/**/*.{html,styl,json}'
+            '!../**/*/_*',
+            '!../**/*/_*/*',
+            '!../**/*.{html,styl,json}'
         ],
         components: [
-            '../src/components/**/!(_*).html',
-            '!../src/components/_*',
-            '!../src/components/_**/*',
-            '!../src/components/**/*.code.html'
+            '../src/components/**/*.html',
+            '!../**/*/_*',
+            '!../**/*/_*/*',
+            '!../**/*.code.html'
         ],
         componentsStatic: [
             '../src/components/**/*',
-            '!../src/components/_*',
-            '!../src/components/_**/*',
-            '!../src/components/**/*.{html,styl,json}'
+            '!../**/*/_*',
+            '!../**/*/_*/*',
+            '!../**/*.{html,styl,json}'
         ],
         www: [
-            '../src/www/**/!(_*).html',
-            '!../src/www/_*',
-            '!../src/www/_**/*'
+            '../src/www/**/*.html',
+            '!../**/*/_*',
+            '!../**/*/_*/*'
         ],
         wwwStatic: [
             '../src/www/**/*',
-            '!../src/www/_*',
-            '!../src/www/**/*.{html,styl,json}'
+            '!../**/*/_*',
+            '!../**/*/_*/*',
+            '!../**/*.{html,styl,json}'
         ],
         archive: '../.archive'
     },
