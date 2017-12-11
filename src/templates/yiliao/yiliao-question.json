@@ -1,6 +1,6 @@
 {
     "extend": [
-        "./_common/article_title.json",
+        "./_common/article_title_big.json",
         "./_common/article_info.json"
         
     ],

@@ -21,7 +21,7 @@
             "level" : "主治医师",
             "hospital" : "北大口腔医院",
             "clamp" : "4",
-            "text" : "概览：北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院北京大学人民医院"
+            "text" : "概览：北京大学人民医院西直门院区位于北京市西直门南大街11号，白塔寺院区位于西城区阜成门内大街133号，始建于1918年，是一所集医疗、教学、科研为一体的三级甲等综合医院，是北京市医保定点医院，国家卫生计生委委管医院，北京大学附属医院，北京大学第二临床医学院，先后获得“全国卫生系统思想政治工作先进单位”、“全国医院（卫生）文化建设优秀成果奖”、“全国医院（卫生）文化建设先进集体”、“全国医药卫生系统创先争优活动先进集体”、“首都文明单位标兵”、“首都医药卫生文化建设先进单位”、“北京大学党务和思想政治工作先进集体”、“北京大学统战工作先进党委”等荣誉"
         },
         "videoReco":{
             "title" : "相关视频",
@@ -29,27 +29,27 @@
                 {
                     "href" : "/html/templates/yiliao/yiliao-article.html",
                     "hrefTitle" : "testTitle",
-                    "imgUrl" : "https://www.mipengine.org/static/img/sample_04.jpg",
+                    "imgUrl" : "https://image.39.net/auth/t/213.jpg",
                     "time" : "05:38",
-                    "title" : "1糖尿病怎么治疗啊。。。呜呜呜呜，我勒个去，还是不够长啊。。。。哈哈",
+                    "title" : "糖尿病怎么治疗啊",
                     "source" : "腾讯视频",
                     "number" : "2341人评论"
                 },
                 {
                     "href" : "/html/templates/yiliao/yiliao-article.html",
                     "hrefTitle" : "testTitle",
-                    "imgUrl" : "https://www.mipengine.org/static/img/sample_04.jpg",
-                    "time" : "05:38",
-                    "title" : "2糖尿病怎么治疗啊。。。呜呜呜呜，我勒个去，还是不够长啊。。。。哈哈",
+                    "imgUrl" : "http://pimg.39.net/PictureLib/A/f76/20161215/org_830165.jpg",
+                    "time" : "12:03",
+                    "title" : "什么是糖尿病？",
                     "source" : "搜狐视频",
                     "number" : "232人评论"
                 },
                 {
                     "href" : "/html/templates/yiliao/yiliao-article.html",
                     "hrefTitle" : "testTitle",
-                    "imgUrl" : "https://www.mipengine.org/static/img/sample_04.jpg",
-                    "time" : "05:38",
-                    "title" : "3糖尿病怎么治疗啊。。。呜呜呜呜，我勒个去，还是不够长啊。。。。哈哈",
+                    "imgUrl" : "https://image.39.net/auth/t/10030.jpg",
+                    "time" : "15:22",
+                    "title" : "糖尿病患者什么时候需要使用胰岛素？？胰岛素是胰腺里面胰岛细胞分泌的一种激素，不仅有降低血糖的功效，还能促进人体三大营养素脂肪、糖原、",
                     "source" : "爱奇艺",
                     "number" : "341人评论"
                 }

@@ -1,54 +1,60 @@
-{{extend '../../base/templates.html'}} {{block 'content'}}
+{{extend '../../base/templates.html'}} 
+
+{{block 'content'}}
 <div class="mag-container">
     <!-- 问题信息 -->
     <div class="med-question-base">
-        {{include './_common/article_title.html'}}
-        <div class="mag-gap-top mag-gap-bottom mag-line-clamp{{ page.questionInfo.clamp }}">{{ page.questionInfo.content }}</div>
+        {{include './_common/article_title_big.html'}}
+        <div class="med-line-height28 c-color font-size-m mag-gap-top-large mag-gap-bottom mag-line-clamp{{ page.questionInfo.clamp }}">{{ page.questionInfo.content }}</div>
     </div>
 
     <!-- 回答信息 -->
     <div class="med-question-answer">
         <!--标题参数：title名称,number数量-->
-        <p class="mag-gap-top">{{ page.answer.title }}
+        <h4 class="mag-gap-top-large med-video-title">{{ page.answer.title }}
             <span>{{ if page.answer.number > 0}} ({{ page.answer.number }}) {{/if}}</span>
-        </p>
+        </h4>
 
         <!-- 循环回答列表 -->
+        <div class="med-margin-reduce">
         {{each page.answer.answerList}}
-        <div class="med-img-content mag-row mag-line-bottom">
-            <div class="mag-span2">
-                <mip-img class="med-img-content-img" src="{{ $value.imgUrl }}">
-            </div>
-            <div class="mag-span10">
-                <p class="mag-gap-top-small">{{ $value.name }} {{if $value.tag}}
-                    <span class="c-text-box c-text-box-yiliao">{{ $value.tag }} </span>{{/if}}</p>
-                <p class="c-color-gray font-size-xs">
-                    <span class="mag-gap-right-small">{{ $value.level }}</span>
-                    <span>{{ $value.hospital }}</span>
-                </p>
-                <p class="mag-gap-top mag-gap-bottom-small mag-line-clamp4">{{ $value.content }}</p>
-                <p class="font-size-s">{{ $value.time }}</p>
-
-                <!--追问-->
-                {{if $value.more}}
-                <div class="med-question-answer-more mag-gap-top-small">
-                    {{each $value.more v}}
-                    <div class="med-question-answeru-user mag-gap-bottom">
-
-                        {{if v.role == 'user'}}
-                        <p class="mag-gap-bottom-small med-question-user-color">患者追问：</p>
-                        {{else if v.role == 'doctor'}}
-                        <p class="mag-gap-bottom-small med-question-doctor-color">医生答复：</p>
-                        {{/if}}
-                        <p class="mag-gap-top-small mag-gap-bottom-small font-size-s">{{ v.content }}</p>
-                        <p class="c-color-gray font-size-s">{{ v.time }}</p>
-                    </div>
-                    {{/each}}
+        <div class="mag-line-bottom mag-gap-top-large">
+            <div class="mag-row mag-gap-bottom-large">
+                <div class="mag-span2">
+                    <mip-img class="med-img-content-img" src="{{ $value.imgUrl }}">
                 </div>
-                {{/if}}
+                <div class="mag-span10">
+                    <p class="mag-gap-top-small">{{ $value.name }} {{if $value.tag}}
+                        <span class="c-text-box c-text-box-yiliao">{{ $value.tag }} </span>{{/if}}</p>
+                    <p class="c-color-gray font-size-xs">
+                        <span class="mag-gap-right-small">{{ $value.level }}</span>
+                        <span>{{ $value.hospital }}</span>
+                    </p>
+                    <p class="med-line-height28 mag-gap-top mag-gap-bottom-small mag-line-clamp4 c-color">{{ $value.content }}</p>
+                    <p class="font-size-s c-color-gray">{{ $value.time }}</p>
+
+                    <!--追问-->
+                    {{if $value.more}}
+                    <div class="med-question-answer-more mag-gap-top-small c-color">
+                        {{each $value.more v}}
+                        <div class="med-question-answer-user mag-gap-bottom-large">
+
+                            {{if v.role == 'user'}}
+                            <p class="med-question-user-color font-size-s">患者追问：</p>
+                            {{else if v.role == 'doctor'}}
+                            <p class="med-question-doctor-color font-size-s c-color">医生答复：</p>
+                            {{/if}}
+                            <p class="mag-gap-bottom-small font-size-s">{{ v.content }}</p>
+                            <p class="c-color-gray font-size-s">{{ v.time }}</p>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/if}}
+                </div>
             </div>
         </div>
         {{/each}}
+        </div>
     </div>
 </div>
 {{/block}}

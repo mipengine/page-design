@@ -1,5 +1,5 @@
 @import './_common/common.styl'
-@import './_common/article_title.styl'
+@import './_common/article_title_big.styl'
 @import './_common/article_info.styl'
 
 .med-question-answer{
@@ -19,15 +19,17 @@
 }
 .med-question-answer-more{
     background-color:#f8f8f8;
-    padding: 10px;
+    padding: 12px;
+    border-radius: 5px;
 }
 .med-question-user-color{
-    color:#000;
-    font-weight:300;
-}
-.med-question-doctor-color{
     color:#01b7c9;
     font-weight:300;
+    font-weight:bold;
+}
+.med-question-doctor-color{
+    font-weight:300;
+    font-weight:bold;
 }
 
 .med-showmore-btn {
@@ -54,4 +56,11 @@
     top: 8px;
     transform: rotate(135deg) translate(-23px,-26px);
     -webkit-transform: rotate(135deg) translate(-23px,-26px);
+}
+
+.med-question-base{
+}
+
+.med-question-answer-user:last-child{
+    margin-bottom: 0;
 }

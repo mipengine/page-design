@@ -2,11 +2,13 @@
 
 {{block 'content'}}
 <div class="mag-container">
-    {{include './_common/article_title.html'}}
+    {{include './_common/article_title_big.html'}}
     {{include './_common/article_info.html'}}
 
     <!--自定义html标签内容-->
-    {{@page.htmlContent}}
+    <div class="article-main-content c-color mag-gap-top-large">            
+        {{@page.htmlContent}}
+    </div>
 
     <!--自定义标签-->
     {{ if page.tags}}
