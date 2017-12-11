@@ -17,6 +17,7 @@ require('./clean');
 require('./html-minifier');
 require('./archive');
 require('./validate');
+require('./format');
 
 gulp.task('dev', ['build:templates', 'build:components', 'build:www', 'webserver'], () => {
     gulp.watch(['../src/templates/**/*', '../src/base/**/*'], ['build:templates']);
@@ -36,6 +37,23 @@ gulp.task('dev', ['build:templates', 'build:components', 'build:www', 'webserver
 });
 /* eslint-enable no-console */
 
+gulp.task('validator', () => {
+    const task = [];
+
+    // 清理目录
+    task.push('clean');
+
+    // 编译并验证产出
+    task.push(['build:templates', 'build:components', 'build:www'], 'miphtml:validate');
+
+    // 压缩代码并验证压缩后是否规范
+    task.push('build:htmlminifier', 'build:format', 'miphtml:validate');
+
+    task.push('build:archive-after');
+
+    return run.apply(run, task);
+});
+
 gulp.task('build', () => {
     const task = [];
 
@@ -46,7 +64,7 @@ gulp.task('build', () => {
     task.push(['build:templates', 'build:components', 'build:www'], 'miphtml:validate');
 
     // 压缩代码并验证压缩后是否规范
-    task.push('build:htmlminifier', 'miphtml:validate');
+    task.push('build:htmlminifier', 'build:format', 'miphtml:validate');
 
     // 打 zip 包
     task.push('build:archive');
