@@ -17,6 +17,23 @@ const PluginError = gutil.PluginError;
 artTemplate.defaults.extname = '.html';
 artTemplate.defaults.minimize = false;
 
+/**
+ * 注入根据预览链接获取组件配置里的 extensions
+ *
+ * @param {string} value 预览链接，以 src 为基础路径
+ * @return {string}
+ */
+artTemplate.defaults.imports.getComponentsExtensions = value => {
+    const filepath = path.resolve(__dirname, '../src/', value.replace('.html', '.json'));
+    return util.getExtensionsUrl(util.mergeJSON(filepath).extensions);
+};
+
+/**
+ * 注入根据预览的链接获取对应的 *.code.html 预览代码
+ *
+ * @param {string} value 预览链接，以 src 为基础路径
+ * @return {string}
+ */
 artTemplate.defaults.imports.getComponentsCode = value => {
     const filepath = path.resolve(__dirname, '../src/', value.replace('.html', '.code.html'));
     const content = util.readFileSync(filepath);
