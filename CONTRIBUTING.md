@@ -34,13 +34,13 @@
 # 启动本地开发调试，将运行 web server 服务并修改浏览器实时生效，根据命令输出文本即可打开对应预览链接
 $ npm run dev
 
-# 编译为 html ，将产出 dist/ 目录
+# 编译 html ，将产出 dist/ 目录
 $ npm run build
 
-# 验证编译 html 是否 MIP 规范
+# 验证编译是否符合 MIP HTML 规范
 $ npm run validator
 
-# 使用 fecs 验证代码风格
+# 使用 fecs 验证 tools/ 目录下代码风格
 $ npm run lint
 ```
 
@@ -100,7 +100,7 @@ $ npm run lint
 <a id="start-dir"></a>
 ### 目录结构
 
-- `src/templates/模板名/模板名.html`          - 模板 HTML 代码
+- `src/templates/模板名/模板名.html`          - 模板 HTML 代码，该文件是模板的入口文件
 - `src/templates/模板名/模板名.styl`          - 模板样式代码
 - `src/templates/模板名/模板名.json`          - 模板配置数据
 - `src/components/组件名/组件名.html`         - 组件 HTML 代码
@@ -190,7 +190,6 @@ git commit 信息和 pull request 标题必须遵循 MIP 项目的 [提交信息
 
 1. fork [mipengine/page-design](https://github.com/mipengine/page-design)
 1. 把个人仓库（repository）克隆到电脑上，并安装所依赖的插件（ `npm install` ）。
-1. 开始开发，使用 `npm run dev` 空间里预览的效果，开发完成后，需要检查：
-    - 运行 `npm run validator` 确保编译产出成功。
+1. 开始开发，使用 `npm run dev` 命令开发预览，开发完成后，需要运行 `npm run validator` 确认检查 MIP HTML 规范通过。
 1. 推送（push）分支。
 1. 建立一个新的合并申请（pull request）并描述变动。
