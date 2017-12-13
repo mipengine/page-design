@@ -47,7 +47,7 @@ $ npm run lint
 <a id="code-spec"></a>
 ### 代码风格
 
-基于 <https://github.com/ecomfe/spec> 风格编写代码，基于 <https://github.com/ecomfe/fecs/> 验证代码风格。
+基于 <https://github.com/ecomfe/spec> 风格编写代码，基于 <https://github.com/ecomfe/fecs> 验证代码风格。
 
 <a id="dir-spec"></a>
 ### 项目结构
@@ -126,12 +126,12 @@ $ npm run lint
 - 组件需要继承 `{{extend '../../base/components.html'}}` 主模板。
 - 模板内代码需要在 `{{block 'content'}} 内容 {{/block}}` 中完成。
 - 支持使用 `{{include './_inc/xx.html}}` 继承子模板。
-- 其他语法请看 [art-template 模板引擎语法文档](https://aui.github.io/art-template/zh-cn/docs/syntax.html)
+- 其他语法请看 [art-template 模板引擎语法文档](https://aui.github.io/art-template/zh-cn/docs/syntax.html) 。
 
 <a id="style-syntax"></a>
 ### 样式语法
 
-基于 `stylus` 开发，已加载 `autoprefixer` 插件，语法请参考官网： <http://stylus-lang.com/> 。
+基于 `stylus` 开发，已加载 `autoprefixer` 插件，语法请参考官网： <http://stylus-lang.com> 。
 
 <a id="json-syntax"></a>
 ### 配置数据
@@ -140,10 +140,10 @@ $ npm run lint
 
 变量名 | 说明 | 类型 | 默认值
 --- | --- | --- | ---
-extend | 继承的数据文件地址，将按顺序的去合并数据，支持递归依赖 | 数组、字符串 | -
-extensions | 依赖组件（只写组件名即可） | 数组 | `[]`
+extend | 继承的数据文件地址，将按顺序的去合并数据，支持递归依赖 | 数组、字符串 | 
+extensions | 依赖组件（只写组件名即可） | 数组 | []
 page.title | 页面标题 | 字符串 | Hello World
-page.canonical | 页面 `canonical` 链接 | 字符串 | https://www.mipengine.org/
+page.canonical | 页面 `canonical` 链接 | 字符串 | https://www.mipengine.org
 page.lang | 页面语言 | 字符串 | zh-cn
 
 注意：
@@ -188,7 +188,7 @@ git commit 信息和 pull request 标题必须遵循 MIP 项目的 [提交信息
 <a id="pull-request"></a>
 ### 提交请求（pull request）
 
-1. fork [mipengine/page-design](https://github.com/mipengine/page-design)
+1. fork [mipengine/page-design](https://github.com/mipengine/page-design) 。
 1. 把个人仓库（repository）克隆到电脑上，并安装所依赖的插件（ `npm install` ）。
 1. 开始开发，使用 `npm run dev` 命令开发预览，开发完成后，需要运行 `npm run validator` 确认检查 MIP HTML 规范通过。
 1. 推送（push）分支。
