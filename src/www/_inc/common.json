@@ -1,0 +1,8 @@
+{
+    "extend": [
+        "./nav.json"
+    ],
+    "extensions": [
+        "mip-stats-baidu"
+    ]
+}
