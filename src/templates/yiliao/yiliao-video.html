@@ -2,7 +2,7 @@
 <div class="mag-container">
     <!--主视频信息-->
     <mip-video poster="{{ page.videoPoster }}" controls layout="{{ page.videoLayout }}" width="{{ page.videoWidth }}" height="{{ page.videoHeight }}"
-        src="{{ page.videoSrc }}" class="med-video-main">
+        src="{{ page.videoSrc }}" class="med-video-main" preload="auto">
     </mip-video>
 
     <!--标题信息-->
@@ -18,7 +18,7 @@
 
     <!--相关视频-->
     <div class="med-video-reco">
-        <h4 class="mag-gap-top-large med-video-title c-color">{{ page.videoReco.title }}</h4>
+        <h4 class="mag-gap-top-large med-normal-title c-color">{{ page.videoReco.title }}</h4>
         <div class="med-video-list-wrap med-margin-reduce">
         {{ each page.videoReco.list }}
         <div class="mag-line-bottom">
@@ -47,6 +47,8 @@
     </div>
 
 </div>
-<div class="med-ask-btn btn-block">{{ page.button }}</div>
+<mip-fixed type="bottom" class="med-ask-btn">
+    {{ page.button }}
+</mip-fixed>
 
 {{/block}}

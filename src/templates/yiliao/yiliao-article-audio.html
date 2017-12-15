@@ -2,11 +2,11 @@
 
 {{block 'content'}}
 <div class="mag-container">
-    {{include './_common/article_title.html'}}
+    {{include './_common/article_title_big.html'}}
     {{include './_common/article_info.html'}}
 
     <mip-audio
-        src="https://mip-doc.bj.bcebos.com/guitar.mp3"
+        src="{{ page.audio.src }}"
         controls
         customControls=".mip-audio-controller"
         layout="container"
@@ -16,7 +16,7 @@
             <i class="mag-icon mag-icon-voice"></i>
         </div>
         <div class="audio-body">
-            <div class="audio-title">点击播放医生的语音回答</div>
+            <div class="audio-title">{{ page.audio.text }}</div>
                 <div class="audio-seekbar mip-audio-seekbar">
                 <div class="audio-seekbar-fill mip-audio-seekbar-fill"></div>
             </div>
@@ -29,9 +29,12 @@
     </mip-audio>
 
     <!--自定义html标签内容-->
-    <div class="article-main-content c-color mag-gap-top-large">            
+    <div class="article-main-content c-color mag-gap-top-large font-size-m med-line-height26">            
         {{@page.htmlContent}}
     </div>
-    <button class="med-ask-btn btn-block">快速咨询</button>
+    
+    <mip-fixed type="bottom" class="med-ask-btn">
+        {{ page.button }}
+    </mip-fixed>
 </div>
 {{/block}}

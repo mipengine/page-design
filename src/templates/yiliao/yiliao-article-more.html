@@ -12,12 +12,16 @@
         </div>
     </mip-showmore>
     
-    <div on="tap:med-showmore.toggle" data-closeclass="mip-showmore-open" data-closetext="收起" class="med-showmore-btn font-size-s">
-        <span class="show">收起</span>
-        <span class="hidden">展开</span>
+    <div on="tap:med-showmore.toggle" data-closeclass="mip-showmore-open" class="align-direction med-showmore-btn font-size-s mag-gap-top mag-gap-bottom">
+        
+        <div class="med-showmore-inner">
+            <span class="show">{{ page.showmore.hidden }}<span class="icon mag-gap-left-small"></span></span>
+            <span class="hidden">{{ page.showmore.show }}<span class="icon mag-gap-left-small"></span></span>
+        </div>
+        
     </div>
-
-
-    <button class="med-ask-btn btn-block">快速咨询</button>
 </div>
+<mip-fixed type="bottom" class="med-ask-btn">
+    {{ page.button }}
+</mip-fixed>
 {{/block}}

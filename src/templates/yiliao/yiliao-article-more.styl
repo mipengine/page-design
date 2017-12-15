@@ -3,41 +3,51 @@
 @import './_common/article_info.styl'
 
 
-.med-article-tag{
-    text-align:center;
-}
-
-.med-showmore p{
+.med-showmore p {
     margin: 10px;
 }
 
 .med-showmore-btn {
-    text-align: center;
-    margin:10px;
     display:block !important;
     position: relative;
 }
 
-.med-showmore-btn:after {
-    content:"";
-    position: absolute;
+.med-showmore-btn .icon {
+    display: inline-block;
     width: 6px;
     height: 6px;
-    border-left:1px solid #000;
-    border-bottom:1px solid #000;
-    font-weight:bold;
-    top: 3px;
-    left:46%;
-    transform: rotate(315deg) translate(25px,27px);
-    -webkit-transform: rotate(315deg) translate(25px,27px);
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    font-weight: bold;
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    margin-bottom: 3px;
 }
 
-.mip-showmore-open:after {
-    top: 6px;
-    transform: rotate(135deg) translate(-23px,-26px);
-    -webkit-transform: rotate(135deg) translate(-23px,-26px);
+.mip-showmore-open .icon {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin-bottom: 0;
 }
 
-.med-article-showmore-gap .article-main-content p:first-child,.med-article-showmore-gap .article-main-content div:first-child{
-    margin-top:0;
+.med-article-showmore-gap .article-main-content p:first-child,
+.med-article-showmore-gap .article-main-content div:first-child {
+    margin-top: 0;
+}
+
+/* 展开更多 */
+.show {
+    display: none;
+}
+
+.hidden {
+    display: block;
+}
+
+.mip-showmore-open .show {
+    display: block;
+}
+
+.mip-showmore-open .hidden {
+    display: none;
 }

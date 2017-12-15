@@ -11,7 +11,7 @@
     <!-- 回答信息 -->
     <div class="med-question-answer">
         <!--标题参数：title名称,number数量-->
-        <h4 class="mag-gap-top-large med-video-title">{{ page.answer.title }}
+        <h4 class="mag-gap-top-large med-normal-title">{{ page.answer.title }}
             <span>{{ if page.answer.number > 0}} ({{ page.answer.number }}) {{/if}}</span>
         </h4>
 
@@ -19,19 +19,13 @@
         <div class="med-margin-reduce">
         {{each page.answer.answerList}}
         <div class="mag-line-bottom mag-gap-top-large">
-            <div class="mag-row mag-gap-bottom-large">
-                <div class="mag-span2">
-                    <mip-img class="med-img-content-img" src="{{ $value.imgUrl }}">
-                </div>
-                <div class="mag-span10">
-                    <p class="mag-gap-top-small">{{ $value.name }} {{if $value.tag}}
-                        <span class="c-text-box c-text-box-yiliao">{{ $value.tag }} </span>{{/if}}</p>
-                    <p class="c-color-gray font-size-xs">
-                        <span class="mag-gap-right-small">{{ $value.level }}</span>
-                        <span>{{ $value.hospital }}</span>
-                    </p>
-                    <p class="med-line-height28 mag-gap-top mag-gap-bottom-small mag-line-clamp4 c-color">{{ $value.content }}</p>
-                    <p class="font-size-s c-color-gray">{{ $value.time }}</p>
+            
+            {{include './_common/article_info.html' }}
+
+            <div class="mag-design-row mag-gap-bottom-large">
+                <div class="mag-span11 med-question-margin-left">
+                    <p class="med-line-height28 mag-gap-bottom-small mag-line-clamp4 c-color">{{ $value.content }}</p>
+                    <p class="font-size-s c-color-gray mag-gap-bottom">{{ $value.time }}</p>
 
                     <!--追问-->
                     {{if $value.more}}

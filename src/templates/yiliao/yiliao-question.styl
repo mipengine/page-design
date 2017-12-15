@@ -2,65 +2,39 @@
 @import './_common/article_title_big.styl'
 @import './_common/article_info.styl'
 
-.med-question-answer{
-    padding-top:20px;
+.med-question-answer {
+    padding-top: 20px;
 }
-.med-question-answer:before{
-    content:'';
-    display:block;
-    width:100%;
-    height:10px;
-    background:#f1f1f1;
-    width:120%;
-    margin-left:-10%;
+.med-question-answer:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: #f1f1f1;
+    width: 120%;
+    margin-left: -10%;
 }
-.med-img-content{
-    padding-bottom:10px;
+.med-img-content {
+    padding-bottom: 10px;
 }
-.med-question-answer-more{
-    background-color:#f8f8f8;
+.med-question-answer-more {
+    background-color: #f8f8f8;
     padding: 12px;
     border-radius: 5px;
 }
-.med-question-user-color{
+.med-question-user-color,
+.med-question-doctor-color {
     color:#01b7c9;
-    font-weight:300;
     font-weight:bold;
 }
-.med-question-doctor-color{
-    font-weight:300;
-    font-weight:bold;
+.med-question-user-color {
+    color:#01b7c9;
 }
 
-.med-showmore-btn {
-    text-align: center;
-    margin:10px;
-    display:block !important;
-    position: relative;
-}
-
-.med-showmore-btn:after {
-    content:"";
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border-left:1px solid #000;
-    border-bottom:1px solid #000;
-    font-weight:bold;
-    top: 3px;
-    transform: rotate(315deg) translate(25px,27px);
-    -webkit-transform: rotate(315deg) translate(25px,27px);
-}
-
-.mip-showmore-open:after {
-    top: 8px;
-    transform: rotate(135deg) translate(-23px,-26px);
-    -webkit-transform: rotate(135deg) translate(-23px,-26px);
-}
-
-.med-question-base{
-}
-
-.med-question-answer-user:last-child{
+.med-question-answer-user:last-child {
     margin-bottom: 0;
+}
+
+.med-question-margin-left {
+    margin-left: 35px;
 }

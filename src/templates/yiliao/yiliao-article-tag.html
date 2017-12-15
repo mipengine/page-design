@@ -12,13 +12,15 @@
 
     <!--自定义标签-->
     {{ if page.tags}}
-    <div class="med-article-tag mag-gap-top">
+    <div class="med-article-tag mag-gap-top align-direction">
         {{ each page.tags }}
-        <span class="tag">{{ $value }}</span>
+        <span class="tag rounded">{{ $value }}</span>
         {{/each}}
     </div>
     {{/if}}
-
-    <button class="med-ask-btn btn-block">快速咨询</button>
+    
 </div>
+<mip-fixed type="bottom" class="med-ask-btn">
+    {{ page.button }}
+</mip-fixed>
 {{/block}}
