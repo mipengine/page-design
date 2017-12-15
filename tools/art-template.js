@@ -18,6 +18,22 @@ artTemplate.defaults.extname = '.html';
 artTemplate.defaults.minimize = false;
 
 /**
+ * 注入模板内获取
+ *
+ * @param {string} value 预览链接，以 src 为基础路径
+ * @return {string}
+ */
+artTemplate.defaults.imports.getBaiduStatsEvent = function (type) {
+    var args = [].slice.call(arguments);
+    var res = {
+        type: type,
+        data: '[_trackEvent, ' + args.join(',') + ']'
+    };
+    // {"type":"click","data":"[_trackEvent, tpl, down, 1]"}
+    return encodeURIComponent(JSON.stringify(res));
+};
+
+/**
  * 注入根据预览链接获取组件配置里的 extensions
  *
  * @param {string} value 预览链接，以 src 为基础路径
