@@ -1,22 +1,14 @@
 @import './_common/common.styl'
+@import './_common/message_tip.styl'
 
-.med-tips-info {
-    background:#d8d8d8;
-    border-radius:5px;
-    display:inline-block;
-    padding:5px 10px;
-    color:#fff;
-}
 
 .med-message-text {
     position:relative;
-    margin-top:20px;
 }
 .med-message-text-left, .med-message-text-right {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    margin: 0 15px;
+    width: 35px;
+    height: 35px;
     top: 0;
 }
 
@@ -25,17 +17,17 @@
 }
 
 .med-message-text-center,.med-message-img-center {
-    margin: 15px 70px;
+    margin: 15px 51px;
 }
 
 .med-message-text-center-inner,.med-message-img-center-inner{
     border: 1px solid #e9e9e9;
-    -webkit-border-radius: 6px;
+    -webkit-border-radius: 4px;
     padding: 8px 12px;
     display: inline-block;
     text-align: left;
     word-wrap: break-word;
-    width: 100%;
+    max-width: 100%;
     font-size: 15px;
     line-height: 22px;
     box-sizing: border-box;
@@ -43,7 +35,7 @@
     min-width: 47px;
 }
 
-.mag-img-circle{
+.mag-img-circle,.mag-img-circle img{
     border-radius: 50%;
 }
 
@@ -51,6 +43,10 @@
     background:#02b7ca;
     color:#fff;
     border:none;
+}
+
+.med-message-user .med-message-text-center,.med-message-user .med-message-img-center{
+    text-align: right;
 }
 
 .angle-border, .angle{
@@ -76,4 +72,100 @@
     left: -18px;
     border-left: .07rem solid #02b7ca;
     z-index: 1;
+}
+
+.med-message-img-audio-center{
+    max-width:100%;
+}
+.med-mip-audio-controller {
+    position:relative;
+}
+.mip-audio-play-pause{
+    max-width:100%;
+    width:60%;
+    height:40px;
+    display:inline-block;
+    position: relative;
+    border-radius: 4px;
+    background:#02b7ca;
+}
+.med-mip-audio-icon{
+    display:inline-block;
+    width:14px;
+    height:19px;
+    background: url(./img/audio.jpg) right center no-repeat;
+    background-size: cover;
+    margin: 10px 10px 0 0;
+}
+.med-mip-audio-time{
+    position:relative;
+    top:-4px;
+}
+
+.med-message-doctor .med-mip-audio-icon{
+    display:inline-block;
+    width:14px;
+    height:19px;
+    background: url(./img/audio2.jpg) left center no-repeat;
+    background-size: cover;
+    margin: 10px 0 0 10px;
+}
+
+.med-message-doctor .mip-audio-play-pause{
+    background:#fff;
+    border:1px solid #e9e9e9;
+}
+
+.mip-audio{
+    display:none;
+}
+
+
+.med-showmore p {
+    margin: 10px;
+}
+
+.med-showmore-btn {
+    display:block !important;
+    position: relative;
+}
+
+.med-showmore-btn .icon {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    font-weight: bold;
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    margin-bottom: 3px;
+}
+
+.mip-showmore-open .icon {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin-bottom: 0;
+}
+
+.med-article-showmore-gap .article-main-content p:first-child,
+.med-article-showmore-gap .article-main-content div:first-child {
+    margin-top: 0;
+}
+
+/* 展开更多 */
+.show {
+    display: none;
+}
+
+.hidden {
+    display: block;
+}
+
+.mip-showmore-open .show {
+    display: block;
+}
+
+.mip-showmore-open .hidden {
+    display: none;
 }

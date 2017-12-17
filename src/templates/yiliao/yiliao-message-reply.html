@@ -3,103 +3,65 @@
 {{block 'content'}}
 <div class="mag-container">
     <!--友情提示-->
-    <div class="med-tips-container align-direction">
-        <p class="font-size-s c-color-gray align-direction">医生回复仅为建议，进一步确诊请到线下医院</p>
-        <div class="med-tips-info font-size-xs mag-gap-top"><span class="mag-gap-right-small">2014-09-29</span><span>2345人已阅读</span></div>
-    </div>
+    {{include './_common/message_tip.html'}}
 
     <!--消息对话-->
+    <mip-showmore maxheight='{{ page.maxHeight }}' animatetime='.3' id="med-showmore" bottomshadow='1' class="med-article-showmore-gap">
+            
     <div class="med-message-content">
-        <!--左侧文本消息-->
-        <section class="med-message-text med-message-doctor">
-            <div class="med-message-text-left">
-                <div class="angle-border"></div>
-                <div class="angle"></div>
+        {{each message.messageList}}
+            <section class="med-message-text mag-gap-top-large {{if $value.user == 'user'}} med-message-user {{else}} med-message-doctor {{/if}}">
+                <div class="{{ if $value.user == 'doctor'}} med-message-text-left {{else if $value.user == 'user'}} med-message-text-right {{/if}}">
+                    {{ if $value.user == 'doctor'}} <div class="angle-border"></div> {{/if}}
+                    <div class="angle"></div>
+                    <div><mip-img src="{{$value.avatar}}" class="mag-img-circle"/></div>
+                </div>
                 
-                <div><mip-img src="https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg" class="mag-img-circle"/></div>
+                {{if $value.type == 'text'}}
+                    <div class="med-message-text-center">
+                        <div class="med-message-text-center-inner">{{ $value.content }}</div>
+                    </div>
+                {{else if $value.type == 'pic'}}
+                    <div class="med-message-img-center">
+                        <div class="med-message-img-center-inner">
+                            <mip-img src="{{$value.content}}" />
+                        </div>
+                    </div>
+                {{else if $value.type == 'audio'}}
+                        <div class="med-message-img-center">
+                       
+                            <mip-audio
+                            src="{{$value.content}}"
+                            controls
+                            customControls=".med-mip-audio-controller"
+                            layout="container"
+                            >
+                                <div class="med-mip-audio-controller mag-gap-top-large">
+                                    {{if $value.user == 'user'}}<span class="med-mip-audio-time font-size-s c-color-gray">{{ $value.time }}</span>{{/if}}
+                                    <div class="mip-audio-play-pause audio-control">
+                                        <span class="med-mip-audio-icon"></span>
+                                    </div>
+                                    {{if $value.user == 'doctor'}}<span class="med-mip-audio-time font-size-s c-color-gray">{{ $value.time }}</span>{{/if}}
+                                </div>
+                            </mip-audio>
+                    </div>
+                {{/if}}
+            </section>
+        {{/each}}
+    </div>
+    </mip-showmore>
 
-            </div>
-
-            <div class="med-message-text-center">
-                <div class="med-message-text-center-inner">武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊武汉市长江好长啊</div>
-            </div>
-
-            <div class="med-message-text-right">
-                <div><mip-img src="https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg" class="mag-img-circle"/></div>
-            </div>
-        </section>
-
-        <section class="med-message-text med-message-user">
-
-            <div class="med-message-text-center">
-                <div class="med-message-text-center-inner">hahahahahahahtest</div>
-            </div>
-
-            <div class="med-message-text-right">
-                <div class="angle"></div>
-                <div><mip-img src="https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg" class="mag-img-circle"/></div>
-            </div>
-        </section>
-
-        <!--图片消息-->
-        <section class="med-message-text med-message-user">
+    <div on="tap:med-showmore.toggle" data-closeclass="mip-showmore-open" class="align-direction med-showmore-btn font-size-s mag-gap-top mag-gap-bottom">
             
-            <div class="med-message-img-center">
-                <div class="med-message-img-center-inner">
-                    <mip-img src="https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg" />
-                </div>
-            </div>
-
-            <div class="med-message-text-right">
-                <div class="angle"></div>
-                <div><mip-img src="https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg" class="mag-img-circle"/></div>
-            </div>
-        </section>
-
-        <section class="med-message-text med-message-doctor">
-            
-            <div class="med-message-img-center">
-                <div class="med-message-img-center-inner">
-                    <mip-img src="https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg" />
-                </div>
-            </div>
-
-            <div class="med-message-text-left">
-                <div class="angle-border"></div>
-                <div class="angle"></div>
-                <div><mip-img src="https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg" class="mag-img-circle"/></div>
-            </div>
-        </section>
-
-        <!--语音消息-->
-        <mip-audio
-            src="https://mip-doc.bj.bcebos.com/guitar.mp3"
-            controls
-            customControls=".mip-audio-controller"
-            layout="container"
-        >
-        <div class="mip-audio-controller audio-player">
-          <div class="audio-control mip-audio-play-pause mip-audio-stopped-icon">
-            <i class="mag-icon mag-icon-voice"></i>
-          </div>
-          <div class="audio-body">
-            <div class="audio-title">点击播放医生的语音回答</div>
-            <div class="audio-seekbar mip-audio-seekbar">
-              <div class="audio-seekbar-fill mip-audio-seekbar-fill"></div>
-            </div>
-            <div class="audio-progress">
-              <div class="mip-audio-time-current audio-time-current">00:00</div>
-              <div class="audio-time-total mip-audio-time-total">--:--</div>
-            </div>
-          </div>
+        <div class="med-showmore-inner">
+            <span class="show">{{ page.showmore.hidden }}<span class="icon mag-gap-left-small"></span></span>
+            <span class="hidden">{{ page.showmore.show }}<span class="icon mag-gap-left-small"></span></span>
         </div>
-      </mip-audio>
-
         
     </div>
 
-    <mip-fixed type="bottom" class="med-ask-btn">
-        {{ page.button }}
-    </mip-fixed>
 </div>
+<mip-fixed type="bottom" class="med-ask-btn">
+    {{ button }}
+</mip-fixed>
 {{/block}}
