@@ -2,64 +2,46 @@
 @import './_common/article_title.styl'
 @import './_common/article_info.styl'
 
-.med-video-main {
-    margin: -.2rem -.17rem 0;
-}
+.med-video-main 
+  margin -.2rem -.17rem 0
+  video 
+    object-fit fill
+.med-video-reco 
+  padding-top 20px
+  &:before 
+    content ''
+    display block
+    width 100%
+    height 10px
+    background #f1f1f1
+    width 120%
+    margin-left -10%
+.med-video-reco-left 
+  position relative
+.med-video-reco-time 
+  position absolute
+  right 3px
+  bottom 3px
+  width 60px
+  height 20px
+  line-height 20px
+  background rgba(0,0,0,.4)
+  color #fff
+  border-radius 10px
+  text-indent 10px
+.med-video-reco-icon 
+  display inline-block
+  border-top 5px solid transparent
+  border-left 8px solid #fff
+  border-bottom 5px solid transparent
+  width 0
+  height 0
+.med-video-item 
+  padding-bottom 12px
+  padding-top 15px
+  &:last-child 
+    border-bottom none
+.mag-container 
+  margin-top 0
 
-.med-video-main video {
-    object-fit: fill;
-}
-
-.med-video-reco {
-    padding-top: 20px;
-}
-
-.med-video-reco:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 10px;
-    background: #f1f1f1;
-    width: 120%;
-    margin-left: -10%;
-}
-
-.med-video-reco-left {
-    position: relative;
-}
-
-.med-video-reco-time {
-    position: absolute;
-    right: 3px;
-    bottom: 3px;
-    width: 60px;
-    height: 20px;
-    line-height: 20px;
-    background: rgba(0,0,0,.4);
-    color: #fff;
-    border-radius: 10px;
-    text-indent: 10px;
-}
-
-.med-video-reco-icon {
-    display: inline-block;
-    border-top: 5px solid transparent;
-    border-left: 8px solid #fff;
-    border-bottom: 5px solid transparent;
-    width: 0;
-    height: 0;
-}
-
-.med-video-item {
-    padding-bottom: 12px;
-    padding-top: 15px;
-}
-
-.med-video-item:last-child {
-    border-bottom: none;
-}
-
-.mag-container {
-    margin-top: 0;
-}
 
