@@ -8,21 +8,21 @@
     <mip-audio
         src="{{ page.audio.src }}"
         controls
-        customControls=".mip-audio-controller"
         layout="container"
     >
-        <div class="mip-audio-controller audio-player mag-gap-top-large">
-        <div class="audio-control mip-audio-play-pause mip-audio-stopped-icon">
+        <div class="audio-player" controller >
+        <div class="audio-control" play-button>
             <i class="mag-icon mag-icon-voice"></i>
         </div>
         <div class="audio-body">
             <div class="audio-title">{{ page.audio.text }}</div>
-                <div class="audio-seekbar mip-audio-seekbar">
-                <div class="audio-seekbar-fill mip-audio-seekbar-fill"></div>
-            </div>
+                <div seekbar class="audio-seekbar">
+                    <div seekbar-fill class="audio-seekbar-fill"></div>
+                    <div seekbar-button class="hidden"></div>
+                </div>
             <div class="audio-progress">
-                <div class="mip-audio-time-current audio-time-current">00:00</div>
-                <div class="audio-time-total mip-audio-time-total">--:--</div>
+                <div current-time class="audio-time-current">00:00</div>
+                <div total-time class="audio-time-total">--:--</div>
             </div>
         </div>
         </div>
