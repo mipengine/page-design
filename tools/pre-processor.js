@@ -26,21 +26,11 @@ module.exports = (filepath, type) => {
 
     // 处理默认数据
     json = Object.assign({
-        page: {},
-        extensions: []
+        page: {}
     }, json);
 
     // 处理组件依赖
-    // 如果是官方内置组件，则不输出
-    if (json.extensions) {
-        if (!Array.isArray(json.extensions)) {
-            json.extensions = [json.extensions];
-        }
-        json.extensions = json.extensions.filter(name => util.coreExtensions.indexOf(name) === -1);
-        if (!json.extensions.length) {
-            json.extensions = null;
-        }
-    }
+    json.extensions = util.getExtensionsUrl(json.extensions);
 
     if (!cssSource) {
         return json;

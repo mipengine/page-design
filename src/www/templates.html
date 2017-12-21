@@ -17,9 +17,9 @@
                                 <mip-img src="/html/{{ $val.img }}" width="200" height="300"></mip-img>
                             </li>
                             <li>
-                                <a href="/html/{{ $val.url }}" data-type="mip" target="_blank">预览</a>
+                                <a data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'preview', $val.name) }}" href="/html/{{ $val.url }}" data-type="mip" target="_blank">预览</a>
                             </li>
-                            <li><a href="/archive/{{ $val.name }}.zip">下载</a></li>
+                            <li><a data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'down', $val.name) }}" href="/archive/{{ $val.name }}.zip">下载</a></li>
                         </ul>
                     {{/each}}
                 </dd>
