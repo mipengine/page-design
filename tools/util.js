@@ -8,7 +8,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const deepassign = require('deep-assign');
+const deepmerge = require('deepmerge');
 
 /**
  * 官方核心组件
@@ -145,8 +145,8 @@ exports.mergeJSON = filepath => {
     }
     source.extend.forEach(uri => {
         const extendFilePath = path.resolve(path.dirname(filepath), uri);
-        deepassign(clone, exports.mergeJSON(extendFilePath));
+        clone = deepmerge(clone, exports.mergeJSON(extendFilePath));
     });
 
-    return deepassign(clone, source);
+    return deepmerge(clone, source);
 };
