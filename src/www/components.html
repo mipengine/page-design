@@ -12,12 +12,25 @@
                     {{each $value.components val}}
                         <ul>
                             <li><mip-iframe height="{{ val.iframe.height }}" width="100" src="/html/{{ val.iframe.url }}" layout="fixed-height"></mip-iframe></li>
+                            {{ set ext = $imports.getComponentsExtensions(val.iframe.url) }}
+                            {{if ext && ext.length}}
+                                <li>
+                                    依赖组件代码：
+                                </li>
+                                <li>
+                                    {{each ext text}}
+                                        <pre><code>{{text}}</code></pre>
+                                    {{/each}}
+                                </li>
+                            {{/if}}
+
+
                             {{ set code = $imports.getComponentsCode(val.iframe.url) }}
                             {{if code}}
-                            <li>代码：</li>
-                            <li>
-                                {{@ code }}
-                            </li>
+                                <li>代码：</li>
+                                <li>
+                                    {{@ code }}
+                                </li>
                             {{/if}}
                         </ul>
                     {{/each}}

@@ -1,6 +1,6 @@
 {
     "extend": [
-        "./_inc/nav.json"
+        "./_inc/common.json"
     ],
     "page": {
         "title": "关于"

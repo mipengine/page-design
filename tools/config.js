@@ -9,6 +9,7 @@ module.exports = {
     src: {
         path: '../src',
         match: '../src/**/*',
+        api: process.env.NODE_ENV === 'development' ? '../src/**/api/**/*.{json,js}' : '../src/**/api/**/*.json',
         templates: [
             '../src/templates/*/*.html',
             '!../**/*/_*',
@@ -18,7 +19,7 @@ module.exports = {
             '../src/templates/**/*',
             '!../**/*/_*',
             '!../**/*/_*/*',
-            '!../**/*.{html,styl,json}'
+            '!../**/*.{html,styl,json,js}'
         ],
         components: [
             '../src/components/**/*.html',
@@ -30,7 +31,7 @@ module.exports = {
             '../src/components/**/*',
             '!../**/*/_*',
             '!../**/*/_*/*',
-            '!../**/*.{html,styl,json}'
+            '!../**/*.{html,styl,json,js}'
         ],
         www: [
             '../src/www/**/*.html',
@@ -41,12 +42,13 @@ module.exports = {
             '../src/www/**/*',
             '!../**/*/_*',
             '!../**/*/_*/*',
-            '!../**/*.{html,styl,json}'
+            '!../**/*.{html,styl,json,js}'
         ],
         archive: '../.archive'
     },
     dest: {
         path: '../dist',
+        api: '../dist/html',
         match: '../dist/**/*',
         archive: '../dist/archive',
         templates: '../dist/html/templates',

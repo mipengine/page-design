@@ -8,7 +8,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const deepassign = require('deep-assign');
+const deepmerge = require('deepmerge');
 
 /**
  * 官方核心组件
@@ -109,6 +109,24 @@ exports.getFolders = dir => {
 };
 
 /**
+ * 获取组件链接
+ *
+ * @param {Array} arr 组件名数组
+ * @return {Array}
+ */
+exports.getExtensionsUrl = arr => {
+    if (!arr || !arr.length) {
+        return [];
+    }
+    if (!Array.isArray(arr)) {
+        arr = [arr];
+    }
+    return arr
+        .filter(name => exports.coreExtensions.indexOf(name) === -1)
+        .map(name => `<script src="https://mipcache.bdstatic.com/static/v1/${name}/${name}.js"></script>`);
+};
+
+/**
  * 递归合并 JSON 配置文件
  *
  * @param {string} filepath 文件路径
@@ -127,8 +145,8 @@ exports.mergeJSON = filepath => {
     }
     source.extend.forEach(uri => {
         const extendFilePath = path.resolve(path.dirname(filepath), uri);
-        deepassign(clone, exports.mergeJSON(extendFilePath));
+        clone = deepmerge(clone, exports.mergeJSON(extendFilePath));
     });
 
-    return deepassign(clone, source);
+    return deepmerge(clone, source);
 };

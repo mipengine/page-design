@@ -12,6 +12,7 @@
     - [模板语法](#tpl-syntax)
     - [样式语法](#style-syntax)
     - [配置数据](#json-syntax)
+    - [异步数据](#async-data)
     - [在官网展示](#showcase)
 - [提交信息规范](#commit-message-spec)
 - [提交请求（pull request）](#pull-request)
@@ -34,20 +35,20 @@
 # 启动本地开发调试，将运行 web server 服务并修改浏览器实时生效，根据命令输出文本即可打开对应预览链接
 $ npm run dev
 
-# 编译为 html ，将产出 dist/ 目录
+# 编译 html ，将产出 dist/ 目录
 $ npm run build
 
-# 验证编译 html 是否 MIP 规范
+# 验证编译是否符合 MIP HTML 规范
 $ npm run validator
 
-# 使用 fecs 验证代码风格
+# 使用 fecs 验证 tools/ 目录下代码风格
 $ npm run lint
 ```
 
 <a id="code-spec"></a>
 ### 代码风格
 
-基于 <https://github.com/ecomfe/spec> 风格编写代码，基于 <https://github.com/ecomfe/fecs/> 验证代码风格。
+基于 <https://github.com/ecomfe/spec> 风格编写代码，基于 <https://github.com/ecomfe/fecs> 验证代码风格。
 
 <a id="dir-spec"></a>
 ### 项目结构
@@ -100,7 +101,7 @@ $ npm run lint
 <a id="start-dir"></a>
 ### 目录结构
 
-- `src/templates/模板名/模板名.html`          - 模板 HTML 代码
+- `src/templates/模板名/模板名.html`          - 模板 HTML 代码，该文件是模板的入口文件
 - `src/templates/模板名/模板名.styl`          - 模板样式代码
 - `src/templates/模板名/模板名.json`          - 模板配置数据
 - `src/components/组件名/组件名.html`         - 组件 HTML 代码
@@ -126,12 +127,12 @@ $ npm run lint
 - 组件需要继承 `{{extend '../../base/components.html'}}` 主模板。
 - 模板内代码需要在 `{{block 'content'}} 内容 {{/block}}` 中完成。
 - 支持使用 `{{include './_inc/xx.html}}` 继承子模板。
-- 其他语法请看 [art-template 模板引擎语法文档](https://aui.github.io/art-template/zh-cn/docs/syntax.html)
+- 其他语法请看 [art-template 模板引擎语法文档](https://aui.github.io/art-template/zh-cn/docs/syntax.html) 。
 
 <a id="style-syntax"></a>
 ### 样式语法
 
-基于 `stylus` 开发，已加载 `autoprefixer` 插件，语法请参考官网： <http://stylus-lang.com/> 。
+基于 `stylus` 开发，已加载 `autoprefixer` 插件，语法请参考官网： <http://stylus-lang.com> 。
 
 <a id="json-syntax"></a>
 ### 配置数据
@@ -140,16 +141,45 @@ $ npm run lint
 
 变量名 | 说明 | 类型 | 默认值
 --- | --- | --- | ---
-extend | 继承的数据文件地址，将按顺序的去合并数据，支持递归依赖 | 数组、字符串 | -
-extensions | 依赖组件（只写组件名即可） | 数组 | `[]`
+extend | 继承的数据文件地址，将按顺序的去合并数据，支持递归依赖，使用 [deepmerge](https://www.npmjs.com/package/deepmerge) 处理合并 | 数组、字符串 | -
+extensions | 依赖组件（只写组件名即可） | 数组 | []
 page.title | 页面标题 | 字符串 | Hello World
-page.canonical | 页面 `canonical` 链接 | 字符串 | https://www.mipengine.org/
+page.canonical | 页面 `canonical` 链接 | 字符串 | https://www.mipengine.org
 page.lang | 页面语言 | 字符串 | zh-cn
 
 注意：
 
 1. 如果以上内置变量不能满足需求，可以使用 `{{block 'head'}}{{/block'}}` 来覆盖默认的 `<head>` 标签，甚至你模板内可以自己创建一个主模板（ `layout.tpl` ）。
 1. `extend` 继承数据字段是为了解决一个行业模板内包含了多个页面文件，又存在一些公用的数据字段，可以使用该字段来继承一些公用的数据配置。支持继承多个文件、递归深度继承。
+
+<a id="async-data"></a>
+### 异步数据
+
+由于丰富的组件、模板可能需要请求后端异步接口，mipgo支持配置 JSON 静态数据和高级 `node server` 中间件形式的异步接口，如：
+
+文件路径 | 说明 | 对应链接
+--- | --- | ---
+`src/templates/模板名/api/接口名称.json` | 静态的接口数据 | `https://www.mipgo.org/html/templates/模板名/api/接口名称.json`
+`src/components/组件名/api/接口名称.json` | 静态的接口数据 | `https://www.mipgo.org/html/components/组件名/api/接口名称.json`
+`src/templates/模板名/api/中间件.js` | 高级 `node server` 中间件 | `https://www.mipgo.org/html/templates/模板名/api/中间件.json`
+`src/templates/组件名/api/中间件.js` | 高级 `node server` 中间件 | `https://www.mipgo.org/html/templates/组件名/api/中间件.json`
+
+#### 中间件示例
+
+```js
+module.exports = function (req, res, next) {
+    // req 为 request 请求对象
+    // res 为 response 响应对象
+    // next() 为进入下个路由
+    res.end('ok');
+};
+```
+更多中间件信息请点击 <https://nodejs.org/api/http.html> 获得更多帮助。
+
+#### 注意
+
+1. 开发模板中异步接口链接就写绝对 `https` 的链接，本地开发时会做替换处理。
+1. 异步接口请求只支持在当前模板目录下的 `./api/` 目录，不支持跨模板。
 
 <a id="showcase"></a>
 ### 在官网展示
@@ -188,9 +218,8 @@ git commit 信息和 pull request 标题必须遵循 MIP 项目的 [提交信息
 <a id="pull-request"></a>
 ### 提交请求（pull request）
 
-1. fork [mipengine/page-design](https://github.com/mipengine/page-design)
+1. fork [mipengine/page-design](https://github.com/mipengine/page-design) 。
 1. 把个人仓库（repository）克隆到电脑上，并安装所依赖的插件（ `npm install` ）。
-1. 开始开发，使用 `npm run dev` 空间里预览的效果，开发完成后，需要检查：
-    - 运行 `npm run validator` 确保编译产出成功。
+1. 开始开发，使用 `npm run dev` 命令开发预览，开发完成后，需要运行 `npm run validator` 确认检查 MIP HTML 规范通过。
 1. 推送（push）分支。
 1. 建立一个新的合并申请（pull request）并描述变动。

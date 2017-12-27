@@ -17,6 +17,8 @@
 
 1. 安装 [nodejs](https://nodejs.org/) 版本4+ ，下载项目到本地后安装依赖 `npm install` 。
 1. 运行 `npm run dev` 本地开发调试，将开启 web server 实时预览。
+1. 运行 `npm run validator` 验证开发页面是否符合 [MIP HTML 规范](https://www.mipengine.org/doc/2-tech/1-mip-html.html) 。
+1. 运行 `npm run build` 编译产出 HTML 文件到 `dist` 目录。
 
 更多开发指南请看： [贡献指南](./CONTRIBUTING.md)
 

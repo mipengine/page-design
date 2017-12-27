@@ -1,6 +1,7 @@
 <script src="https://mipcache.bdstatic.com/static/v1/mip.js"></script>
-{{if extensions}}
+
+{{if extensions && extensions.length}}
     {{each extensions}}
-        <script src="https://mipcache.bdstatic.com/static/v1/{{$value}}/{{$value}}.js"></script>
+        {{@$value}}
     {{/each}}
 {{/if}}

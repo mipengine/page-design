@@ -6,13 +6,21 @@
 'use strict';
 
 const gulp = require('gulp');
+const devReplace = require('./dev-replace');
 const artTemplate = require('./art-template');
 const config = require('./config');
 const processor = require('./pre-processor');
 
-gulp.task('build:templates', ['build:templates-static'], () => {
+gulp.task('build:api', () => {
+    return gulp
+        .src(config.src.api)
+        .pipe(gulp.dest(config.dest.api));
+});
+
+gulp.task('build:templates', ['build:templates-static', 'build:api'], () => {
     return gulp
         .src(config.src.templates)
+        .pipe(devReplace())
         .pipe(artTemplate({
             data(file) {
                 return processor(file.path, 'template');
@@ -27,9 +35,10 @@ gulp.task('build:templates-static', () => {
         .pipe(gulp.dest(config.dest.templates));
 });
 
-gulp.task('build:components', ['build:components-static'], () => {
+gulp.task('build:components', ['build:components-static', 'build:api'], () => {
     return gulp
         .src(config.src.components)
+        .pipe(devReplace())
         .pipe(artTemplate({
             data(file) {
                 return processor(file.path, 'component');
