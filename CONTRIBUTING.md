@@ -12,6 +12,7 @@
     - [模板语法](#tpl-syntax)
     - [样式语法](#style-syntax)
     - [配置数据](#json-syntax)
+    - [异步数据](#async-data)
     - [在官网展示](#showcase)
 - [提交信息规范](#commit-message-spec)
 - [提交请求（pull request）](#pull-request)
@@ -140,7 +141,7 @@ $ npm run lint
 
 变量名 | 说明 | 类型 | 默认值
 --- | --- | --- | ---
-extend | 继承的数据文件地址，将按顺序的去合并数据，支持递归依赖 | 数组、字符串 | 
+extend | 继承的数据文件地址，将按顺序的去合并数据，支持递归依赖，使用 [deepmerge](https://www.npmjs.com/package/deepmerge) 处理合并 | 数组、字符串 | -
 extensions | 依赖组件（只写组件名即可） | 数组 | []
 page.title | 页面标题 | 字符串 | Hello World
 page.canonical | 页面 `canonical` 链接 | 字符串 | https://www.mipengine.org
@@ -151,18 +152,19 @@ page.lang | 页面语言 | 字符串 | zh-cn
 1. 如果以上内置变量不能满足需求，可以使用 `{{block 'head'}}{{/block'}}` 来覆盖默认的 `<head>` 标签，甚至你模板内可以自己创建一个主模板（ `layout.tpl` ）。
 1. `extend` 继承数据字段是为了解决一个行业模板内包含了多个页面文件，又存在一些公用的数据字段，可以使用该字段来继承一些公用的数据配置。支持继承多个文件、递归深度继承。
 
+<a id="async-data"></a>
 ### 异步数据
 
-由于丰富的组件、模板可能需要请求后端异步接口，mipgo支持配置 JSON 数据为异步接口，如：
+由于丰富的组件、模板可能需要请求后端异步接口，mipgo支持配置 JSON 静态数据和高级 `node server` 中间件形式的异步接口，如：
 
 文件路径 | 说明 | 对应链接
 --- | --- | ---
-src/templates/模板名/api/接口名称.json | 静态的接口数据 | https://www.mipgo.org/html/templates/模板名/api/接口名称.json
-src/components/组件名/api/接口名称.json | 静态的接口数据 | https://www.mipgo.org/html/components/组件名/api/接口名称.json
-src/templates/模板名/api/中间件.js | 高级 `node server` 中间件 | https://www.mipgo.org/html/templates/模板名/api/中间件.json
-src/templates/组件名/api/中间件.js | 高级 `node server` 中间件 | https://www.mipgo.org/html/templates/组件名/api/中间件.json
+`src/templates/模板名/api/接口名称.json` | 静态的接口数据 | `https://www.mipgo.org/html/templates/模板名/api/接口名称.json`
+`src/components/组件名/api/接口名称.json` | 静态的接口数据 | `https://www.mipgo.org/html/components/组件名/api/接口名称.json`
+`src/templates/模板名/api/中间件.js` | 高级 `node server` 中间件 | `https://www.mipgo.org/html/templates/模板名/api/中间件.json`
+`src/templates/组件名/api/中间件.js` | 高级 `node server` 中间件 | `https://www.mipgo.org/html/templates/组件名/api/中间件.json`
 
-#### 中间件示例
+#### 中间件示例
 
 ```js
 module.exports = function (req, res, next) {
