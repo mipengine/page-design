@@ -164,7 +164,7 @@ page.lang | 页面语言 | 字符串 | zh-cn
 `src/templates/模板名/api/中间件.js` | 高级 `node server` 中间件 | `https://www.mipgo.org/html/templates/模板名/api/中间件.json`
 `src/templates/组件名/api/中间件.js` | 高级 `node server` 中间件 | `https://www.mipgo.org/html/templates/组件名/api/中间件.json`
 
-#### 中间示例
+#### 中间件示例
 
 ```js
 module.exports = function (req, res, next) {
