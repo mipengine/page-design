@@ -151,6 +151,34 @@ page.lang | 页面语言 | 字符串 | zh-cn
 1. 如果以上内置变量不能满足需求，可以使用 `{{block 'head'}}{{/block'}}` 来覆盖默认的 `<head>` 标签，甚至你模板内可以自己创建一个主模板（ `layout.tpl` ）。
 1. `extend` 继承数据字段是为了解决一个行业模板内包含了多个页面文件，又存在一些公用的数据字段，可以使用该字段来继承一些公用的数据配置。支持继承多个文件、递归深度继承。
 
+### 异步数据
+
+由于丰富的组件、模板可能需要请求后端异步接口，mipgo支持配置 JSON 数据为异步接口，如：
+
+文件路径 | 说明 | 对应链接
+--- | --- | ---
+src/templates/模板名/api/接口名称.json | 静态的接口数据 | https://www.mipgo.org/html/templates/模板名/api/接口名称.json
+src/components/组件名/api/接口名称.json | 静态的接口数据 | https://www.mipgo.org/html/components/组件名/api/接口名称.json
+src/templates/模板名/api/中间件.js | 高级 `node server` 中间件 | https://www.mipgo.org/html/templates/模板名/api/中间件.json
+src/templates/组件名/api/中间件.js | 高级 `node server` 中间件 | https://www.mipgo.org/html/templates/组件名/api/中间件.json
+
+#### 中间件示例
+
+```js
+module.exports = function (req, res, next) {
+    // req 为 request 请求对象
+    // res 为 response 响应对象
+    // next() 为进入下个路由
+    res.end('ok');
+};
+```
+更多中间件信息请点击 <https://nodejs.org/api/http.html> 获得更多帮助。
+
+#### 注意
+
+1. 开发模板中异步接口链接就写绝对 `https` 的链接，本地开发时会做替换处理。
+1. 异步接口请求只支持在当前模板目录下的 `./api/` 目录，不支持跨模板。
+
 <a id="showcase"></a>
 ### 在官网展示
 

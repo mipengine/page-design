@@ -5,6 +5,9 @@
 
 'use strict';
 
+const json = require('res-json');
+const api = require('express-api-require');
+const path = require('path');
 const gulp = require('gulp');
 const connect = require('gulp-connect');
 const run = require('run-sequence');
@@ -82,6 +85,14 @@ gulp.task('webserver', () => {
     return connect.server({
         root: config.dest.path,
         port: 8080,
-        livereload: true
+        livereload: true,
+        middleware(connect, opt) {
+            return [
+                json(),
+                api({
+                    root: path.resolve(__dirname, '../dist')
+                })
+            ];
+        }
     });
 });
