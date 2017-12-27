@@ -1,5 +1,5 @@
 {
-    "extensions": ["mip-showmore"],
+    "extensions": ["mip-showmore","mip-audio"],
     "page": {
         "title": "医疗行业新模板",
         "name": "",

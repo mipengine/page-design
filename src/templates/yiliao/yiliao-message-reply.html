@@ -33,15 +33,14 @@
                             <mip-audio
                             src="{{$value.content}}"
                             controls
-                            customControls=".med-mip-audio-controller"
                             layout="container"
                             >
-                                <div class="med-mip-audio-controller mag-gap-top-large">
-                                    {{if $value.user == 'user'}}<span class="med-mip-audio-time font-size-s c-color-gray">{{ $value.time }}</span>{{/if}}
-                                    <div class="mip-audio-play-pause audio-control">
+                                <div class="med-mip-audio-controller mag-gap-top-large" controller>
+                                    {{if $value.user == 'user'}}<span class="med-mip-audio-time font-size-s c-color-gray audio-time-total" total-time></span>{{/if}}
+                                    <div class="mip-audio-play-pause audio-control" play-button>
                                         <span class="med-mip-audio-icon"></span>
                                     </div>
-                                    {{if $value.user == 'doctor'}}<span class="med-mip-audio-time font-size-s c-color-gray">{{ $value.time }}</span>{{/if}}
+                                    {{if $value.user == 'doctor'}}<span class="med-mip-audio-time font-size-s c-color-gray audio-time-total" total-time></span>{{/if}}
                                 </div>
                             </mip-audio>
                     </div>

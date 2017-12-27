@@ -1,4 +1,5 @@
 {
+    "extensions": ["mip-audio"],    
     "extend": [
         "./_common/message_tip.json"
     ],
