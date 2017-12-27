@@ -12,7 +12,7 @@
     - [模板语法](#tpl-syntax)
     - [样式语法](#style-syntax)
     - [配置数据](#json-syntax)
-    - [配置数据](#async-data)
+    - [异步数据](#async-data)
     - [在官网展示](#showcase)
 - [提交信息规范](#commit-message-spec)
 - [提交请求（pull request）](#pull-request)
