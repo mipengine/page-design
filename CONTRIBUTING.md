@@ -171,9 +171,18 @@ module.exports = function (req, res, next) {
     // req 为 request 请求对象
     // res 为 response 响应对象
     // next() 为进入下个路由
+
+    // 输出响应内容
     res.end('ok');
+
+    // 输出 JSON 对象的响应内容
+    res.json({});
+
+    // 输出 JSONP 数据
+    res.jsonp({});
 };
 ```
+
 更多中间件信息请点击 <https://nodejs.org/api/http.html> 获得更多帮助。
 
 #### 注意
