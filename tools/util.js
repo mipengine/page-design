@@ -127,7 +127,7 @@ exports.getExtensionsUrl = arr => {
             if (name.indexOf('mip-') !== 0) {
                 return `<script src="${name}"></script>`;
             }
-            return `<script src="https://mipcache.bdstatic.com/static/v1/${name}/${name}.js"></script>`;
+            return `<script src="https://c.mipcdn.com/static/v1/${name}/${name}.js"></script>`;
         });
 };
 
