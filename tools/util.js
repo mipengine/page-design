@@ -123,7 +123,12 @@ exports.getExtensionsUrl = arr => {
     }
     return arr
         .filter(name => exports.coreExtensions.indexOf(name) === -1)
-        .map(name => `<script src="https://mipcache.bdstatic.com/static/v1/${name}/${name}.js"></script>`);
+        .map(name => {
+            if (name.indexOf('mip-') !== 0) {
+                return `<script src="${name}"></script>`;
+            }
+            return `<script src="https://mipcache.bdstatic.com/static/v1/${name}/${name}.js"></script>`;
+        });
 };
 
 /**
