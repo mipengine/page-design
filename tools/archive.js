@@ -14,8 +14,17 @@ const zip = require('gulp-zip');
 const util = require('./util');
 const config = require('./config');
 
+// 顺序是：先copy一份源->清空里面的api->打包->删除copy的
 gulp.task('build:archive', () => {
-    return run('build:archive-before', 'build:archive-task', 'build:archive-after');
+    return run('build:archive-before', 'build:archive-clean-api', 'build:archive-task', 'build:archive-after');
+});
+
+gulp.task('build:archive-clean-api', () => {
+    return gulp.src(config.src.archive + '/**/api', {
+        read: false
+    }).pipe(clean({
+        force: true
+    }));
 });
 
 gulp.task('build:archive-task', () => {
