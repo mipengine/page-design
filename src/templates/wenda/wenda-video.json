@@ -27,7 +27,7 @@
             "title" : "相关视频",
             "list" : [
                 {
-                    "href" : "/html/templates/yiliao/yiliao-article.html",
+                    "href" : "/html/templates/wenda/wenda-article.html",
                     "hrefTitle" : "testTitle",
                     "imgUrl" : "https://image.39.net/auth/t/213.jpg",
                     "time" : "05:38",
@@ -36,7 +36,7 @@
                     "number" : "2341人评论"
                 },
                 {
-                    "href" : "/html/templates/yiliao/yiliao-article.html",
+                    "href" : "/html/templates/wenda/wenda-article.html",
                     "hrefTitle" : "testTitle",
                     "imgUrl" : "http://pimg.39.net/PictureLib/A/f76/20161215/org_830165.jpg",
                     "time" : "12:03",
@@ -45,7 +45,7 @@
                     "number" : "232人评论"
                 },
                 {
-                    "href" : "/html/templates/yiliao/yiliao-article.html",
+                    "href" : "/html/templates/wenda/wenda-article.html",
                     "hrefTitle" : "testTitle",
                     "imgUrl" : "https://image.39.net/auth/t/10030.jpg",
                     "time" : "15:22",

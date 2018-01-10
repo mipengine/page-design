@@ -15,7 +15,7 @@
 
 
         <mip-showmore maxheight='400' animatetime='.3' id="med-showmore" bottomshadow='1' class="mag-gap-top">
-                
+
         <!-- 循环回答列表 -->
         {{each page.answer.answerList}}
             <div class="med-img-content mag-row mag-line-bottom">
@@ -23,7 +23,7 @@
                     <mip-img class="med-img-content-img" src="{{ $value.imgUrl }}">
                 </div>
                 <div class="mag-span10">
-                    <p class="mag-gap-top-small">{{ $value.name }} {{if $value.tag}}<span class="c-text-box c-text-box-yiliao">{{ $value.tag }} </span>{{/if}}</p>
+                    <p class="mag-gap-top-small">{{ $value.name }} {{if $value.tag}}<span class="c-text-box c-text-box-wenda">{{ $value.tag }} </span>{{/if}}</p>
                     <p class="c-color-gray font-size-xs"><span class="mag-gap-right-small">{{ $value.level }}</span><span>{{ $value.hospital }}</span></p>
                     <p class="mag-gap-top mag-gap-bottom-small mag-line-clamp4">{{ $value.content }}</p>
                     <p class="font-size-s">{{ $value.time }}</p>
@@ -32,7 +32,7 @@
                         <div class="med-question-answer-more mag-gap-top-small">
                             {{each $value.more v}}
                                 <div class="med-question-answeru-user mag-gap-bottom">
-                                    
+
                                     {{if v.role == 'user'}}
                                         <p class="mag-gap-bottom-small med-question-user-color">患者追问：</p>
                                     {{else if v.role == 'doctor'}}
@@ -51,7 +51,7 @@
         <div on="tap:med-showmore.toggle" data-closeclass="mip-showmore-open" data-closetext="收起" class="med-showmore-btn">
             <span class="show">收起</span>
             <span class="hidden">展开</span>
-        </div>        
+        </div>
     </div>
 </div>
 {{/block}}
