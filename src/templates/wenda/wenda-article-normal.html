@@ -1,0 +1,20 @@
+{{extend '../../base/templates.html'}}
+
+
+{{block 'content'}}
+
+<div class="mag-container">
+    {{include './_common/article_title_big.html'}}
+    {{include './_common/article_info.html'}}
+
+    <!--自定义html标签内容-->
+    <div class="article-main-content c-color mag-gap-top-large">
+                    
+    {{@page.htmlContent}}
+    </div>
+
+    <mip-fixed type="bottom" class="med-ask-btn">
+        {{ page.button }}
+    </mip-fixed>
+</div>
+{{/block}}

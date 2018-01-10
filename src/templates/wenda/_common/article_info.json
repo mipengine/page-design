@@ -1,0 +1,12 @@
+{
+    "articleInfo": {
+        "img": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
+        "name": "于雷",
+        "level": "主治医师",
+        "hospital": "北大口腔医院",
+        "isMarginTop": "20px",
+        "isMarginBottom": "10px",
+        "isLink": true,
+        "linkUrl": "www.baidu.com"
+    }
+}

@@ -1,0 +1,96 @@
+{
+    "extend": [
+        "./_common/article_title_big.json"
+    ],
+    "page": {
+        "title": "医疗行业新模板",
+        "questionInfo" : {
+            "title" : "烫伤了怎么办？",
+            "time" : "2017-09-21",
+            "views" : "2342人阅读",
+            "content" : "我老婆的手在今天早上烧开水的时候不小心被蒸汽烫伤了，当时烫伤的时候，老婆立刻就把手用自来水冲洗了，可是现在还是会红肿得厉害，而且还会有一些小水泡，我不敢给老婆擦什么药啊，怕会刺激伤口。",
+            "clamp" : 4
+        },
+        "answer" : {
+            "title" : "医生回答",  
+            "number" : "5",      
+            "showall" : "0",     
+            "answerList" : [
+                {  
+                    "articleInfo": {
+                        "img": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
+                        "name": "马玉敏",
+                        "level": "主治医师",
+                        "hospital": "北京积水潭医院",
+                        "isMarginTop": "20px",
+                        "isMarginBottom": "10px",
+                        "isLink": true,
+                        "linkUrl": "www.baidu.com"
+                    },
+                    "time" : "2017-09-21",
+                    "content" : "病情分析：开水或蒸汽烫伤应尽快将患部浸入凉水中，或用自来水流水冲洗，以促使局部散热，防止起水泡。如果起泡，小泡可以不做任何处理；对黄豆大小的水泡，如果创面也比较浅，可以用消毒剪刀剪开水泡，用消毒棉球或纱布蘸干后，涂点紫草油或紫花膏即可。为避免感染，最好还是到医院做进一步治疗",
+                    "more" : [
+                        {   
+                            "role" : "user",
+                            "time" : "2017-09-22",
+                            "content" : "现在还很痛怎么办，自己擦药吗，还是去医院"
+                        },
+                        {
+                            "role" : "doctor",
+                            "time" : "2017-09-22",
+                            "content" : "如果是轻微烫伤，没有起包，可以自己处理，如果比较严重或者自己难受赶紧去医院检查并进行处理。"
+                        },
+                        {
+                            "role" : "user",
+                            "time" : "2017-09-22",
+                            "content" : "好的，谢谢，我去医院了。"
+                        }
+                    ]
+                },
+                {
+                    "articleInfo": {
+                        "img": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
+                        "name": "于珊珊",
+                        "level": "主治医师",
+                        "hospital": "北京人民医院",
+                        "isMarginTop": "20px",
+                        "isMarginBottom": "10px",
+                        "isLink": true,
+                        "linkUrl": "www.baidu.com"
+                    },
+                    "time" : "2017-09-21",
+                    "content" : "你好根据身体，烫伤后，及时通过自来水降温处理以后，及时通过，烫伤药物进行局部治疗，积极控制感染，日常生活，避免辛辣刺激性食物，定期换药"
+                },
+                {   
+                    "articleInfo": {
+                        "img": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
+                        "name": "李四",
+                        "level": "主治医师",
+                        "hospital": "北京大学口腔医院",
+                        "isMarginTop": "20px",
+                        "isMarginBottom": "10px",
+                        "isLink": true,
+                        "linkUrl": "www.baidu.com"
+                    },
+                    "time" : "2017-09-21",
+                    "content" : "使用高浓度的果酸进行皮肤角质的剥离作用，促使老化角质层脱落，加速角质细胞及少部分上层表皮细胞的更新速度，促进真皮层内弹性纤维增生，对浅层痘疤有较好疗效，也能改善毛孔粗大，但需经多次疗程治疗后才能消除痘疤，但优点是安全，副作用小"
+                },
+                {   
+                    "articleInfo": {
+                        "img": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
+                        "name": "张三",
+                        "level": "教授",
+                        "hospital": "北京大学第三医院",
+                        "isMarginTop": "20px",
+                        "isMarginBottom": "10px",
+                        "isLink": true,
+                        "linkUrl": "www.baidu.com"
+                    },
+                    "time" : "2017-09-21",
+                    "content" : "你好，烧烫伤按深度，一般分为三度：1．一度烧烫伤：只伤及表皮层，受伤的皮肤发红、肿胀，觉得火辣辣地痛，但无水泡出现。2．二度烧烫伤：伤及真皮层，局部红肿、发热，疼痛难忍，有明显水泡。3．三度烧烫伤：全层皮肤包括皮肤下面的脂肪、骨和肌肉都受到仿害，皮肤焦黑、坏死，这时反而疼痛不剧烈，因为许多神经也都一起被损坏了指导意见"
+                }
+            ]
+
+        }
+    }
+}
