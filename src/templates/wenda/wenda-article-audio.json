@@ -1,0 +1,39 @@
+{
+    "extensions": ["mip-showmore","mip-audio"],
+    "page": {
+        "title": "医疗行业新模板",
+        "name": "",
+        "articleTitle": "心脏病吃什么比较好",
+        "articleTime": "2017-11-08",
+        "articleViews": "2345人阅读",
+        "authorDetail": {
+            "img": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
+            "name": "于雷",
+            "level": "主治医师",
+            "hospital": "北大口腔医院"
+        },
+        "htmlContent": "患有感冒可以用自助情治疗的话，在不发烧的情况下最好的方法就是喝橙汁（最好自己买橙子自己榨汁，主要是为了补充维生素c），卧床休息是最好的办法，吃药只能缓解下症状，但如果用药不当有时并不能治愈。结合卧床休息，多喝温开水（多喝温开水，可以减轻症状，缩短病程，在一定程度上有助于退烧）。",
+        "maxHeight": "250",
+        "tags": ["感冒", "发烧", "鼻涕"],
+        "button":"快速咨询",
+        "audio": {
+            "src": "https://mip-doc.bj.bcebos.com/guitar.mp3",
+            "text": "点击播放医生的语音回答"
+        }
+    },
+    "articleInfo": {
+        "img": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
+        "name": "张斌",
+        "level": "主治医师",
+        "hospital": "北京大学第三医院",
+        "isMarginTop": "20px",
+        "isMarginBottom": "20px",
+        "isLink": true,
+        "linkUrl": "www.baidu.com"
+    },
+    "article_title": {
+        "title" : "感冒怎么办？",
+        "time" : "2017-10-08",
+        "views" : "8909人阅读"
+    }
+}

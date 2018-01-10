@@ -1,0 +1,53 @@
+{{extend '../../base/templates.html'}} 
+
+{{block 'content'}}
+<div class="mag-container">
+    <!-- 问题信息 -->
+    <div class="med-question-base">
+        {{include './_common/article_title_big.html'}}
+        <div class="med-line-height28 c-color font-size-m mag-gap-top-large mag-gap-bottom mag-line-clamp{{ page.questionInfo.clamp }}">{{ page.questionInfo.content }}</div>
+    </div>
+
+    <!-- 回答信息 -->
+    <div class="med-question-answer">
+        <!--标题参数：title名称,number数量-->
+        <h4 class="mag-gap-top-large med-normal-title">{{ page.answer.title }}
+            <span>{{ if page.answer.number > 0}} ({{ page.answer.number }}) {{/if}}</span>
+        </h4>
+
+        <!-- 循环回答列表 -->
+        <div class="med-margin-reduce">
+        {{each page.answer.answerList}}
+        <div class="mag-line-bottom mag-gap-top">
+            {{include './_common/article_info.html' $value}}
+
+            <div class="mag-design-row mag-gap-bottom-large">
+                <div class="mag-span11 med-question-margin-left">
+                    <p class="med-line-height28 mag-gap-bottom-small mag-line-clamp4 c-color">{{ $value.content }}</p>
+                    <p class="font-size-s c-color-gray mag-gap-bottom">{{ $value.time }}</p>
+
+                    <!--追问-->
+                    {{if $value.more}}
+                    <div class="med-question-answer-more mag-gap-top-small c-color">
+                        {{each $value.more v}}
+                        <div class="med-question-answer-user mag-gap-bottom-large">
+
+                            {{if v.role == 'user'}}
+                            <p class="med-question-user-color font-size-s">患者追问：</p>
+                            {{else if v.role == 'doctor'}}
+                            <p class="med-question-doctor-color font-size-s c-color">医生答复：</p>
+                            {{/if}}
+                            <p class="mag-gap-bottom-small font-size-s">{{ v.content }}</p>
+                            <p class="c-color-gray font-size-s">{{ v.time }}</p>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        </div>
+    </div>
+</div>
+{{/block}}

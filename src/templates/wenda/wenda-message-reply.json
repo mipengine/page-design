@@ -1,0 +1,68 @@
+{
+    "extensions": ["mip-showmore","mip-audio"],
+    "extend": [
+        "./_common/message_tip.json"
+    ],
+    "message": {
+        "tips": {
+            "text" : "医生回复仅为建议，进一步确诊请到线下医院",
+            "name" : "2017-08-9",
+            "views" : "2341人已阅读"
+        },
+        "messageList" : [
+            {
+                "type": "text",
+                "user": "user",
+                "content": "最近身体不太好，晚上经常浅睡眠，早上起来头晕乎乎的，没什么精神，我是不是生病了？好难受",
+                "avatar": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg"
+            },
+            {
+                "type": "pic",
+                "user": "user",
+                "content": "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1252971286,2630212558&fm=58&s=1436E5370730739452F4ACFC03009021&w=352&h=235&img.PNG",
+                "avatar": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg"
+            },
+            {
+                "type": "audio",
+                "user": "user",
+                "content": "https://mip-doc.bj.bcebos.com/guitar.mp3",
+                "avatar": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
+                "time": "9'"
+            },
+            {
+                "type": "audio",
+                "user": "doctor",
+                "content": "https://mip-doc.bj.bcebos.com/guitar.mp3",
+                "avatar": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
+                "time": "10'"
+            },
+            {
+                "type": "text",
+                "user": "doctor",
+                "content": "持续多长时间了，经常这样吗？",
+                "avatar": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg"
+            },
+            {
+                "type": "text",
+                "user": "doctor",
+                "content": "生活中注意早中晚三餐规律饮食，特别是早餐不能少，每天工作需要适当休息，中午午休15分钟左右能够很好的调节你的疲劳感...",
+                "avatar": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg"
+            },
+            {
+                "type": "text",
+                "user": "doctor",
+                "content": "每天晚上睡觉前半个小时喝一杯热牛奶，泡个热水脚，暖暖身子，有助于睡眠，睡觉前可以听听舒缓的音乐，定时关闭音乐，有利于促进睡眠。",
+                "avatar": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg"
+            }
+        ]
+    },
+    "button":"快速咨询",
+    "page":{
+        "showmore":{
+            "show": "展开",
+            "hidden": "收起"
+        },
+        "maxHeight": 400
+    }
+
+}

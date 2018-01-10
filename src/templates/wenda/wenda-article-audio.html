@@ -1,0 +1,40 @@
+{{extend '../../base/templates.html'}}
+
+{{block 'content'}}
+<div class="mag-container">
+    {{include './_common/article_title_big.html'}}
+    {{include './_common/article_info.html'}}
+
+    <mip-audio
+        src="{{ page.audio.src }}"
+        controls
+        layout="container"
+    >
+        <div class="audio-player" controller >
+        <div class="audio-control" play-button>
+            <i class="mag-icon mag-icon-voice"></i>
+        </div>
+        <div class="audio-body">
+            <div class="audio-title">{{ page.audio.text }}</div>
+                <div seekbar class="audio-seekbar">
+                    <div seekbar-fill class="audio-seekbar-fill"></div>
+                    <div seekbar-button class="hidden"></div>
+                </div>
+            <div class="audio-progress">
+                <div current-time class="audio-time-current">00:00</div>
+                <div total-time class="audio-time-total">--:--</div>
+            </div>
+        </div>
+        </div>
+    </mip-audio>
+
+    <!--自定义html标签内容-->
+    <div class="article-main-content c-color mag-gap-top-large font-size-m med-line-height26">            
+        {{@page.htmlContent}}
+    </div>
+    
+    <mip-fixed type="bottom" class="med-ask-btn">
+        {{ page.button }}
+    </mip-fixed>
+</div>
+{{/block}}
