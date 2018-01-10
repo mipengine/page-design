@@ -1,0 +1,11 @@
+{
+    "extend": "./_inc/json/base.json",
+    "header": {
+        "title": "小说分类",
+        "share": null,
+        "search": null
+    },
+    "page": {
+        "title": "小说分类_小说网"
+    }
+}

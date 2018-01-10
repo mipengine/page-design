@@ -1,0 +1,14 @@
+{
+    "extend": "./_inc/json/base.json",
+    "header": {
+        "title": "神武天帝",
+        "share": true,
+        "search": null
+    },
+    "page": {
+        "title": "第1章灵魂重生_神武天帝_小说网"
+    },
+    "extensions": [
+        "mip-xiaoshuo-read"
+    ]
+}

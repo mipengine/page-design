@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang || 'zh-cn' }}" mip>
+{{block 'head'}}{{include '../../../../base/inc/head.html'}}{{/block}}
+{{block 'bodyprefix'}}
+<body>
+{{/block}}
+    {{block 'header'}}{{include './header.html'}}{{/block}}
+    <div id="main">{{block 'content'}}{{/block}}</div>
+    {{block 'footer'}}{{include './footer.html'}}{{/block}}
+    {{block 'scripts'}}{{include '../../../../base/inc/scripts.html'}}{{/block}}
+{{block 'bodysuffix'}}
+</body>
+{{/block}}
+</html>
