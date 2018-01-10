@@ -9,7 +9,7 @@ module.exports = {
     src: {
         path: '../src',
         match: '../src/**/*',
-        api: process.env.NODE_ENV === 'development' ? '../src/**/api/**/*.{json,js}' : '../src/**/api/**/*.json',
+        api: '../src/**/api/**/*.{json,js}',
         templates: [
             '../src/templates/*/*.html',
             '!../**/*/_*',
