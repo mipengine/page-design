@@ -16,6 +16,7 @@
     - [在官网展示](#showcase)
 - [提交信息规范](#commit-message-spec)
 - [提交请求（pull request）](#pull-request)
+- [线上运行环境](#online)
 
 <a id="issue"></a>
 ## 问题反馈
@@ -225,10 +226,29 @@ git commit 信息和 pull request 标题必须遵循 MIP 项目的 [提交信息
 
 
 <a id="pull-request"></a>
-### 提交请求（pull request）
+## 提交请求（pull request）
 
 1. fork [mipengine/page-design](https://github.com/mipengine/page-design) 。
 1. 把个人仓库（repository）克隆到电脑上，并安装所依赖的插件（ `npm install` ）。
 1. 开始开发，使用 `npm run dev` 命令开发预览，开发完成后，需要运行 `npm run validator` 确认检查 MIP HTML 规范通过。
 1. 推送（push）分支。
 1. 建立一个新的合并申请（pull request）并描述变动。
+
+<a id="online"></a>
+## 线上运行环境
+
+由于有后端接口服务，线上运行依赖 [nodejs](https://nodejs.org/) 版本4+ 。
+
+```bash
+# 编译产出线上运行文件 dist
+npm run build
+
+# 进入目录
+cd dist
+
+# 安装依赖
+npm install
+
+# 运行 nodejs 服务
+npm start
+```
