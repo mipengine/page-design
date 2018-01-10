@@ -1,7 +1,7 @@
 {{extend './_inc/template/layout.html'}}
 
 {{block 'content'}}
-    <mip-xiaoshuo-read>
+    <mip-xiaoshuo-read class="read">
         <div content>
             <h3>第1章 灵魂重生</h3>
             <p>“贱人，你竟敢背叛我！”</p>
@@ -72,15 +72,35 @@
 
         <div class="mip-xiaoshuo-read-control" control>
             <div class="mip-xiaoshuo-read-control-page">
-                <a href="#" class="mip-xiaoshuo-read-prev disabled">上一章</a>
-                <a href="#" class="mip-xiaoshuo-read-next">下一章</a>
+                <a href="#" class="mip-xiaoshuo-read-prev disabled"><i class="mag-icon mag-gap-right-small mag-icon-back"></i>上一章</a>
+                <a href="read.html" class="mip-xiaoshuo-read-next">下一章<i class="mag-icon mag-gap-left-small mag-icon-more"></i></a>
             </div>
             <div class="mip-xiaoshuo-read-control-nav">
                 <ul>
-                    <li><a href="#">目录</a></li>
-                    <li><span mode-default>日间模式</span></a></li>
-                    <li><span mode-night>夜间模式</span></a></li>
-                    <li><span settings>设置</span></li>
+                    <li>
+                        <a href="catalog.html">
+                            <i class="iconfont">&#xe66a;</i>
+                            <p class="mag-gap-top-small">目录</p>
+                        </a>
+                    </li>
+                    <li mode-default>
+                        <div>
+                            <i class="iconfont">&#xe662;</i>
+                            <p class="mag-gap-top-small">日间模式</p>
+                        </div>
+                    </li>
+                    <li mode-night>
+                        <div>
+                            <i class="iconfont">&#xe662;</i>
+                            <p class="mag-gap-top-small">夜间模式</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div settings>
+                            <i class="iconfont">&#xe669;</i>
+                            <p class="mag-gap-top-small">设置</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
