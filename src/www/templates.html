@@ -19,7 +19,7 @@
                         <div class="template-descripe">{{ $value.descriptions }}</div>
                         <mip-img class="template-img" src="/html/{{ $value.img }}" width="440" height="783"></mip-img>
                         <div class="template-control">
-                            <a class="rounded tag" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'preview', $value.name) }}" href="{{ $value.url }}"  data-type="mip" target="_blank">预览</a>
+                            <a class="rounded tag" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'preview', $value.name) }}" href="/html/{{ $value.url }}"  data-type="mip" target="_blank">预览</a>
                             <a class="rounded tag" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'down', $value.name) }}" href="/archive/{{ $value.name }}.zip">下载</a>
                         </div>
                     </dd>
@@ -42,6 +42,6 @@
         <div class="template-preview-mask-main">
             <iframe src="https://www.mipengine.org/" width="100%" height="100%"></iframe>
         </div>
-    </div>    
+    </div>
 </div> -->
 {{/block}}
