@@ -1,30 +1,47 @@
 {{extend './_inc/layout.html'}}
 
 {{block 'content'}}
-<div class="templates">
-    <h1>模板列表</h1>
-
-    <div class="templates-list">
-        <dl>
+<div class="mag-row template-content">
+    <div class="template-nav">
+        <ul>
             {{each templatesList}}
-                <dt><h2>#{{ $index + 1 }} {{ $value.title }}</h2></dt>
-                <dd>
-                    {{each $value.templates $val}}
-                        <ul>
-                            <li>名称：{{ $val.title }}</li>
-                            <li>描述：{{ $val.descriptions }}</li>
-                            <li>
-                                <mip-img src="/html/{{ $val.img }}" width="200" height="300"></mip-img>
-                            </li>
-                            <li>
-                                <a data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'preview', $val.name) }}" href="/html/{{ $val.url }}" data-type="mip" target="_blank">预览</a>
-                            </li>
-                            <li><a data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'down', $val.name) }}" href="/archive/{{ $val.name }}.zip">下载</a></li>
-                        </ul>
-                    {{/each}}
-                </dd>
+                <li><a href="#{{ $value.name }}">{{ $value.title }}</a></li>
             {{/each}}
-        </dl>
+        </ul>
+    </div>
+    <div class="templates">
+        <!-- <h1>模板列表</h1> -->
+        <div class="templates-list">
+            <dl>
+                {{each templatesList}}
+                    <dt><h2 id="{{ $value.name }}">{{ $value.title }}</h2></dt>
+                    <dd>
+                        <div class="template-descripe">{{ $value.descriptions }}</div>
+                        <mip-img class="template-img" src="/html/{{ $value.img }}" width="440" height="783"></mip-img>
+                        <div class="template-control">
+                            <a class="rounded tag" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'preview', $value.name) }}" href="{{ $value.url }}"  data-type="mip" target="_blank">预览</a>
+                            <a class="rounded tag" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'down', $value.name) }}" href="/archive/{{ $value.name }}.zip">下载</a>
+                        </div>
+                    </dd>
+                {{/each}}
+            </dl>
+        </div>
     </div>
 </div>
+<!-- <div class="template-preview">
+    <div class="template-preview-control">
+        <div class="mag-row template-preview-control-main">
+            <span class="preview-label">预览</span>
+            <div>
+                <a class="rounded tag" href="">下载</a>
+                <a href="javascript:void(0);" onclick="javascript:document.querySelector('.template-preview').style.display='none';">X</a>
+            </div>
+        </div>
+    </div>
+    <div class="template-preview-mask" onclick="javascript:document.querySelector('.template-preview').style.display='none';">
+        <div class="template-preview-mask-main">
+            <iframe src="https://www.mipengine.org/" width="100%" height="100%"></iframe>
+        </div>
+    </div>    
+</div> -->
 {{/block}}

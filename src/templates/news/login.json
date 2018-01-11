@@ -1,0 +1,9 @@
+ {
+    "extend": "./blog.json",
+    "extensions": [
+        "mip-form"
+    ],
+    "page": {
+        "title": "登录 - 博客模板"
+    }
+}

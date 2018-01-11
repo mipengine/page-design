@@ -1,5 +1,5 @@
 .header
-    background-color #0c1a44
+    background-color #000
     position relative
     z-index 1000
     padding 0 10px
@@ -8,9 +8,9 @@
     list-style none
 
 .header-inner
-    max-width 1000px
+    width 1110px
     margin 0 auto
-    padding 10px 0
+    /*padding 10px 0*/
 
 .header-flex
     display flex
@@ -23,42 +23,55 @@
 
 .header-logo
     box-flex 1
-    flex 0 42px
+    flex 0 50%
+    line-height 57px
 
 .header-logo a
-    display block
-    overflow hidden
-    width 81px
-    height 42px
+    text-align center
     white-space nowrap
-    font-size 0
     cursor pointer
-    background url(./img/logo-white.png)
-    background-size 100% 100%
+    text-transform uppercase
+    color #fff
+    font-size 27px
+    font-weight bold
 
 .header-nav
     font-size 14px
-    line-height 50px
     display none
-    padding-left 20px
     box-flex 1
-    flex 1 auto
-    text-align right
+    flex 1 40%
+    text-align left
+    line-height 57px
 
 .header-nav-list > li
     position relative
     display inline-block
-    padding 0 10px
+    padding-left 60px
 
 .header-nav-list > li > a
     position relative
     display block
     text-decoration none
-    color rgba(255, 255, 255, 0.8)
-    padding 0 5px
+    font-size 16px
+    color rgba(255, 255, 255, 0.7)
 
-.header-nav-list > li > a:hover,
+.header-nav-list > li > a:hover
+    color #fff
+
 .header-nav-list > li > .current
+    border-bottom 3px solid #fff
+
+.right-nav
+    line-height 60px
+    box-flex 1
+    flex 1 10%
+    text-align right
+
+.right-nav > a
+    color rgba(255, 255, 255, 0.7)
+    font-size 16px
+
+.right-nav > a:hover
     color #fff
 
 @media screen and (min-width: 767px)
@@ -102,11 +115,5 @@
     .header-mobile-nav-toggle span:nth-child(3)
         top 18px
 
-    .header-logo a
-        width 68px
-        height 33px
-
-    .header-inner
-        padding 5px 0
 
 

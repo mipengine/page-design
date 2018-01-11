@@ -13,12 +13,11 @@
             "url": "/components.html"
         },
         {
-            "text": "关于",
+            "text": "使用指南",
             "url": "/about.html"
-        },
-        {
-            "text": "Github",
-            "url": "https://github.com/xuexb"
         }
+    ],
+    "extensions": [
+        "mip-sidebar"
     ]
 }
