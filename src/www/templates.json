@@ -10,8 +10,8 @@
             "title": "小说",
             "name": "xiaoshuo",
             "descriptions": "小说类型模板，给小说站点带来NA化的体验。",
-            "url": "templates/xiaoshuo-zongheng/xiaoshuo-zongheng.html",
-            "img": "templates/xiaoshuo-zongheng/img/logo.png"
+            "url": "templates/xiaoshuo/xiaoshuo.html",
+            "img": "templates/xiaoshuo/img/logo.jpg"
         },
         {
             "title": "新闻",
