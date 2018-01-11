@@ -8,6 +8,8 @@
     "componentsList": [
         {
             "title": "按钮",
+            "name": "button",
+            "descriptions": "左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文",
             "components": [
                 {
                     "iframe": {
@@ -31,7 +33,9 @@
         },
 
         {
-            "title": "表单元素",
+            "title": "列表行",
+            "name": "list",
+            "descriptions": "列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行",
             "components": [
                 {
                     "iframe": {

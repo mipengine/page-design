@@ -7,28 +7,18 @@
     },
     "templatesList": [
         {
-            "title": "博客",
-            "templates": [
-                {
-                    "name": "blog",
-                    "title": "前端小武博客",
-                    "descriptions": "我是前端小武，曾用名谢亮，91年（阳历）后... 目前任职于某公司，住在北京昌平史各庄，常活跃于海淀西二旗。",
-                    "url": "templates/blog/blog.html",
-                    "img": "templates/blog/img/logo.png"
-                }
-            ]
+            "title": "小说",
+            "name": "xiaoshuo",
+            "descriptions": "小说类型模板，给小说站点带来NA化的体验。",
+            "url": "templates/xiaoshuo-zongheng/xiaoshuo-zongheng.html",
+            "img": "templates/xiaoshuo-zongheng/img/logo.png"
         },
         {
-            "title": "小说",
-            "templates": [
-                {
-                    "name": "xiaoshuo-zongheng",
-                    "title": "纵横中文网",
-                    "descriptions": "纵横中文网,最热门的免费小说网站,提供玄幻小说、网游小说、言情小说、穿越小说、都市小说等免费小说在线阅读与下载。大神作品齐聚纵横,最新章节每日更新。",
-                    "url": "templates/xiaoshuo-zongheng/xiaoshuo-zongheng.html",
-                    "img": "templates/xiaoshuo-zongheng/img/logo.png"
-                }
-            ]
+            "title": "新闻",
+            "name": "news",
+            "descriptions": "简洁的新闻模板，适合于图文为主的站点风格。",
+            "url": "templates/news/news.html",
+            "img": "templates/news/img/logo.png"
         }
     ]
 }

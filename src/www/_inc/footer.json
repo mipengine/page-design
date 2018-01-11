@@ -1,0 +1,20 @@
+{
+    "linkList": [
+        {
+            "title": "主页",
+            "url": "/"
+        },
+        {
+            "title": "模板",
+            "url": "/templates.html"
+        },
+        {
+            "title": "组件",
+            "url": "/components.html"
+        },
+        {
+            "title": "关于",
+            "url": "/about.html"
+        }
+    ]
+}
