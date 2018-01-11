@@ -1,0 +1,7 @@
+{
+    "extend": [
+        "./header.json",
+        "./footer.json"
+    ],
+    "name": "小说网"
+}

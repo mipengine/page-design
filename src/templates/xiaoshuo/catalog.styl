@@ -1,0 +1,51 @@
+@import './_inc/styl/base.styl'
+
+.catalog-title
+    .mag-span6
+        &:last-child
+            text-align right
+
+.catalog-order
+    padding-left 25px
+    background url(./img/order.svg) no-repeat left center
+    background-size 20px
+
+.catalog-menu
+    position relative
+    background-color #fff
+    select
+        word-break normal
+        word-wrap normal
+        position relative
+        -webkit-appearance none
+        appearance none
+        display inline-block
+        padding 0 .24rem 0 .08rem
+        width 100%
+        height .38rem
+        vertical-align middle
+        line-height normal
+        font-size .14rem
+        color #000
+        background-color transparent
+        border 1px solid #eee
+        border-radius 0
+        overflow hidden
+        outline none
+
+.catalog-list
+    ul
+        list-style none
+    li
+        border-bottom 1px solid #f1f1f1
+        line-height 30px
+    a
+        display block
+
+.catalog-page
+    .mag-span6
+        &:last-child
+            text-align right
+    .disabled
+        color #a0a0a0
+        cursor not-allowed

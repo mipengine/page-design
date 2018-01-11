@@ -1,0 +1,31 @@
+@import './variables.styl'
+
+#header
+    border-bottom 1px solid #f1f1f1
+    height header-hegiht
+    line-height header-hegiht
+    padding-left margin-left
+    padding-right margin-right
+    .left, .right
+        position absolute
+        top 0
+        z-index 10
+    .left
+        left margin-left
+        text-align left
+    .right
+        right margin-right
+        text-align right
+    a
+        width 22px
+        height header-hegiht
+        line-height header-hegiht
+        color #333
+    h4
+        margin 0
+        padding 0 50px
+        text-align center
+
+.header-mybook
+    background url(./img/mybook.svg) no-repeat center center
+    background-size contain

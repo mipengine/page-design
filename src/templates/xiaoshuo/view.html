@@ -1,0 +1,117 @@
+{{extend './_inc/template/layout.html'}}
+
+{{block 'content'}}
+    <div class="mag-container detail-info">
+        <div class="mag-row">
+            <div class="mag-span4">
+                <mip-img width="271" height="362" layout="responsive" src="./img/jiangye.png"></mip-img>
+            </div>
+            <div class="mag-span8">
+                <p class="mag-line-clamp1">作者：心梦无痕</p>
+                <p class="mag-line-clamp1 mag-gap-top-small">分类：东方玄幻</p>
+                <p class="mag-line-clamp1 mag-gap-top-small">状态：连载中</p>
+                <p class="mag-line-clamp1 mag-gap-top-small">最新章节：灭晋云翼</p>
+                <p class="mag-line-clamp1 mag-gap-top-small">更新时间：2017年12月27日</p>
+            </div>
+        </div>
+
+        <div class="mag-row mag-gap-top-large">
+            <div class="mag-span4"><a href="read.html" class="btn btn-block btn-outline mag-btn-black">立即阅读</a></div>
+            <div class="mag-span4"><a href="catalog.html" class="btn btn-block btn-outline mag-btn-black">查看目录</a></div>
+            <div class="mag-span4"><a href="mybook.html" class="btn btn-block btn-outline mag-btn-black">加入书架</a></div>
+        </div>
+    </div>
+
+    <div class="mag-container detail-desc">
+        <h4>内容简介</h4>
+        <div class="detail-desc-inner mag-gap-top-small">
+            <mip-showmore maxheight='68' animatetime='.3' id="detail-desc">
+                <div>陆宇，神武天域最传奇的圣魂天师，却被妻子与兄弟联手暗害，重生到数百年后的同名少年身上。重活一世，陆宇立志要手刃那对狗男女，以武逆天，重回天域，融炼万法，称尊天地！《神武天帝》作者：心梦无痕</div>
+            </mip-showmore>
+            <div class="detail-desc-btn">
+                <span on="tap:detail-desc.toggle" data-closeclass="mip-xiaoshuo-view-open">
+                    <span>收起<i class="mag-icon mag-icon-collapse mag-gap-left-small"></i></span>
+                    <span>展开<i class="mag-icon mag-icon-expand mag-gap-left-small"></i></span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="mag-container detail-catalog">
+        <h4>最近更新</h4>
+        <ul class="mag-row-bottom">
+            <li>
+                <a href="read.html" class="mag-block">
+                    <div class="mag-gap-top mag-gap-bottom mag-flexbox">
+                        <p class="mag-line-clamp1">第1176章 灭晋云翼灭晋云翼灭晋云翼灭晋云翼</p>
+                        <span class="mag-line-clamp1">9天前</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="read.html" class="mag-block">
+                    <div class="mag-gap-top mag-gap-bottom mag-flexbox">
+                        <p class="mag-line-clamp1">第1176章 灭晋云翼</p>
+                        <span class="mag-line-clamp1">9天前</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mag-container detail-comment">
+        <div class="mag-row">
+            <div class="mag-span8">
+                <h4>评论</h4>
+            </div>
+            <div class="mag-span4">
+                <a href="#" class="mag-text-right mag-block">
+                    <i class="mag-icon mag-icon-more"></i>
+                </a>
+            </div>
+        </div>
+
+        <ul>
+            <li>
+                <div class="mag-gap-top mag-gap-bottom">
+                    ing
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mag-container">
+        <div class="mag-row">
+            <div class="mag-span8">
+                <h4>书籍推荐</h4>
+            </div>
+            <div class="mag-span4">
+                <a href="list.html" class="mag-text-right mag-block">
+                    <i class="mag-icon mag-icon-more"></i>
+                </a>
+            </div>
+        </div>
+        <div class="booklist-inner">
+            <div class="mag-row mag-gap-top">
+                <div class="mag-span4">
+                    <a href="view.html" class="mag-block">
+                        <mip-img width="271" height="362" layout="responsive" src="./img/morizhizishu.png" alt="末日之子书"></mip-img>
+                        <p class="mag-line-clamp1 mag-gap-top-small">末日之子书</p>
+                    </a>
+                </div>
+                <div class="mag-span4">
+                    <a href="view.html" class="mag-block">
+                        <mip-img width="271" height="362" layout="responsive" src="./img/titianxingdao.png" alt="替天行盗"></mip-img>
+                        <p class="mag-line-clamp1 mag-gap-top-small">替天行盗</p>
+                    </a>
+                </div>
+                <div class="mag-span4">
+                    <a href="view.html" class="mag-block">
+                        <mip-img width="271" height="362" layout="responsive" src="./img/wuhengtiandi.png" alt="武横天地"></mip-img>
+                        <p class="mag-line-clamp1 mag-gap-top-small">武横天地</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/block}}

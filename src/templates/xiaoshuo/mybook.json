@@ -1,0 +1,11 @@
+{
+    "extend": [
+        "./_inc/json/base.json"
+    ],
+    "header": {
+        "title": "我的书架"
+    },
+    "page": {
+        "title": "我的书架_小说网"
+    }
+}

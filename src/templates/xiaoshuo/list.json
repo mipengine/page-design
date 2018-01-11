@@ -1,0 +1,15 @@
+{
+    "extend": "./_inc/json/base.json",
+    "header": {
+        "title": "玄幻",
+        "share": null,
+        "search": null
+    },
+    "page": {
+        "title": "玄幻小说排行榜_小说网"
+    },
+    "extensions": [
+        "mip-infinitescroll",
+        "mip-mustache"
+    ]
+}

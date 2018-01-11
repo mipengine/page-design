@@ -1,0 +1,19 @@
+<header id="header">
+    <div class="left">
+        {{if header.back}}
+            <a href="{{ header.back }}"><i class="mag-icon mag-icon-back"></i></a>
+        {{/if}}
+    </div>
+    <h4 class="mag-line-clamp1">{{ header.title || '小说' }}</h4>
+    <div class="right">
+        {{if header.search}}
+            <a href="{{ header.search }}"><i class="mag-icon mag-icon-search"></i></a>
+        {{/if}}
+        {{if header.share}}
+            <a href="#"><i class="mag-icon mag-icon-share"></i></a>
+        {{/if}}
+        {{if header.mybook}}
+            <a href="{{ header.mybook }}"><i class="iconfont">&#xe65f;</i></a>
+        {{/if}}
+    </div>
+</header>

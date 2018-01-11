@@ -1,0 +1,14 @@
+{
+    "extend": [
+        "./_inc/json/base.json"
+    ],
+    "header": {
+        "share": null,
+        "title": "小说网",
+        "search": null,
+        "mybook": "mybook.html"
+    },
+    "page": {
+        "title": "首页_小说网"
+    }
+}
