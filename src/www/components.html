@@ -1,13 +1,21 @@
 {{extend './_inc/layout.html'}}
 
 {{block 'content'}}
-<div class="components">
-    <h1>组件列表</h1>
-
-    <div class="components-list">
-        <dl>
+<div class="mag-row components-content">
+    <div class="components-nav">
+        <ul>
             {{each componentsList}}
-                <dt><h2>#{{ $index + 1 }} {{ $value.title }}</h2></dt>
+                <li><a href="#{{ $value.name }}">{{ $value.title }}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="components">
+        <!-- <h1>模板列表</h1> -->
+        <div class="components-list">
+             <dl>
+            {{each componentsList}}
+                <dt><h2 id="{{ $value.name }}">{{ $value.title }}</h2></dt>
                 <dd>
                     {{each $value.components val}}
                         <ul>
@@ -37,6 +45,7 @@
                 </dd>
             {{/each}}
         </dl>
+        </div>
     </div>
 </div>
 {{/block}}

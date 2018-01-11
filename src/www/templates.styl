@@ -1,16 +1,117 @@
 @import './_inc/common.styl'
 
+.template-content 
+    background #fff
+    width 1110px
+    margin auto
+
+.template-nav
+    margin-top 60px
+    margin-right 123px
+    -webkit-box-flex 1
+    -webkit-flex 1 1 7%
+    flex 1 1 7%
+
+.template-nav ul
+    list-style none
+    font-size 14px
+    color rgba(0, 0, 0, 0.88)
+
+.template-nav ul li
+    margin-bottom 40px
+
 .templates
-    max-width 1000px
-    margin 30px auto
-    padding 0 10px
+    border-left 1px solid rgba(0, 0, 0, 0.08)
+    -webkit-box-flex 1
+    -webkit-flex 1 1 85%
+    flex 1 1 85%
 
 .templates-list
+    padding 50px 0 0 40px
     dt
         font-size 16px
-        margin-top 50px
-    ul
-        list-style none
-        background-color #f0f0f0
-        padding 10px
-        margin-top 20px
+        h2
+            font-size 36px
+            color #000
+    dd
+        margin-bottom 90px
+
+.template-descripe
+    margin-top 30px
+
+.template-descripe
+    font-size 16px
+    color rgba(0, 0, 0, 0.88)
+
+.template-img
+    margin-top 45px
+    &:hover
+        box-shadow 0px 0px 10px 5px rgba(0, 0, 0, 0.1)
+
+.template-control
+    width 440px
+    text-align center
+    margin-top 30px
+    a
+        width 100px
+        height 30px
+        line-height 28px
+        &:nth-child(2)
+            margin-left 27px
+        &:hover
+            background-color rgba(0, 0, 0, 0.02)
+        &:active
+            background-color rgba(0, 0, 0, 0.05)
+
+.template-preview
+    position fixed
+    top 0
+    left 0
+    width 100%
+    height 100%
+    z-index 9999
+    display none
+
+.template-preview-mask
+    width 100%
+    height 100%
+    background-color rgba(255,255,255,0.8)
+
+.template-preview-mask-main
+    width 370px
+    height 688px
+    margin auto
+    position relative
+    top 50%
+    transform translateY(-50%)
+    padding 45px 25px
+    border 1px solid rgba(0, 0, 0, 0.1)
+    background-color #fff
+    border-radius 40px
+    iframe
+        border 1px solid rgba(156, 156, 156, 0.31)
+
+.template-preview-control
+    width 100%
+    margin auto
+    height 60px
+    background #000
+    .template-preview-control-main
+        width 1110px
+        height 100%
+        margin auto
+        color #fff
+        align-items center
+        a
+            color #fff
+            height 31px
+            width 100px
+            border-color #fff
+            text-align center
+            margin 0
+            line-height 29px
+            margin-right 45px
+        .preview-btn
+            font-size 16px
+            color rgba(255, 255, 255, 0.7)
+

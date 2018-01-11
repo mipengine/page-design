@@ -1,20 +1,58 @@
 @import './_inc/common.styl'
 
+.components-content 
+    background #fff
+    width 1110px
+    margin auto
+
+.components-nav
+    margin-top 60px
+    margin-right 123px
+    -webkit-box-flex 1
+    -webkit-flex 1 1 7%
+    flex 1 1 7%
+
+.components-nav ul
+    list-style none
+    font-size 14px
+    color rgba(0, 0, 0, 0.88)
+
+.components-nav ul li
+    margin-bottom 40px
+
 
 .components
-    max-width 1000px
-    margin 30px auto
-    padding 0 10px
+    border-left 1px solid rgba(0, 0, 0, 0.08)
+    -webkit-box-flex 1
+    -webkit-flex 1 1 85%
+    flex 1 1 85%
 
 .components-list
-    dt
-        font-size 16px
-        margin-top 50px
+    padding 50px 0 0 40px
     ul
         list-style none
-        background-color #f0f0f0
-        padding 10px
-        margin-top 20px
+    dt
+        font-size 16px
+        h2
+            font-size 36px
+            color rgba(0, 0, 0, 0.88)
+    dd
+        margin-bottom 90px
+
+.component-descripe
+    margin-top 30px
+
+.component-descripe
+    font-size 16px
+    color rgba(0, 0, 0, 0.88)
+
+.component-img
+    margin-top 45px
+    &:hover
+        box-shadow 0px 0px 10px 5px rgba(0, 0, 0, 0.1)
+
+
+
 
 // github style
 .hljs
@@ -29,7 +67,7 @@
 .hljs-keyword,.hljs-selector-tag,.hljs-subst
     color #333
     font-weight bold
-.hljs-number,.hljs-literal,.hljs-variable,.hljs-template-variable,.hljs-tag .hljs-attr
+.hljs-number,.hljs-literal,.hljs-variable,.hljs-components-variable,.hljs-tag .hljs-attr
     color #008080
 .hljs-string,.hljs-doctag
     color #d14
