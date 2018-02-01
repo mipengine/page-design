@@ -10,5 +10,8 @@
     },
     "page": {
         "title": "首页_小说网"
-    }
+    },
+    "extensions": [
+        "mip-scrollbox"
+    ]
 }
