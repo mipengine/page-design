@@ -9,6 +9,7 @@
         "title": "神武天帝_小说网"
     },
     "extensions": [
-        "mip-showmore"
+        "mip-showmore",
+        "mip-scrollbox"
     ]
 }
