@@ -9,21 +9,27 @@
         {
             "title": "按钮",
             "name": "button",
-            "descriptions": "左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文",
+            "descriptions": "多种标签下的mag design按钮",
             "components": [
                 {
+                    "title": "按钮标签",
+                    "descriptions": "适合图文展现类的左图右文。",
                     "iframe": {
                         "url": "components/button/button.html",
                         "height": 200
                     }
                 },
                 {
+                    "title": "按钮样式",
+                    "descriptions": "适合图文展现类的左图右文。",
                     "iframe": {
                         "url": "components/button/button-style.html",
                         "height": 200
                     }
                 },
                 {
+                    "title": "按钮尺寸",
+                    "descriptions": "适合图文展现类的左图右文。",
                     "iframe": {
                         "url": "components/button/button-size.html",
                         "height": 260
@@ -38,6 +44,8 @@
             "descriptions": "列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行",
             "components": [
                 {
+                    "title": "样式二",
+                    "descriptions": "适合图文展现类的左图右文。",
                     "iframe": {
                         "url": "components/select/select.html",
                         "height": 100

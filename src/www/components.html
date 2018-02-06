@@ -5,7 +5,7 @@
     <div class="components-nav">
         <ul>
             {{each componentsList}}
-                <li><a href="#{{ $value.name }}">{{ $value.title }}</a></li>
+                <li onclick="var navCurrent = document.querySelectorAll('.components-nav .current');navCurrent.length>0&&navCurrent[0].classList.remove('current');this.classList.add('current');location.href='#{{ $value.name }}'"><a href="">{{ $value.title }}</a></li>
             {{/each}}
         </ul>
     </div>
@@ -15,31 +15,52 @@
         <div class="components-list">
              <dl>
             {{each componentsList}}
-                <dt><h2 id="{{ $value.name }}">{{ $value.title }}</h2></dt>
+                <dt id="{{ $value.name }}">
+                    <h2>{{ $value.title }}</h2>
+                    <p class="description">{{ $value.descriptions }}</p>
+                </dt>
                 <dd>
                     {{each $value.components val}}
                         <ul>
-                            <li><mip-iframe height="{{ val.iframe.height }}" width="100" src="/html/{{ val.iframe.url }}" layout="fixed-height"></mip-iframe></li>
-                            {{ set ext = $imports.getComponentsExtensions(val.iframe.url) }}
-                            {{if ext && ext.length}}
-                                <li>
-                                    依赖组件代码：
-                                </li>
-                                <li>
-                                    {{each ext text}}
-                                        <pre><code>{{text}}</code></pre>
-                                    {{/each}}
-                                </li>
-                            {{/if}}
+                            <li>
+                                <h3>{{ val.title }}</h3>
+                                <p>{{ val.descriptions }}</p>
+                                <div class="components-preview">
+                                    <div class="components-label row">
+                                        <span>简单示例</span>
+                                        <select onchange="var showContent = this.options[this.selectedIndex].getAttribute('name');document.querySelector('#case,#code').style.display='none';document.querySelector('#'+showContent).style.display='block';">                                            
+                                            <option name="case">case</option>
+                                            <option name="code">code</option>
+                                        </select>
+                                    </div>
+                                    <div class="components-case">
+                                        <mip-iframe id="case" height="{{ val.iframe.height }}" width="100" src="/html/{{ val.iframe.url }}" layout="fixed-height"></mip-iframe>
+                                        <div id="code" class="components-code">
+                                            {{ set ext = $imports.getComponentsExtensions(val.iframe.url) }}
+                                                {{if ext && ext.length}}
+                                                    <span>
+                                                        依赖代码：
+                                                    </span>
+                                                    <p>
+                                                        {{each ext text}}
+                                                            <pre><code>{{text}}</code></pre>
+                                                        {{/each}}
+                                                    </p>
+                                                {{/if}}
 
 
-                            {{ set code = $imports.getComponentsCode(val.iframe.url) }}
-                            {{if code}}
-                                <li>代码：</li>
-                                <li>
-                                    {{@ code }}
-                                </li>
-                            {{/if}}
+                                                {{ set code = $imports.getComponentsCode(val.iframe.url) }}
+                                                {{if code}}
+                                                    <span>组件代码：</span>
+                                                    <p>
+                                                        {{@ code }}
+                                                    </p>
+                                                {{/if}}
+                                        </div>
+                                     </div>
+                                </div>
+                            </li>
+
                         </ul>
                     {{/each}}
                 </dd>

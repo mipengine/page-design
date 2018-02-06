@@ -1,5 +1,24 @@
 @import './_inc/common.styl'
 
+/*fixed*/
+.header
+    position fixed
+    width 100%
+    top 0
+
+div.components-content
+    margin 60px auto 0 auto
+
+.components-nav
+    position fixed
+    width 195px
+
+.components
+    margin-left 195px
+
+
+
+
 .components-content 
     background #fff
     width 1110px
@@ -14,12 +33,29 @@
 
 .components-nav ul
     list-style none
-    font-size 14px
-    color rgba(0, 0, 0, 0.88)
 
 .components-nav ul li
-    margin-bottom 40px
+    margin-bottom 10px
+    padding 10px 0px 10px 17px
+    cursor none
 
+.components-nav ul li a
+    opacity 0.54
+    font-family PingFangSC-Regular
+    font-size 14px
+    color #000
+    line-height 14px
+    cursor none
+
+.components-nav ul li:hover
+    background rgba(0, 0, 0, 0.02)
+
+
+.components-nav ul li.current
+    background rgba(0, 0, 0, 0.04)
+
+.components-nav ul li:hover a, .template-nav ul li.current a
+    opacity 0.88
 
 .components
     border-left 1px solid rgba(0, 0, 0, 0.08)
@@ -36,8 +72,41 @@
         h2
             font-size 36px
             color rgba(0, 0, 0, 0.88)
+            font-weight normal
+        .description
+            font-size 16px
+            color rgba(0, 0, 0, 0.88)
+            margin-top 30px
     dd
         margin-bottom 90px
+        li
+            margin-top 50px
+            p
+                color rgba(0, 0, 0, 0.88)
+                margin 20px 0 30px
+
+.components-preview
+    width 920px
+    height 211px
+    border 1px solid rgba(0, 0, 0, 0.1)
+    border-radius 2px
+    .components-label
+        margin 0
+        padding 0 20px
+        line-height 40px
+        background #fafafa
+        span
+            font-size 16px
+            color rgba(0,0,0,0.88)
+        select
+            height 32px
+            margin-top 4px
+    .components-case
+        padding 20px
+        overflow scroll
+        height 171px
+        .components-code
+            display none
 
 .component-descripe
     margin-top 30px
