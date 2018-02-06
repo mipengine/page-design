@@ -7,18 +7,33 @@
 
 .template-nav
     margin-top 60px
-    margin-right 123px
     -webkit-box-flex 1
-    -webkit-flex 1 1 7%
-    flex 1 1 7%
+    -webkit-flex 1 1 200px
+    flex 1 1 201px
 
 .template-nav ul
     list-style none
-    font-size 14px
-    color rgba(0, 0, 0, 0.88)
 
 .template-nav ul li
-    margin-bottom 40px
+    margin-bottom 10px
+    padding 10px 0px 10px 17px
+
+.template-nav ul li a 
+    opacity 0.54
+    font-family PingFangSC-Regular
+    font-size 14px
+    color #000
+    line-height 14px
+
+.template-nav ul li:hover
+    background rgba(0, 0, 0, 0.02)
+
+
+.template-nav ul li:target
+    background rgba(0, 0, 0, 0.04)
+
+.template-nav ul li:hover a, .template-nav ul li:target a
+    opacity 0.88
 
 .templates
     border-left 1px solid rgba(0, 0, 0, 0.08)

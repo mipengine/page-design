@@ -2,26 +2,48 @@
 
 {{block 'content'}}
     <div class="banner">
-        <div class="banner-title">
+        <div class="content banner-title">
             <h1>MIPGO</h1>
             <h4>用我们的组件和模板构建快速响应的 MIP 页面</h4>
-            <a class="rounded tag" href="">立即开始</a>
+            <a class="rounded tag" href="/about.html">立即开始</a>
         </div>
     </div>
     <div class="container">
         <div class="content">
-            <div class="point">
-                <div class="point-single component">
-                    <h1>丰富多样的组件库</h1>
-                    <p class="subtitle">提供上百个组件 站长即插即用</p>
+            <div class="mag-row point">
+                <div class="point-single mag-span4 mag-row">
+                    <mip-img
+                        width="54" 
+                        height="54"
+                        src="./img/component.png">
+                    </mip-img>
+                    <div class="mag-span6">
+                        <h1>丰富多样的组件库</h1>
+                        <p class="subtitle">提供上百个组件 站长即插即用</p>
+                    </div>
                 </div>
-                <div class="point-single template">
-                    <h1>优质的模板示例</h1>
-                    <p class="subtitle">覆盖多类型站点 提升浏览体验</p>
+                <div class="point-single mag-span4 mag-row middle">
+                    <mip-img
+                        width="54" 
+                        height="54"
+                        src="./img/template.png">
+                    </mip-img>
+                    <div class="mag-span6">
+                        <h1>优质的模板示例</h1>
+                        <p class="subtitle">覆盖多类型站点 提升浏览体验</p>
+                    </div>
                 </div>
-                <div class="point-single code">
-                    <h1>下载可复用的代码</h1>
-                    <p class="subtitle">模板轻松下载 组件代码复制即用</p>
+                <div class="point-single mag-span4 mag-row last">
+                    
+                     <mip-img
+                        width="54" 
+                        height="54"
+                        src="./img/code.png">
+                    </mip-img>
+                    <div class="mag-span6">
+                        <h1>下载可复用的代码</h1>
+                        <p class="subtitle">模板轻松下载 组件代码复制即用</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -32,7 +54,7 @@
                 <div class="imgtext-link">
                     <div class="font-size-15">设计精美</div>
                     <div class="font-size-4 imgtext-des">覆盖多类型站点 提升浏览体验</div>
-                    <a class="rounded tag imgtext-tag" href="">查看详情<i class="mag-icon mag-icon-more imgtext-icon"></i></a>
+                    <a class="rounded tag imgtext-tag" href="/templates.html">查看详情<i class="mag-icon mag-icon-more imgtext-icon"></i></a>
                 </div>
             </div>
             <div class="mag-span7">
@@ -41,7 +63,6 @@
                     height="620"
                     src="./img/design.png">
                 </mip-img>
-                <!-- <img src="./img/design.png" class="mag-img"> -->
             </div>
         </div>
     </div>
@@ -53,13 +74,12 @@
                     height="620"
                     src="./img/develop.png">
                 </mip-img>
-                <!-- <img src="./img/develop.png" class="mag-img"> -->
             </div>
             <div class="mag-span7">
                 <div class="imgtext-link imgtext-right-text">
                     <div class="font-size-15">易于开发</div>
                     <div class="font-size-4 imgtext-des">模板轻松下载 组件代码复制即可</div>
-                    <a class="rounded tag imgtext-tag" href="">查看详情<i class="mag-icon mag-icon-more imgtext-icon"></i></a>
+                    <a class="rounded tag imgtext-tag" href="/templates.html">查看详情<i class="mag-icon mag-icon-more imgtext-icon"></i></a>
                 </div>
             </div>
         </div>
@@ -70,7 +90,7 @@
                 <div class="imgtext-link">
                     <div class="font-size-15">页面组件</div>
                     <div class="font-size-4 imgtext-des">提供上百个组件 站长即插即用</div>
-                    <a class="rounded tag imgtext-tag" href="">查看详情<i class="mag-icon mag-icon-more imgtext-icon"></i></a>
+                    <a class="rounded tag imgtext-tag" href="/components.html">查看详情<i class="mag-icon mag-icon-more imgtext-icon"></i></a>
                 </div>
             </div>
             <div class="mag-span7">
@@ -79,7 +99,6 @@
                     height="588"
                     src="./img/page-component.png">
                 </mip-img>
-                <!-- <img src="./img/page-component.png" class="mag-img"> -->
             </div>
         </div>
     </div>
@@ -94,7 +113,7 @@
                     height="75"
                     src="./img/compass.png">
                 </mip-img>
-                <p class="shortcut-subtitle">使用指南</p>
+                <a class="shortcut-subtitle" href="/about.html">使用指南</a>
                 <p class="shortcut-small-font">如何使用MIPGO帮你快速建立MIP站</p>
             </div>
             <div class="shortcut-single">
@@ -103,7 +122,7 @@
                     height="75"
                     src="./img/intr.png">
                 </mip-img>
-                <p class="shortcut-subtitle">MIP介绍</p>
+                <a class="shortcut-subtitle" href="https://www.mipengine.org">MIP介绍</a>
                 <p class="shortcut-small-font">更多MIP信息和知识</p>
             </div>
            <div class="shortcut-single">
@@ -112,7 +131,7 @@
                     height="75"
                     src="./img/github.png">
                 </mip-img>
-                <p class="shortcut-subtitle">Github</p>
+                <a class="shortcut-subtitle" href="https://github.com/mipengine">Github</a>
                 <p class="shortcut-small-font">MIP开源技术博客</p>
             </div>
         </div>

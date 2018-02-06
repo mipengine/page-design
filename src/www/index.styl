@@ -19,7 +19,7 @@
 	margin auto
 
 .banner
-	background #000 url(./img/banner.png) center center
+	background #fff url(./img/banner.jpg) center center
 	background-repeat no-repeat
 	width 100%
 	height 468px
@@ -29,20 +29,23 @@
 	position relative
 	top 50%
 	transform translateY(-50%)
-	color #fff
-	text-align center
+	color #000
 
 .banner-title h1
-	font-size 47px
 	margin 0
+	font-family DINAlternate-Bold
+	font-size 81px
+	color #000000
+	letter-spacing 6.07px
 
 .banner-title h4
 	margin-bottom 1.67em
 
 .banner-title a
-	border-color #fafafa
-	height .38rem
-	padding .05rem .25rem
+	border-color #1D63EB
+	background-color #1D63EB
+	height 40px
+	padding 6px 46px
 	color #fafafa
 
 /*中部point*/
@@ -51,8 +54,8 @@
 	padding 50px 0
 
 .point
+	margin 0
 	height 147px
-	display flex
 	align-items center
 	box-align center
 	box-lines single
@@ -65,7 +68,12 @@
 	flex 1 auto
 	text-align left
 	height 60px
-	padding-left 66px
+
+.point-single.middle
+	padding-left 65px
+
+.point-single.last
+	padding-left 93px
 
 .point-single h1
 	margin 0
@@ -93,20 +101,6 @@
 .imgtext-icon
 	margin-left 5px
 	font-size 12px
-
-.component
-	background url(./img/component.png) no-repeat left center
-	background-size 56px
-
-
-.template
-	background url(./img/template.png) no-repeat left center
-	background-size 56px
-
-
-.code
-	background url(./img/code.png) no-repeat left center
-	background-size 56px
 
 .mag-container
 	background-color #fafafa
@@ -139,6 +133,7 @@
 	margin 0px 21px
 
 .shortcut-subtitle
+	display block
 	font-size 20px
 	color #000
 	margin-top 30px
