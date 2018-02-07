@@ -38,7 +38,9 @@ module.exports = (filepath, type) => {
 
     return new Promise(resolve => {
         stylus(cssSource)
-            .use(autoprefixer())
+            .use(autoprefixer({
+                browsers: ['iOS >= 8', 'ie >= 10', 'Android >= 4']
+            }))
             .set('filename', path.basename(filepath))
             .set('paths', [path.dirname(filepath)])
             .render((err, css) => {
