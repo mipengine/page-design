@@ -37,7 +37,6 @@ div.components-content
 .components-nav ul li
     margin-bottom 10px
     padding 10px 0px 10px 17px
-    cursor none
 
 .components-nav ul li a
     opacity 0.54
@@ -45,11 +44,10 @@ div.components-content
     font-size 14px
     color #000
     line-height 14px
-    cursor none
 
 .components-nav ul li:hover
     background rgba(0, 0, 0, 0.02)
-
+    cursor pointer
 
 .components-nav ul li.current
     background rgba(0, 0, 0, 0.04)
@@ -120,6 +118,20 @@ div.components-content
     &:hover
         box-shadow 0px 0px 10px 5px rgba(0, 0, 0, 0.1)
 
+@media screen and (max-width: 767px)
+    .components-content
+        width 100%
+        .components-nav
+            display none
+        .components
+            margin-left 0
+            padding 0 15px
+        .components-list
+            padding-left 0
+            padding-top 10px
+        .components-preview
+            width 100%
+           
 
 
 

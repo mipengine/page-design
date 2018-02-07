@@ -17,10 +17,11 @@
                     <dt id="{{ $value.name }}"><h2>{{ $value.title }}</h2></dt>
                     <dd>
                         <div class="template-descripe">{{ $value.descriptions }}</div>
-                        <mip-img class="template-img" src="/html/{{ $value.img }}" width="440" height="783"></mip-img>
+                        <mip-img layout="responsive" class="template-img" src="/html/{{ $value.img }}" width="440" height="783"></mip-img>
                         <div class="template-control">
-                            <a class="rounded tag" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'preview', $value.name) }}" href="/html/{{ $value.url }}"  data-type="mip" target="_blank" onclick="javascript:document.querySelector('.template-preview').style.display='block';document.querySelectorAll('.templates-select option[name={{ $value.name }}]')[0].selected=true;document.querySelectorAll('#preview-sandbox')[0].setAttribute('src', '/html/{{ $value.url }}');return false;">预览</a>
-                            <a class="rounded tag" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'down', $value.name) }}" href="/archive/{{ $value.name }}.zip">下载</a>
+                            <a class="rounded tag tag-pc" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'preview', $value.name) }}" href="/html/{{ $value.url }}"  data-type="mip" target="_blank" onclick="javascript:document.querySelector('.template-preview').style.display='block';document.querySelectorAll('.templates-select option[name={{ $value.name }}]')[0].selected=true;document.querySelectorAll('#preview-sandbox')[0].setAttribute('src', '/html/{{ $value.url }}');return false;">预览</a>
+                            <a class="rounded tag tag-wise" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'preview', $value.name) }}" href="/html/{{ $value.url }}"  data-type="mip" target="">预览</a>
+                            <a class="rounded tag tag-down" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'down', $value.name) }}" href="/archive/{{ $value.name }}.zip">下载</a>
                         </div>
                     </dd>
                 {{/each}}

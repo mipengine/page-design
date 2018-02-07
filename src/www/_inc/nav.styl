@@ -1,6 +1,3 @@
-a
-    cursor none
-
 .header
     background-color #fff
     position relative
@@ -14,7 +11,6 @@ a
 .header-inner
     width 1110px
     margin 0 auto
-    /*padding 10px 0*/
 
 .header-flex
     display flex
@@ -48,7 +44,6 @@ a
     display inline-block
     width 72px
     text-align center
-    cursor none
 
 .header-nav-list > li > a
     position relative
@@ -60,6 +55,7 @@ a
 
 .header-nav-list > li:hover
     background rgba(0, 0, 0, 0.02)
+    cursor pointer
 
 .header-nav-list > li:hover > a
     opacity 0.88
@@ -89,6 +85,10 @@ a
     display none
 
 @media screen and (max-width: 767px)
+    .row
+        flex-wrap wrap
+    .header-inner
+        width 100%
     .header-mobile-nav-toggle
         position absolute
         top 0
@@ -112,7 +112,7 @@ a
         width 100%
         height 2px
         border-radius 2px
-        background #fff
+        background #3c63ecad
         transition .4s
         transform-origin 0
 
@@ -121,6 +121,11 @@ a
 
     .header-mobile-nav-toggle span:nth-child(3)
         top 18px
+    mip-sidebar
+        li
+            padding 7px 20px
+        li.current, li:active
+            background rgba(0,0,0,0.1)
 
 
 

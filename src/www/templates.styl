@@ -7,7 +7,7 @@
     top 0
 
 div.template-content
-    margin 60px auto 0 auto
+    margin 60px auto 45px auto
 
 .template-nav
     position fixed
@@ -28,8 +28,6 @@ div.template-content
     -webkit-box-flex 1
     -webkit-flex 1 1 200px
     flex 1 1 201px
-a
-    cursor none
 
 .template-nav ul
     list-style none
@@ -37,7 +35,6 @@ a
 .template-nav ul li
     margin-bottom 10px
     padding 10px 0px 10px 17px
-    cursor none
 
 .template-nav ul li a 
     opacity 0.54
@@ -45,11 +42,10 @@ a
     font-size 14px
     color #000
     line-height 14px
-    cursor none
 
 .template-nav ul li:hover
     background rgba(0, 0, 0, 0.02)
-
+    cursor pointer
 
 .template-nav ul li.current
     background rgba(0, 0, 0, 0.04)
@@ -81,6 +77,7 @@ a
 
 .template-img
     margin-top 45px
+    width 440px
     &:hover
         box-shadow 0px 0px 10px 5px rgba(0, 0, 0, 0.1)
 
@@ -92,7 +89,7 @@ a
         width 100px
         height 30px
         line-height 28px
-        &:nth-child(2)
+        &.tag-down
             margin-left 27px
         &:hover
             background-color rgba(0, 0, 0, 0.02)
@@ -162,3 +159,31 @@ a
         right 0
         top 0
 
+@media screen and (min-width: 767px)
+    .tag-wise
+        display none
+
+@media screen and (max-width: 767px)
+    .template-content
+        width 100%
+        .template-nav
+            display none
+        .templates
+            margin-left 0
+            padding 0 15px
+        .templates-list
+            padding-left 0
+            dd
+                margin-bottom 15px
+            dt
+                padding-top 20px
+            .template-control
+                width 100%
+            .template-img
+                width 100%
+            .tag-wise
+                display inline-block
+            .tag-pc
+                display none
+        .template-preview
+            display none

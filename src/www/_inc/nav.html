@@ -16,11 +16,6 @@
                     {{/each}}
                 </ul>
             </div>
-
-            <!-- <div class="right-nav">
-                <a href="https://github.com/mipengine" target="_blank" title="mip github">Github</a>
-            </div> -->
-
             <button class="header-mobile-nav-toggle" id="logo" on="tap:right-sidebar.open" role="button">
                 <span></span>
                 <span></span>
@@ -34,7 +29,7 @@
                 <ul>
                     {{each headerNav}}
                         {{if $value.text == page.title}}
-                            <li><a data-type="mip" data-title="{{ $value.text }}" class="current" href="{{ $value.url }}">{{ $value.text }}</a></li>
+                            <li class="current"><a data-type="mip" data-title="{{ $value.text }}" href="{{ $value.url }}">{{ $value.text }}</a></li>
                         {{else}}
                             <li><a data-type="mip" data-title="{{ $value.text }}" href="{{ $value.url }}">{{ $value.text }}</a></li>
                         {{/if}}
