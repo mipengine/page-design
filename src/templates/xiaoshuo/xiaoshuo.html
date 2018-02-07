@@ -33,58 +33,59 @@
     </div>
 
     <!-- 首页菜单 -->
-    <div class="menu">
-        <div class="mag-container">
-            <div class="mag-row">
-                <div class="mag-span3">
-                    <a href="list.html">
+    <div class="menu text-center">
+        <div class="container">
+            <div class="row">
+                <div class="span3">
+                    <a href="list.html" class="block">
                         <i class="iconfont">&#xe663;</i>
-                        <p class="mag-line-clamp1 mag-gap-top">排行</p>
+                        <p class="line-clamp1 gap-top">排行</p>
                     </a>
                 </div>
-                <div class="mag-span3">
+                <div class="span3" class="block">
                     <a href="category.html">
                         <i class="iconfont">&#xe667;</i>
-                        <p class="mag-line-clamp1 mag-gap-top">分类</p>
+                        <p class="line-clamp1 gap-top">分类</p>
                     </a>
                 </div>
-                <div class="mag-span3">
+                <div class="span3" class="block">
                     <a href="list.html">
                         <i class="iconfont">&#xe665;</i>
-                        <p class="mag-line-clamp1 mag-gap-top">免费</p>
+                        <p class="line-clamp1 gap-top">免费</p>
                     </a>
                 </div>
-                <div class="mag-span3">
+                <div class="span3" class="block">
                     <a href="list.html">
                         <i class="iconfont">&#xe668;</i>
-                        <p class="mag-line-clamp1 mag-gap-top">推荐</p>
+                        <p class="line-clamp1 gap-top">推荐</p>
                     </a>
                 </div>
             </div>
         </div>
     </div>
 
+    <hr class="hr-xl">
+
     <!-- 首页推荐分类列表 -->
     <div class="booklist">
-        <!-- 循环 .mag-container 元素 -->
-        <div class="mag-container">
-            <div class="mag-row booklist-title">
-                <div class="mag-span8">
+        <div class="container">
+            <div class="row booklist-title">
+                <div class="span8">
                     <h4>玄幻</h4>
                 </div>
-                <div class="mag-span4">
-                    <a href="list.html">
-                        <i class="mag-icon mag-icon-more"></i>
+                <div class="span4">
+                    <a href="list.html" class="block text-right">
+                        <i class="icon icon-more"></i>
                     </a>
                 </div>
             </div>
-            <div class="mag-row-tile mag-gap-top">
-                <mip-scrollbox data-type="row">
+            <div class="row-tile gap-top">
+                <mip-scrollbox data-type="row" class="scrollbox">
                     <div data-wrapper>
                         <div data-inner>
-                            <div data-scroller>
+                            <div data-scroller class="flexbox">
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/changshengjie.png"
                                             width="300"
@@ -92,11 +93,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">长生界</p>
+                                        <p class="line-clamp1 gap-top-small">长生界</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/gongziqianqiu.png"
                                             width="300"
@@ -104,11 +105,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">公子之秋</p>
+                                        <p class="line-clamp1 gap-top-small">公子之秋</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/jiangye.png"
                                             width="300"
@@ -116,11 +117,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">将夜</p>
+                                        <p class="line-clamp1 gap-top-small">将夜</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/wuhengtiandi.png"
                                             width="300"
@@ -128,11 +129,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">武横天地</p>
+                                        <p class="line-clamp1 gap-top-small">武横天地</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/xitongjunguncu.png"
                                             width="300"
@@ -140,11 +141,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">系统君滚粗</p>
+                                        <p class="line-clamp1 gap-top-small">系统君滚粗</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/xiuluotiandi.png"
                                             width="300"
@@ -152,7 +153,15 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">修罗天帝</p>
+                                        <p class="line-clamp1 gap-top-small">修罗天帝</p>
+                                    </a>
+                                </div>
+                                <div data-item data-col="4" class="scrollbox-more">
+                                    <a href="list.html" class="block">
+                                        <div>
+                                            <i class="icon icon-more2"></i>
+                                            <span class="line-clamp1 gap-top">查看更多</span>
+                                        </div>
                                     </a>
                                 </div>
                             </div>
@@ -162,26 +171,27 @@
             </div>
         </div>
 
-        <!-- 循环 .mag-container 元素 -->
-        <div class="mag-container">
-            <div class="mag-row booklist-title">
-                <div class="mag-span8">
+        <hr class="hr-xl">
+
+        <div class="container">
+            <div class="row booklist-title">
+                <div class="span8">
                     <h4>武侠</h4>
                 </div>
-                <div class="mag-span4">
-                    <a href="list.html">
-                        <i class="mag-icon mag-icon-more"></i>
+                <div class="span4">
+                    <a href="list.html" class="block text-right">
+                        <i class="icon icon-more"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="mag-row-tile mag-gap-top">
-                <mip-scrollbox data-type="row">
+            <div class="row-tile gap-top">
+                <mip-scrollbox data-type="row" class="scrollbox">
                     <div data-wrapper>
                         <div data-inner>
-                            <div data-scroller>
+                            <div data-scroller class="flexbox">
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/morizhizishu.png"
                                             width="300"
@@ -189,11 +199,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">末日之子-作者夏染雪-武侠小说排行榜top1</p>
+                                        <p class="line-clamp1 gap-top-small">末日之子-作者夏染雪-武侠小说排行榜top1</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/titianxingdao.png"
                                             width="300"
@@ -201,11 +211,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">替天行盗</p>
+                                        <p class="line-clamp1 gap-top-small">替天行盗</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/wuhengtiandi.png"
                                             width="300"
@@ -213,11 +223,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">武横天地</p>
+                                        <p class="line-clamp1 gap-top-small">武横天地</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/xitongjunguncu.png"
                                             width="300"
@@ -225,11 +235,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">系统君滚粗</p>
+                                        <p class="line-clamp1 gap-top-small">系统君滚粗</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/xiuluotiandi.png"
                                             width="300"
@@ -237,11 +247,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">修罗天帝</p>
+                                        <p class="line-clamp1 gap-top-small">修罗天帝</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/yinhu.png"
                                             width="300"
@@ -249,7 +259,15 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">银狐</p>
+                                        <p class="line-clamp1 gap-top-small">银狐</p>
+                                    </a>
+                                </div>
+                                <div data-item data-col="4" class="scrollbox-more">
+                                    <a href="list.html" class="block">
+                                        <div>
+                                            <i class="icon icon-more2"></i>
+                                            <span class="line-clamp1 gap-top">查看更多</span>
+                                        </div>
                                     </a>
                                 </div>
                             </div>
@@ -259,25 +277,26 @@
             </div>
         </div>
 
-        <!-- 循环 .mag-container 元素 -->
-        <div class="mag-container">
-            <div class="mag-row booklist-title">
-                <div class="mag-span8">
+        <hr class="hr-xl">
+
+        <div class="container">
+            <div class="row booklist-title">
+                <div class="span8">
                     <h4>言情</h4>
                 </div>
-                <div class="mag-span4">
-                    <a href="list.html">
-                        <i class="mag-icon mag-icon-more"></i>
+                <div class="span4">
+                    <a href="list.html" class="block text-right">
+                        <i class="icon icon-more"></i>
                     </a>
                 </div>
             </div>
-            <div class="mag-row-tile mag-gap-top">
-                <mip-scrollbox data-type="row">
+            <div class="row-tile gap-top">
+                <mip-scrollbox data-type="row" class="scrollbox">
                     <div data-wrapper>
                         <div data-inner>
-                            <div data-scroller>
+                            <div data-scroller class="flexbox">
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/xitongjunguncu.png"
                                             width="300"
@@ -285,11 +304,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">系统君滚粗</p>
+                                        <p class="line-clamp1 gap-top-small">系统君滚粗</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/xiuluotiandi.png"
                                             width="300"
@@ -297,11 +316,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">修罗天帝</p>
+                                        <p class="line-clamp1 gap-top-small">修罗天帝</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/yinhu.png"
                                             width="300"
@@ -309,11 +328,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">银狐</p>
+                                        <p class="line-clamp1 gap-top-small">银狐</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/morizhizishu.png"
                                             width="300"
@@ -321,11 +340,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">末日之子-作者夏染雪-武侠小说排行榜top1</p>
+                                        <p class="line-clamp1 gap-top-small">末日之子-作者夏染雪-武侠小说排行榜top1</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/titianxingdao.png"
                                             width="300"
@@ -333,11 +352,11 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">替天行盗</p>
+                                        <p class="line-clamp1 gap-top-small">替天行盗</p>
                                     </a>
                                 </div>
                                 <div data-item data-col="4">
-                                    <a href="view.html" class="mag-block">
+                                    <a href="view.html" class="block">
                                         <mip-img
                                             src="./img/wuhengtiandi.png"
                                             width="300"
@@ -345,7 +364,15 @@
                                             layout="responsive"
                                         >
                                         </mip-img>
-                                        <p class="mag-line-clamp1 mag-gap-top-small">武横天地</p>
+                                        <p class="line-clamp1 gap-top-small">武横天地</p>
+                                    </a>
+                                </div>
+                                <div data-item data-col="4" class="scrollbox-more">
+                                    <a href="list.html" class="block">
+                                        <div>
+                                            <i class="icon icon-more2"></i>
+                                            <span class="line-clamp1 gap-top">查看更多</span>
+                                        </div>
                                     </a>
                                 </div>
                             </div>
@@ -356,67 +383,68 @@
         </div>
     </div>
 
-    <!-- 猜你喜欢列表，循环 li 标签 -->
-    <div class="lovelist mag-container">
+    <hr class="hr-xl">
+
+    <div class="lovelist container">
         <h4>猜你喜欢</h4>
         <ul>
             <li>
-                <a href="view.html" class="mag-row">
-                    <div class="mag-span4">
+                <a href="view.html" class="row">
+                    <div class="span4">
                         <mip-img width="271" height="362" layout="responsive" src="./img/jiangye.png" alt="将夜"></mip-img>
                     </div>
-                    <div class="mag-span8">
-                        <h4 class="mag-line-clamp1">将夜<span class="mag-text-box mag-text-box-gray mag-gap-left-small">玄幻</span></h4>
-                        <p class="mag-line-clamp1 author mag-gap-top-small">作者：猫腻</p>
-                        <p class="mag-line-clamp3 desc mag-gap-top-small">一段可歌可泣可笑可爱的草根崛起史。 一个物质要求宁滥勿缺的开朗少年行。 书院后山里永恒回荡着他疑惑的声音： 宁可永劫受沉沦，不从诸圣求解脱？ …… …… （当然，这个简介肯定是过几天就会认真改的，我不会持续如此无聊的。）</p>
+                    <div class="span8">
+                        <h4 class="line-clamp1">将夜<span class="text-box text-box-gray gap-left-small">玄幻</span></h4>
+                        <p class="line-clamp1 author gap-top-small">作者：猫腻</p>
+                        <p class="line-clamp3 desc gap-top-small">一段可歌可泣可笑可爱的草根崛起史。 一个物质要求宁滥勿缺的开朗少年行。 书院后山里永恒回荡着他疑惑的声音： 宁可永劫受沉沦，不从诸圣求解脱？ …… …… （当然，这个简介肯定是过几天就会认真改的，我不会持续如此无聊的。）</p>
                     </div>
                 </a>
             </li>
             <li>
-                <a href="view.html" class="mag-row">
-                    <div class="mag-span4">
+                <a href="view.html" class="row">
+                    <div class="span4">
                         <mip-img width="271" height="362" layout="responsive" src="./img/yinhu.png" alt="银狐"></mip-img>
                     </div>
-                    <div class="mag-span8">
-                        <h4 class="mag-line-clamp1">银狐<span class="mag-text-box mag-text-box-gray mag-gap-left-small">武侠</span></h4>
-                        <p class="mag-line-clamp1 author mag-gap-top-small">作者：孑与2</p>
-                        <p class="mag-line-clamp3 desc mag-gap-top-small">人的第一要求就是活着，第二要求还是活着，第三要求依旧是活着……在某些特定的环境下，活着就成了一种奢望。在地狱中我们仰望天堂，把手伸出去，虽然不能触碰到天堂，却能让我们距离天堂更近一些。</p>
+                    <div class="span8">
+                        <h4 class="line-clamp1">银狐<span class="text-box text-box-gray gap-left-small">武侠</span></h4>
+                        <p class="line-clamp1 author gap-top-small">作者：孑与2</p>
+                        <p class="line-clamp3 desc gap-top-small">人的第一要求就是活着，第二要求还是活着，第三要求依旧是活着……在某些特定的环境下，活着就成了一种奢望。在地狱中我们仰望天堂，把手伸出去，虽然不能触碰到天堂，却能让我们距离天堂更近一些。</p>
                     </div>
                 </a>
             </li>
             <li>
-                <a href="view.html" class="mag-row">
-                    <div class="mag-span4">
+                <a href="view.html" class="row">
+                    <div class="span4">
                         <mip-img width="271" height="362" layout="responsive" src="./img/changshengjie.png" alt="长生界"></mip-img>
                     </div>
-                    <div class="mag-span8">
-                        <h4 class="mag-line-clamp1">长生界<span class="mag-text-box mag-text-box-gray mag-gap-left-small">玄幻</span></h4>
-                        <p class="mag-line-clamp1 author mag-gap-top-small">作者：辰东</p>
-                        <p class="mag-line-clamp3 desc mag-gap-top-small">世上谁人能不死？任你风华绝代，艳冠天下，到头来也是红粉骷髅；任你一代天骄，坐拥万里江山，到头来也终将化成一抔黄土。不过，关于长生不死的传说却始终流传于世。故老相传，超脱于人世间之外，有一个浩大的长生界……</p>
+                    <div class="span8">
+                        <h4 class="line-clamp1">长生界<span class="text-box text-box-gray gap-left-small">玄幻</span></h4>
+                        <p class="line-clamp1 author gap-top-small">作者：辰东</p>
+                        <p class="line-clamp3 desc gap-top-small">世上谁人能不死？任你风华绝代，艳冠天下，到头来也是红粉骷髅；任你一代天骄，坐拥万里江山，到头来也终将化成一抔黄土。不过，关于长生不死的传说却始终流传于世。故老相传，超脱于人世间之外，有一个浩大的长生界……</p>
                     </div>
                 </a>
             </li>
             <li>
-                <a href="view.html" class="mag-row">
-                    <div class="mag-span4">
+                <a href="view.html" class="row">
+                    <div class="span4">
                         <mip-img width="271" height="362" layout="responsive" src="./img/gongziqianqiu.png" alt="公子千秋"></mip-img>
                     </div>
-                    <div class="mag-span8">
-                        <h4 class="mag-line-clamp1">公子千秋<span class="mag-text-box mag-text-box-gray mag-gap-left-small">言情</span></h4>
-                        <p class="mag-line-clamp1 author mag-gap-top-small">作者：府天</p>
-                        <p class="mag-line-clamp3 desc mag-gap-top-small">一场劫火之后，越千秋被草根出身，子孙满堂的越老太爷抱回了家。这个天下有世家，也有自以为清高正确的书生。这个天下有江湖，也有不甘仰朝廷鼻息的门派。儒以文乱法，侠以武犯禁。纷争和精彩并存，机遇和风险同在。但在鹰击长空，鱼跃大海之前，越千秋必须得解决自己的地位问题。身为养子，他是该谨小慎微，蛰伏待发，还是活得恣意逍遥，我行我素？</p>
+                    <div class="span8">
+                        <h4 class="line-clamp1">公子千秋<span class="text-box text-box-gray gap-left-small">言情</span></h4>
+                        <p class="line-clamp1 author gap-top-small">作者：府天</p>
+                        <p class="line-clamp3 desc gap-top-small">一场劫火之后，越千秋被草根出身，子孙满堂的越老太爷抱回了家。这个天下有世家，也有自以为清高正确的书生。这个天下有江湖，也有不甘仰朝廷鼻息的门派。儒以文乱法，侠以武犯禁。纷争和精彩并存，机遇和风险同在。但在鹰击长空，鱼跃大海之前，越千秋必须得解决自己的地位问题。身为养子，他是该谨小慎微，蛰伏待发，还是活得恣意逍遥，我行我素？</p>
                     </div>
                 </a>
             </li>
             <li>
-                <a href="view.html" class="mag-row">
-                    <div class="mag-span4">
+                <a href="view.html" class="row">
+                    <div class="span4">
                         <mip-img width="271" height="362" layout="responsive" src="./img/morizhizishu.png" alt="末日之子书"></mip-img>
                     </div>
-                    <div class="mag-span8">
-                        <h4 class="mag-line-clamp1">末日之子书<span class="mag-text-box mag-text-box-gray mag-gap-left-small">灵异</span></h4>
-                        <p class="mag-line-clamp1 author mag-gap-top-small">作者：夏染雪</p>
-                        <p class="mag-line-clamp3 desc mag-gap-top-small">日之子书的作为一个普通的大龄女青年，她平日里最爱的就是暗恋楼上的男神，守着一份几千块的工作，守着父母留下来的房子，就想一辈子这么过下去，她没有野心，也没有什么雄心壮志，就一简单顺从的人，不过，谁又知道，一场突如其来的末日浩劫改变了她，也是改变了所有人的生活以至命运。 </p>
+                    <div class="span8">
+                        <h4 class="line-clamp1">末日之子书<span class="text-box text-box-gray gap-left-small">灵异</span></h4>
+                        <p class="line-clamp1 author gap-top-small">作者：夏染雪</p>
+                        <p class="line-clamp3 desc gap-top-small">日之子书的作为一个普通的大龄女青年，她平日里最爱的就是暗恋楼上的男神，守着一份几千块的工作，守着父母留下来的房子，就想一辈子这么过下去，她没有野心，也没有什么雄心壮志，就一简单顺从的人，不过，谁又知道，一场突如其来的末日浩劫改变了她，也是改变了所有人的生活以至命运。 </p>
                     </div>
                 </a>
             </li>
