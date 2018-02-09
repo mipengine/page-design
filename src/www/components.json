@@ -7,40 +7,77 @@
     },
     "componentsList": [
         {
-            "title": "按钮",
-            "name": "button",
-            "descriptions": "左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文左图右文",
+            "title": "通用",
+            "name": "base",
+            "descriptions": "通用的排版、布局、颜色、间距、图标等基础样式。",
             "components": [
                 {
+                    "title": "标题",
+                    "iframe": {
+                        "url": "components/base/base.title.html",
+                        "height": 200
+                    }
+                },
+                {
+                    "title": "栅格化",
+                    "iframe": {
+                        "url": "components/base/base.grid.html",
+                        "height": 245
+                    }
+                },
+                {
+                    "title": "按行截断",
+                    "iframe": {
+                        "url": "components/base/base.clamp.html",
+                        "height": 200
+                    }
+                },
+                {
+                    "title": "图标",
+                    "iframe": {
+                        "url": "components/base/base.icon.html",
+                        "height": 480
+                    }
+                }
+            ]
+        },
+        {
+            "title": "按钮",
+            "name": "button",
+            "components": [
+                {
+                    "title": "按钮标签",
                     "iframe": {
                         "url": "components/button/button.html",
-                        "height": 200
+                        "height": 40
                     }
                 },
                 {
-                    "iframe": {
-                        "url": "components/button/button-style.html",
-                        "height": 200
-                    }
-                },
-                {
+                    "title": "按钮尺寸",
                     "iframe": {
                         "url": "components/button/button-size.html",
-                        "height": 260
+                        "height": 200
+                    }
+                },
+                {
+                    "title": "按钮样式",
+                    "iframe": {
+                        "url": "components/button/button-style.html",
+                        "height": 240
                     }
                 }
             ]
         },
 
         {
-            "title": "列表行",
-            "name": "list",
-            "descriptions": "列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行列表行",
+            "title": "提示",
+            "name": "tips",
             "components": [
                 {
+                    "title": "Toast",
                     "iframe": {
-                        "url": "components/select/select.html",
-                        "height": 100
+                        "url": "components/tips/toast.html",
+                        "height": 240
                     }
                 }
             ]
