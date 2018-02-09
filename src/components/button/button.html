@@ -1,14 +1,15 @@
 {{extend '../../base/components.html'}}
 
 {{block 'content'}}
-    <h3>按钮标签</h3>
-    <p>
-        <button>按钮</button> - <code>&lt;button&gt;</code>标签
-    </p>
-    <p>
-        <span class="btn">按钮</span> - <code>&lt;span&gt;</code>标签
-    </p>
-    <p>
-        <a href="#" class="btn">按钮</a> - <code>&lt;a&gt;</code>标签
-    </p>
+    <div class="row">
+        <div class="span4">
+            <a href="#" class="btn btn-block">a 标签</a>
+        </div>
+        <div class="span4">
+            <button class="btn-block">button 标签</button>
+        </div>
+        <div class="span4">
+            <span class="btn btn-block">span 标签</span>
+        </div>
+    </div>
 {{/block}}

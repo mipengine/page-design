@@ -1,0 +1,27 @@
+{{extend '../../base/components.html'}}
+
+{{block 'content'}}
+    <div class="row">
+        <div class="span4">
+            <button class="btn-block" on="tap:demo-toast.show">添加关注</button>
+        </div>
+        <div class="span4">
+            <button class="btn-block" on="tap:demo-top.show">取消关注</button>
+        </div>
+        <div class="span4">
+            <button class="btn-block" on="tap:demo-bottom.show">添加好友</button>
+        </div>
+    </div>
+
+    <mip-toggle id="demo-toast" class="toast-container" enterclass="toast-show" hidetimeout="3000">
+        <div class="toast-content">添加关注成功</div>
+    </mip-toggle>
+
+    <mip-toggle id="demo-top" class="toast-container toast-top" enterclass="toast-show" hidetimeout="3000">
+        <div class="toast-content">取消关注成功</div>
+    </mip-toggle>
+
+    <mip-toggle id="demo-bottom" class="toast-container toast-bottom" enterclass="toast-show" hidetimeout="3000">
+        <div class="toast-content">发送成功</div>
+    </mip-toggle>
+{{/block}}
