@@ -31,13 +31,6 @@
                         "url": "components/base/base.clamp.html",
                         "height": 200
                     }
-                },
-                {
-                    "title": "图标",
-                    "iframe": {
-                        "url": "components/base/base.icon.html",
-                        "height": 480
-                    }
                 }
             ]
         },
@@ -70,14 +63,91 @@
         },
 
         {
+            "title": "徽章",
+            "name": "base",
+            "descriptions": "能用计数器、气泡提示器。",
+            "components": [
+                {
+                    "title": "标题徽章",
+                    "iframe": {
+                        "url": "components/badge/title.html",
+                        "height": 200
+                    }
+                },
+                {
+                    "title": "徽章样式",
+                    "iframe": {
+                        "url": "components/badge/style.html",
+                        "height": 160
+                    }
+                }
+            ]
+        },
+
+        {
+            "title": "图标",
+            "name": "icon",
+            "descriptions": "通用的 iconfont 图标",
+            "components": [
+                {
+                    "title": "图标",
+                    "iframe": {
+                        "url": "components/base/base.icon.html",
+                        "height": 570
+                    }
+                }
+            ]
+        },
+
+        {
             "title": "提示",
             "name": "tips",
             "components": [
+                {
+                    "title": "infobar",
+                    "iframe": {
+                        "url": "components/tips/infobar.html",
+                        "height": 40
+                    }
+                },
                 {
                     "title": "Toast",
                     "iframe": {
                         "url": "components/tips/toast.html",
                         "height": 240
+                    }
+                }
+            ]
+        },
+        {
+            "title": "展开收起",
+            "name": "showmore",
+            "components": [
+                {
+                    "title": "默认",
+                    "iframe": {
+                        "url": "components/showmore/showmore.html",
+                        "height": 200
+                    }
+                }
+            ]
+        },
+        {
+            "title": "滑动",
+            "name": "swipe",
+            "components": [
+                {
+                    "title": "图片横滑",
+                    "iframe": {
+                        "url": "components/swipe/scrollbox.html",
+                        "height": 450
+                    }
+                },
+                {
+                    "title": "图片轮播",
+                    "iframe": {
+                        "url": "components/swipe/carousel.html",
+                        "height": 600
                     }
                 }
             ]
