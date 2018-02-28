@@ -32,5 +32,5 @@ const data = {
 };
 
 module.exports = (req, res, next) => {
-    res.jsonp(data)
+    setTimeout(() => res.jsonp(data), 3000);
 };
