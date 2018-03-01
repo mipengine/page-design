@@ -92,7 +92,7 @@
                 {
                     "title": "图标",
                     "iframe": {
-                        "url": "components/base/base.icon.html",
+                        "url": "components/icon/base.icon.html",
                         "height": 570
                     }
                 }

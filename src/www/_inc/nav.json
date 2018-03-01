@@ -13,8 +13,16 @@
             "url": "/components.html"
         },
         {
-            "text": "使用指南",
+            "text": "指南",
             "url": "/about.html"
+        },
+        {
+            "text": "MIP介绍",
+            "url": "https://www.mipengine.org"
+        },
+        {
+            "text": "Github",
+            "url": "https://github.com/mipengine"
         }
     ],
     "extensions": [

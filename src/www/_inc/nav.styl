@@ -1,8 +1,9 @@
 .header
-    background-color #000
+    background-color #fff
     position relative
     z-index 1000
     padding 0 10px
+    box-shadow 0 2px 4px 0 rgba(0, 0, 0, 0.04)
 
 .header ul
     list-style none
@@ -10,7 +11,6 @@
 .header-inner
     width 1110px
     margin 0 auto
-    /*padding 10px 0*/
 
 .header-flex
     display flex
@@ -23,45 +23,48 @@
 
 .header-logo
     box-flex 1
-    flex 0 50%
-    line-height 57px
+    flex 0 35%
 
 .header-logo a
-    text-align center
-    white-space nowrap
-    cursor pointer
-    text-transform uppercase
-    color #fff
-    font-size 27px
-    font-weight bold
+    background #fff url(./img/mip_logo.png) center center no-repeat
+    background-size: 102px 48px;
+    width: 102px;
+    height: 48px;
 
 .header-nav
     font-size 14px
     display none
     box-flex 1
-    flex 1 40%
-    text-align left
+    flex 1 65%
+    text-align right
     line-height 57px
 
 .header-nav-list > li
     position relative
     display inline-block
-    padding-left 60px
+    width 72px
+    text-align center
 
 .header-nav-list > li > a
     position relative
-    display block
     text-decoration none
     font-size 16px
-    color rgba(255, 255, 255, 0.7)
+    color #000
+    opacity 0.54
+    font-family PingFangSC-Regular
 
-.header-nav-list > li > a:hover
-    color #fff
+.header-nav-list > li:hover
+    background rgba(0, 0, 0, 0.02)
+    cursor pointer
 
-.header-nav-list > li > .current
-    border-bottom 3px solid #fff
+.header-nav-list > li:hover > a
+    opacity 0.88
 
-.right-nav
+.header-nav-list > li.current > a
+    border-bottom 3px solid #000
+    opacity 0.88
+
+/*.right-nav
     line-height 60px
     box-flex 1
     flex 1 10%
@@ -72,7 +75,7 @@
     font-size 16px
 
 .right-nav > a:hover
-    color #fff
+    color #fff*/
 
 @media screen and (min-width: 767px)
     .header-nav
@@ -82,6 +85,10 @@
     display none
 
 @media screen and (max-width: 767px)
+    .row
+        flex-wrap wrap
+    .header-inner
+        width 100%
     .header-mobile-nav-toggle
         position absolute
         top 0
@@ -105,7 +112,7 @@
         width 100%
         height 2px
         border-radius 2px
-        background #fff
+        background #3c63ecad
         transition .4s
         transform-origin 0
 
@@ -114,6 +121,11 @@
 
     .header-mobile-nav-toggle span:nth-child(3)
         top 18px
+    mip-sidebar
+        li
+            padding 7px 20px
+        li.current, li:active
+            background rgba(0,0,0,0.1)
 
 
 

@@ -1,11 +1,11 @@
 {{extend './_inc/layout.html'}}
 
 {{block 'content'}}
-<div class="mag-row template-content">
+<div class="row template-content">
     <div class="template-nav">
         <ul>
             {{each templatesList}}
-                <li><a href="#{{ $value.name }}">{{ $value.title }}</a></li>
+                <li onclick="var navCurrent = document.querySelectorAll('.template-nav .current');navCurrent.length>0&&navCurrent[0].classList.remove('current');this.classList.add('current');location.href='#{{ $value.name }}'"><a href="">{{ $value.title }}</a></li>
             {{/each}}
         </ul>
     </div>
@@ -14,13 +14,14 @@
         <div class="templates-list">
             <dl>
                 {{each templatesList}}
-                    <dt><h2 id="{{ $value.name }}">{{ $value.title }}</h2></dt>
+                    <dt id="{{ $value.name }}"><h2>{{ $value.title }}</h2></dt>
                     <dd>
                         <div class="template-descripe">{{ $value.descriptions }}</div>
-                        <mip-img class="template-img" src="/html/{{ $value.img }}" width="440" height="783"></mip-img>
+                        <mip-img layout="responsive" class="template-img" src="/html/{{ $value.img }}" width="440" height="783"></mip-img>
                         <div class="template-control">
-                            <a class="rounded tag" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'preview', $value.name) }}" href="/html/{{ $value.url }}"  data-type="mip" target="_blank">预览</a>
-                            <a class="rounded tag" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'down', $value.name) }}" href="/archive/{{ $value.name }}.zip">下载</a>
+                            <a class="rounded tag tag-pc" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'preview', $value.name) }}" href="/html/{{ $value.url }}"  data-type="mip" target="_blank" onclick="javascript:document.querySelector('.template-preview').style.display='block';document.querySelectorAll('.templates-select option[name={{ $value.name }}]')[0].selected=true;document.querySelectorAll('#preview-sandbox')[0].setAttribute('src', '/html/{{ $value.url }}');return false;">预览</a>
+                            <a class="rounded tag tag-wise" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'preview', $value.name) }}" href="/html/{{ $value.url }}"  data-type="mip" target="">预览</a>
+                            <a class="rounded tag tag-down" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'down', $value.name) }}" href="/archive/{{ $value.name }}.zip">下载</a>
                         </div>
                     </dd>
                 {{/each}}
@@ -28,20 +29,24 @@
         </div>
     </div>
 </div>
-<!-- <div class="template-preview">
-    <div class="template-preview-control">
-        <div class="mag-row template-preview-control-main">
-            <span class="preview-label">预览</span>
-            <div>
-                <a class="rounded tag" href="">下载</a>
-                <a href="javascript:void(0);" onclick="javascript:document.querySelector('.template-preview').style.display='none';">X</a>
+<div class="template-preview">
+    <div class="template-preview-control row">
+        <div class="preview-content">
+            <div class="template-preview-control-main">
+                <select class="templates-select" onchange="var selectContent = document.querySelectorAll('.templates-select')[0];var index = selectContent.selectedIndex;var selsectedItem = selectContent[index];document.querySelectorAll('#preview-sandbox')[0].setAttribute('src', selsectedItem.getAttribute('preview-href'));">
+                    {{each templatesList}}
+                        <option name="{{ $value.name }}" preview-href="/html/{{ $value.url }}" down-href="/archive/{{ $value.name }}.zip">{{ $value.title }}</option>
+                    {{/each}}
+                </select>
+                <a class="rounded tag preview-btn" href="" onclick="javascript:var selectContent = document.querySelectorAll('.templates-select')[0];var index = selectContent.selectedIndex;var selsectedItem = selectContent[index];location.href=selsectedItem.getAttribute('down-href');return false;">下载</a>
             </div>
+            <a class="close-btn" href="javascript:void(0);" onclick="javascript:document.querySelector('.template-preview').style.display='none';">X</a>
         </div>
     </div>
     <div class="template-preview-mask" onclick="javascript:document.querySelector('.template-preview').style.display='none';">
         <div class="template-preview-mask-main">
-            <iframe src="https://www.mipengine.org/" width="100%" height="100%"></iframe>
+            <iframe id="preview-sandbox" src="" width="100%" height="100%"></iframe>
         </div>
     </div>
-</div> -->
+</div>
 {{/block}}
