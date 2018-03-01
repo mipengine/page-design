@@ -1,5 +1,9 @@
 @import './_inc/common.styl'
 
+.header
+	box-shadow none
+
+
 .font-size-15
 	font-size 42px
 	color #000
@@ -19,30 +23,33 @@
 	margin auto
 
 .banner
-	background #000 url(./img/banner.png) center center
+	background #fff url(./img/banner.jpg) center center
 	background-repeat no-repeat
 	width 100%
 	height 468px
-	background-size cover
+	background-size contain
 
 .banner-title
 	position relative
 	top 50%
 	transform translateY(-50%)
-	color #fff
-	text-align center
+	color #000
 
 .banner-title h1
-	font-size 47px
 	margin 0
+	font-family DINAlternate-Bold
+	font-size 81px
+	color #000000
+	letter-spacing 6.07px
 
 .banner-title h4
 	margin-bottom 1.67em
 
 .banner-title a
-	border-color #fafafa
-	height .38rem
-	padding .05rem .25rem
+	border-color #1D63EB
+	background-color #1D63EB
+	height 40px
+	padding 6px 46px
 	color #fafafa
 
 /*中部point*/
@@ -51,8 +58,8 @@
 	padding 50px 0
 
 .point
+	margin 0
 	height 147px
-	display flex
 	align-items center
 	box-align center
 	box-lines single
@@ -65,7 +72,12 @@
 	flex 1 auto
 	text-align left
 	height 60px
-	padding-left 66px
+
+.point-single.middle
+	padding-left 65px
+
+.point-single.last
+	padding-left 93px
 
 .point-single h1
 	margin 0
@@ -93,23 +105,6 @@
 .imgtext-icon
 	margin-left 5px
 	font-size 12px
-
-.component
-	background url(./img/component.png) no-repeat left center
-	background-size 56px
-
-
-.template
-	background url(./img/template.png) no-repeat left center
-	background-size 56px
-
-
-.code
-	background url(./img/code.png) no-repeat left center
-	background-size 56px
-
-.mag-container
-	background-color #fafafa
 
 .imgtext-link
 	position relative
@@ -139,6 +134,7 @@
 	margin 0px 21px
 
 .shortcut-subtitle
+	display block
 	font-size 20px
 	color #000
 	margin-top 30px
@@ -151,3 +147,103 @@
 .shortcut img
 	margin auto
 	width 75px
+
+.title-head
+	display none
+
+@media screen and (max-width: 767px)
+	.banner
+		background-position center right
+		height 125px
+		.banner-title
+			padding-left 25px
+			top 7%
+			-webkit-transform none
+			transform none
+			h1
+				font-size 24px
+			h4
+				font-size 14px
+				margin-bottom 8px
+			a
+				height 28px
+				padding 0 10px
+				border-radius 3px
+				margin 6px 4px
+				line-height 24px
+				font-size 12px
+	.content 
+		width 100%
+	.pointIntr
+		margin-bottom 0
+		padding-bottom 0
+		.point 
+			height auto
+			padding-left 11px
+			flex-wrap wrap
+			.point-single
+				flex 1 100%
+				padding-left 0
+				height auto
+				line-height 18px
+				margin-bottom 15px
+				mip-img
+					width 32px!important
+					height 32px!important
+				h1
+					font-size 16px
+				.subtitle
+					font-size 12px
+					margin-bottom 0
+	.imgtext-single
+		height auto
+		padding 0
+		margin-top 0
+		text-align center
+		.imgtext-link
+			position static
+			transform none
+			top auto
+			padding-top 8px
+			.font-size-15
+				font-size 20px
+			.font-size-4
+				font-size 14px
+			.imgtext-des
+				margin-top 5px
+			.imgtext-tag
+				height 26px
+				width 97px
+				font-size 12px
+				text-align center
+				color #000
+				margin-top 15px
+				padding-top 0
+				line-height 2
+		.title-head
+			display block
+		.title-bottom
+			display none
+	.shortcut-container
+		.shortcut
+			padding-top 0
+			margin-bottom 0
+			h1
+				font-size 20px
+				margin-bottom 10px
+			.shortcut-single
+				height auto
+				padding 12px 0
+				margin 0 auto 10px auto
+				mip-img
+					width 54px!important
+					height 54px!important
+				.shortcut-subtitle
+					font-size 16px
+					margin-top 10px
+					margin-bottom 5px
+				.shortcut-small-font
+					font-size 12px
+
+			
+
