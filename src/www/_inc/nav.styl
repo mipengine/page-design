@@ -1,119 +1,51 @@
+height = 60px
+wiseHeight = 40px
+
 .header
-    background-color #000
-    position relative
-    z-index 1000
-    padding 0 10px
-
-.header ul
-    list-style none
-
-.header-inner
-    width 1110px
-    margin 0 auto
-    /*padding 10px 0*/
-
-.header-flex
+    layout()
     display flex
-    align-items center
-    box-align center
-    box-lines single
-    box-orient horizontal
-    flex-align center
-    flex-flow row nowrap
-
-.header-logo
-    box-flex 1
-    flex 0 50%
-    line-height 57px
-
-.header-logo a
-    text-align center
-    white-space nowrap
-    cursor pointer
-    text-transform uppercase
-    color #fff
-    font-size 27px
-    font-weight bold
-
-.header-nav
-    font-size 14px
-    display none
-    box-flex 1
-    flex 1 40%
-    text-align left
-    line-height 57px
-
-.header-nav-list > li
-    position relative
-    display inline-block
-    padding-left 60px
-
-.header-nav-list > li > a
-    position relative
-    display block
-    text-decoration none
-    font-size 16px
-    color rgba(255, 255, 255, 0.7)
-
-.header-nav-list > li > a:hover
-    color #fff
-
-.header-nav-list > li > .current
-    border-bottom 3px solid #fff
-
-.right-nav
-    line-height 60px
-    box-flex 1
-    flex 1 10%
-    text-align right
-
-.right-nav > a
-    color rgba(255, 255, 255, 0.7)
-    font-size 16px
-
-.right-nav > a:hover
-    color #fff
-
-@media screen and (min-width: 767px)
-    .header-nav
-        display block
-
-.header-mobile-nav-toggle
-    display none
-
-@media screen and (max-width: 767px)
-    .header-mobile-nav-toggle
-        position absolute
-        top 0
-        bottom 0
-        right 20px
-        width 25px
-        height 20px
-        margin auto
-        opacity .5
-        transition .2s
-        cursor pointer
-        outline none
-        background-color transparent
-        display block
-        border none
-
-    .header-mobile-nav-toggle span
-        position absolute
-        top 0
-        left 0
+    justify-content space-between
+    .logo
+        margin 0
+        padding 0
+        a
+            background url(./img/logo.png) no-repeat center center
+            font-size 0
+            height height
+            background-size contain
+            width 100px
+            display block
+    .nav
+        display flex
+        a
+            color rgba(0, 0, 0, .54)
+            height height
+            line-height height
+            padding 0 20px
+            transition all .3s
+            &:hover
+                background-color rgba(0, 0, 0, .02)
+                color rgba(0, 0, 0, .88)
+            &.current
+                color rgba(0, 0, 0, .88)
+                span
+                    height 100%
+                    display block
+                    border-bottom 3px solid  #000
+    .dir
+        line-height wiseHeight
+        padding 0 10px
+        display none
+        .icon
+            font-size 20px
+@media screen and (max-width screenWidth)
+    .header
         width 100%
-        height 2px
-        border-radius 2px
-        background #fff
-        transition .4s
-        transform-origin 0
-
-    .header-mobile-nav-toggle span:nth-child(2)
-        top 9px
-
-    .header-mobile-nav-toggle span:nth-child(3)
-        top 18px
-
-
-
+        padding 3px 10px
+        .logo
+            a
+                height wiseHeight
+        .nav
+            display none
+        .dir
+            display block

@@ -1,22 +1,32 @@
 {
-    "headerNav": [
-        {
-            "text": "主页",
-            "url": "/"
-        },
-        {
-            "text": "模板",
-            "url": "/templates.html"
-        },
-        {
-            "text": "组件",
-            "url": "/components.html"
-        },
-        {
-            "text": "使用指南",
-            "url": "/about.html"
-        }
-    ],
+    "header": {
+        "nav": [
+            {
+                "text": "主页",
+                "url": "/"
+            },
+            {
+                "text": "模板",
+                "url": "/templates.html"
+            },
+            {
+                "text": "组件",
+                "url": "/components.html"
+            },
+            {
+                "text": "指南",
+                "url": "/about.html"
+            },
+            {
+                "text": "关于 Pro",
+                "url": "/about.html"
+            },
+            {
+                "text": "GitHub",
+                "url": "https://github.com/mipengine"
+            }
+        ]
+    },
     "extensions": [
         "mip-sidebar"
     ]

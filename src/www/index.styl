@@ -1,153 +1,254 @@
 @import './_inc/common.styl'
 
-.font-size-15
-	font-size 42px
-	color #000
-
-.font-size-4
-	font-size 20px
-	color #999
-
-.container
-	width 100%
-
-.bggray
-	background-color #fafafa
-
-.content 
-	width 1110px
-	margin auto
-
 .banner
-	background #000 url(./img/banner.png) center center
-	background-repeat no-repeat
-	width 100%
-	height 468px
-	background-size cover
-
-.banner-title
-	position relative
-	top 50%
-	transform translateY(-50%)
-	color #fff
-	text-align center
-
-.banner-title h1
-	font-size 47px
-	margin 0
-
-.banner-title h4
-	margin-bottom 1.67em
-
-.banner-title a
-	border-color #fafafa
-	height .38rem
-	padding .05rem .25rem
-	color #fafafa
-
-/*中部point*/
-.imgtext-single
-	height 720px
-	padding 50px 0
-
-.point
-	height 147px
-	display flex
-	align-items center
-	box-align center
-	box-lines single
-	flex-align center
-	flex-flow row nowrap
-	background-color #fff
-
-.point-single
-	box-flex 1
-	flex 1 auto
-	text-align left
-	height 60px
-	padding-left 66px
-
-.point-single h1
-	margin 0
-	color #000
-	font-weight normal
-
-.point-single .subtitle
-	font-size 16px
-	color #999
-
-.imgtext-des
-	margin-top 15px
-
-.imgtext-tag
-	height 40px
-	width 150px
-	text-align center
-	color #000
-	margin-top 30px
-	padding-top 5px
-
-.imgtext-right-text
-	margin-left 123px
-
-.imgtext-icon
-	margin-left 5px
-	font-size 12px
-
-.component
-	background url(./img/component.png) no-repeat left center
-	background-size 56px
+    box-sizing content-box
+    position relative
+    height 468px
+    &:after
+        z-index 1
+        content ''
+        background #fff url(img/index/banner.jpg) no-repeat center center
+        background-size cover
+        width 100%
+        height 100%
+        display block
+        position absolute
+        left 0
+        top 0
+    .inner
+        layout()
+        position relative
+        z-index 10
+        top 50%
+        transform translateY(-50%)
+    h1
+        font-weight 400
+        margin 0
+        font-size 81px
+        letter-spacing 6.07px
+    .text
+        font-size 20px
+        letter-spacing 4px
+    .started
+        margin-top 30px
+        a
+            display inline-block
+            width 150px
+            height 40px
+            line-height 40px
+            text-align center
+            background-color #1D63EB
+            border-radius 3px
+            color #fff
+        .icon
+            font-size 12px
+@media screen and (max-width screenWidth)
+    .banner
+        height 30vw
+        margin-top 200px
+        background-position right bottom
+        .inner
+            top -200px
+            margin-top 20px
+            transform none
+            text-align center
+        h1
+            font-size 50px
+@media screen and (max-width 320px)
+    .banner
+        .text
+            font-size 18px
+        h1
+            font-size 30px
 
 
-.template
-	background url(./img/template.png) no-repeat left center
-	background-size 56px
+.intro
+    layout()
+    ul
+        padding 45px 0
+        list-style none
+        display flex
+        justify-content space-between
+        li
+            position relative
+            padding-left 64px
+    .img
+        display inline-block
+        position absolute
+        left 0
+        top 0
+        height 54px
+        border 1px solid  #333
+        border-radius 50%
+        text-align center
+        line-height 54px
+        width 54px
+    .icon
+        font-size 30px
+        color #333
+    h3
+        font-size 24px
+        font-weight 400
+    p
+        color #999
+    .wise
+        display none
+@media screen and (max-width 950px)
+    .intro
+        text-align center
+        .wise
+            display block
+        .pc
+            display none
+        ul
+            padding 20px 10px
+            li
+                padding-left 0
+        .img
+            display block
+            border none
+            border-radius none
+            position relative
+        p
+            color rgba(0, 0, 0, .88)
+            font-size 14px
 
 
-.code
-	background url(./img/code.png) no-repeat left center
-	background-size 56px
+.widget
+    .inner
+        position relative
+        height 720px
+        overflow hidden
+        layout()
+        .content
+            position absolute
+            top 50%
+            transform translateY(-50%)
+            h3
+                font-size 42px
+                font-weight 400
+            p
+                color #999
+                font-size 20px
+            .btn
+                margin 0
+                margin-top 30px
+                border-color #000
+                color #000
+                .icon
+                    font-size 12px
+        .img
+            position absolute
+    &.widget-gray
+        background-color #fafafa
+    &.widget-design
+        .img
+            width 681px
+            height 660px
+            right 0
+            top 35px
+    &.widget-develop
+        .content
+            left 724px
+        .img
+            left 0
+            top 35px
+            width 684px
+            height 660px
+    &.widget-components
+        .img
+            width 696px
+            height 628px
+            right 0
+            top 50px
+@media screen and (max-width 1024px)
+    .widget
+        .inner
+            height auto
+            padding 20px 0
+            .img
+                position static
+                width 80%
+                margin-left auto
+                margin-right auto
+                height auto
+                padding-bottom 10px
+            .content
+                position static
+                text-align center
+                transform none
+                h3
+                    font-size 28px
+                p
+                    font-size 14px
 
-.mag-container
-	background-color #fafafa
-
-.imgtext-link
-	position relative
-	top 50%
-	transform translateY(-50%)
 
 .shortcut
-	background-color #fff
-	text-align center
-	margin-bottom 90px
-	padding 0
-	padding-top 90px
-
-.shortcut h1
-	display block
-	margin-top 0
-	margin-bottom 45px
-
-.shortcut-single 
-	height 251px
-	width 345px
-	padding 45px 0px
-	border 1px solid #f1f1f1
-	border-radius 6px
-
-.shortcut-single:nth-child(2)
-	margin 0px 21px
-
-.shortcut-subtitle
-	font-size 20px
-	color #000
-	margin-top 30px
-	margin-bottom 20px
-
-.shortcut-small-font
-	font-size 16px
-	color rgba(0, 0, 0, .56)
-
-.shortcut img
-	margin auto
-	width 75px
+    padding 100px 0
+    layout()
+    h2
+        text-align center
+        font-size 30px
+    ul
+        display flex
+        justify-content space-between
+        list-style none
+        padding-top 45px
+        margin-left -20px
+        li
+            width 33.33%
+            padding-left 20px
+        a
+            position relative
+            text-align center
+            height 252px
+            display block
+            border 1px solid  #f1f1f1
+            border-radius 6px
+            padding-top 45px
+            padding-bottom 30px
+            .icon
+                font-size 75px
+            h4
+                font-size 20px
+                font-weight 400
+                padding-top 30px
+                color #000
+            p
+                padding-top 20px
+                color #999
+@media screen and (max-width screenWidth)
+    .shortcut
+        padding-top 30px
+        padding-bottom 30px
+        h2
+            font-size 24px
+        ul
+            display block
+            margin 0
+            padding 0
+            padding-top 20px
+            li
+                width 100%
+                margin 0
+                padding 0
+                margin-bottom 16px
+            a
+                border-radius 3px
+                text-align left
+                height auto
+                padding 10px 0 10px 40px
+                .icon
+                    position absolute
+                    left 0
+                    top 50%
+                    margin-top -20px
+                    font-size 40px
+                    width 40px
+                    height 40px
+                h4
+                    font-size 18px
+                    padding 0
+                p
+                    font-size 14px
+                    padding-top 0
