@@ -4,17 +4,19 @@
     box-sizing content-box
     position relative
     height 468px
+    overflow hidden
     &:after
         z-index 1
         content ''
-        background #fff url(img/index/banner.jpg) no-repeat center center
-        background-size cover
+        background url(img/index/banner.jpg) no-repeat center bottom
+        background-size contain
         width 100%
         height 100%
         display block
         position absolute
         left 0
         top 0
+        box-sizing border-box
     .inner
         layout()
         position relative
@@ -24,13 +26,14 @@
     h1
         font-weight 400
         margin 0
+        padding-bottom 13px
         font-size 81px
         letter-spacing 6.07px
     .text
         font-size 20px
         letter-spacing 4px
     .started
-        margin-top 30px
+        padding-top 46px
         a
             display inline-block
             width 150px
@@ -41,31 +44,49 @@
             border-radius 3px
             color #fff
         .icon
-            font-size 12px
+            font-size 10px
 @media screen and (max-width screenWidth)
     .banner
-        height 30vw
-        margin-top 200px
-        background-position right bottom
+        height 700px
         .inner
-            top -200px
-            margin-top 20px
+            top 0
             transform none
             text-align center
         h1
-            font-size 50px
-@media screen and (max-width 320px)
-    .banner
+            padding-top 61px
+            font-size 60px
+            line-height 60px
+            padding-bottom 4px
         .text
-            font-size 18px
-        h1
-            font-size 30px
+            font-size 16px
+            line-height 16px
+            padding-top 12px
+        .started
+            padding-top 28px
+            a
+                width 154px
+                height 36px
+                line-height 36px
+        &:after
+            background-position 80% bottom
+            background-size 190%
+@media screen and (max-width 600px)
+    .banner
+        height 600px
+@media screen and (max-width 500px)
+    .banner
+        height 520px
+@media screen and (max-width 400px)
+    .banner
+        height 480px
 
 
 .intro
     layout()
     ul
         padding 45px 0
+        height 54px
+        box-sizing content-box
         list-style none
         display flex
         justify-content space-between
@@ -86,13 +107,21 @@
     .icon
         font-size 30px
         color #333
+    .icon-code
+        font-size 20px
     h3
         font-size 24px
+        line-height 24px
         font-weight 400
+        color #000
     p
+        line-height 16px
         color #999
     .wise
+        padding-top 16px
         display none
+        font-size 14px
+        line-height 14px
 @media screen and (max-width 950px)
     .intro
         text-align center
@@ -101,7 +130,8 @@
         .pc
             display none
         ul
-            padding 20px 10px
+            height auto
+            padding 32px 16px
             li
                 padding-left 0
         .img
@@ -109,6 +139,13 @@
             border none
             border-radius none
             position relative
+            height 25px
+            line-height 25px
+            margin 0 auto
+        .icon
+            font-size 25px
+        .icon-code
+            font-size 16px
         p
             color rgba(0, 0, 0, .88)
             font-size 14px
@@ -127,16 +164,19 @@
             h3
                 font-size 42px
                 font-weight 400
+                line-height 42px
             p
                 color #999
                 font-size 20px
+                line-height 20px
+                padding-top 20px
             .btn
                 margin 0
                 margin-top 30px
                 border-color #000
                 color #000
                 .icon
-                    font-size 12px
+                    font-size 10px
         .img
             position absolute
     &.widget-gray
@@ -165,7 +205,7 @@
     .widget
         .inner
             height auto
-            padding 20px 0
+            padding 38px 0
             .img
                 position static
                 width 80%
@@ -179,55 +219,70 @@
                 transform none
                 h3
                     font-size 28px
+                    line-height 28px
                 p
                     font-size 14px
+                    line-height 14px
+                    padding-top 16px
+                .btn
+                    margin-top 24px
 
 
 .shortcut
-    padding 100px 0
+    padding 90px 0
     layout()
     h2
         text-align center
         font-size 30px
+        line-height 30px
+        font-weight 400
     ul
         display flex
         justify-content space-between
         list-style none
         padding-top 45px
-        margin-left -20px
+        margin-left -40px
         li
             width 33.33%
-            padding-left 20px
+            padding-left 40px
         a
             position relative
             text-align center
-            height 252px
             display block
             border 1px solid  #f1f1f1
             border-radius 6px
             padding-top 45px
             padding-bottom 30px
-            .icon
+            .img
                 font-size 75px
+                line-height 75px
+                height 75px
+                .icon
+                    vertical-align top
             h4
                 font-size 20px
                 font-weight 400
+                line-height 20px
                 padding-top 30px
                 color #000
             p
                 padding-top 20px
+                line-height 16px
                 color #999
 @media screen and (max-width screenWidth)
     .shortcut
-        padding-top 30px
-        padding-bottom 30px
+        padding-top 40px
+        padding-bottom 40px
         h2
             font-size 24px
+            line-height 24px
         ul
             display block
             margin 0
             padding 0
-            padding-top 20px
+            padding-top 30px
+            margin-bottom -16px
+            overflow hidden
             li
                 width 100%
                 margin 0
@@ -237,18 +292,21 @@
                 border-radius 3px
                 text-align left
                 height auto
-                padding 10px 0 10px 40px
-                .icon
+                padding 22px 0 22px 72px
+                .img
                     position absolute
-                    left 0
+                    left 16px
                     top 50%
                     margin-top -20px
                     font-size 40px
+                    line-height 40px
                     width 40px
                     height 40px
                 h4
                     font-size 18px
+                    line-height 18px
                     padding 0
                 p
                     font-size 14px
-                    padding-top 0
+                    line-height 14px
+                    padding-top 8px

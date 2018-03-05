@@ -1,6 +1,9 @@
 .footer
     background-color #1E1E1E
-    color #fff
+    color #999
+    font-size 14px
+    a
+        color #999
     .inner
         layout()
         padding-top 80px
@@ -10,24 +13,33 @@
         justify-content space-between
         dt
             font-size 18px
-            padding-bottom 10px
+            line-height 18px
+            padding-bottom 20px
+            color #fff
         dd
             line-height 30px
-            a
-                font-size 14px
-                color #999
+    .wise
+        display none
+        line-height 28px
+        a
+            display inline-block
+            border-radius 3px
+            background-color rgba(255, 255, 255, .02)
+            padding 0 8px
+            margin-right 16px
     .copyright
         text-align center
-        color #999
-        font-size 14px
-        margin-top 40px
+        padding-top 90px
 @media screen and (max-width screenWidth)
     .footer
         .inner
-            padding-top 20px
-            padding-bottom 20px
-        .menu
-            flex-wrap wrap
-            dl
-                width 50%
-                padding-top 20px
+            padding-top 40px
+            padding-bottom 40px
+        .pc
+            display none
+        .wise
+            display block
+        .copyright
+            color rgba(153, 153, 153, .24)
+            padding-top 16px
+            text-align left
