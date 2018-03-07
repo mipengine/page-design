@@ -8,6 +8,10 @@
     "header": {
         "current": "模板"
     },
+    "extensions": [
+        "https://c.mipcdn.com/extensions/platform/v1/mip-scroll-anchor/mip-scroll-anchor.js",
+        "http://192.168.0.4:8000/local-extension-loader/mip-mipengine-preview-v3.js"
+    ],
     "templatesList": [
         {
             "title": "小说",

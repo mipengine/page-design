@@ -1,5 +1,58 @@
 {{extend './_inc/layout.html'}}
 
 {{block 'content'}}
-todo
+    <div class="templates">
+        <div class="inner">
+            <aside class="aside">
+                <mip-scroll-anchor data-current-class="current">
+                    <ul>
+                        {{each templatesList}}
+                            <li>
+                                <a href="#{{ $value.title }}" anchor="{{ $value.title }}">{{ $value.title }}</a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </mip-scroll-anchor>
+            </aside>
+            <article class="article">
+                {{each templatesList}}
+                    <section class="section" id="{{ $value.title }}">
+                        <h2>{{ $value.title }}</h2>
+                        <p>{{ $value.descriptions }}</p>
+                        <div class="img">
+                            <mip-img
+                                on="tap:preview{{ $index }}.open(/html/{{ $value.url }})"
+                                layout="responsive"
+                                src="../html/{{ $value.img }}"
+                                width="440"
+                                height="783"
+                            ></mip-img>
+                            <a href="/html/{{ $value.url }}" data-type="mip" class="wise"></a>
+                        </div>
+                        <div class="tools">
+                            <button class="btn-outline pc" on="tap:preview{{ $index }}.open(/html/{{ $value.url }})">预览</button>
+                            <a href="/html/{{ $value.url }}" data-type="mip" class="btn btn-outline wise">预览</a>
+                            <a href="/archive/{{ $value.name }}.zip" class="btn btn-outline">下载</a>
+                        </div>
+
+                        <mip-mipengine-preview-v3 id="preview{{ $index }}" layout="nodisplay" mode="mobile">
+                            <div class="preview-header">
+                                <div class="preivew-header-inner">
+                                    <a href="/archive/{{ $value.name }}.zip" class="btn btn-outline">下载</a>
+                                    <div class="preview-close" on="tap:preview{{ $index }}.close" title="点击关闭预览">
+                                        <i class="icon icon-close"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="preview-box">
+                                <div class="preview-iframe" iframe>
+                                </div>
+                            </div>
+                        </mip-mipengine-preview-v3>
+                    </section>
+                {{/each}}
+            </article>
+        </div>
+    </div>
+
 {{/block}}

@@ -3,15 +3,14 @@
 
 .components
     layout()
-    box-sizing content-box
     .inner
         display flex
     .article
         padding-bottom 90px
         flex 1 1 auto
         overflow hidden
-        padding-left 20px
-        border-left 1px solid rgba(0, 0, 0, .08)
+        padding-left 40px
+        border-left 1px solid rgba(0,0,0,0.08)
         h2
             padding-top 90px
             font-size 36px
@@ -55,23 +54,25 @@
                 line-height 30px
                 display block
     aside
-        min-width 195px
+        width 195px
         padding-top 80px
         flex none
         mip-scroll-anchor
             display block
-            position sticky
-            top 80px
+            width 195px
+            position fixed
+            top 120px
+            z-index 10
         ul
             list-style none
-            // &:before
-            //     content ''
-            //     position absolute
-            //     right -1px
-            //     top -80px
-            //     width 1px
-            //     height 80px
-            //     background-color #fff
+            &:before
+                content ''
+                position absolute
+                right -1px
+                top -80px
+                width 1px
+                height 80px
+                background-color #fff
         a
             display block
             line-height 40px
@@ -79,10 +80,12 @@
             color 14px
             color rgba(0, 0, 0, .54)
             text-indent 44px
-            &:hover,
             &.current
                 background-color rgba(0, 0, 0, .04)
                 color rgba(0, 0, 0, .88)
+            &:hover
+                background-color rgba(0, 0, 0, .02)
+                color rgba(0, 0, 0, .54)
 
 @media screen and (max-width screenWidth)
     .components

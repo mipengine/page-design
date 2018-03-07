@@ -1,2 +1,162 @@
 @import './_inc/common.styl'
 
+.templates
+    layout()
+    .inner
+        display flex
+    .article
+        padding-bottom 90px
+        flex 1 1 auto
+        overflow hidden
+        padding-left 40px
+        border-left 1px solid rgba(0, 0, 0, .08)
+        h2
+            padding-top 90px
+            font-size 36px
+            line-height 36px
+            font-weight 400
+        p
+            padding-top 20px
+            line-height 35px
+        .img
+            border 1px solid  #eee
+            border-radius 9px
+            max-width 440px
+            overflow hidden
+            margin-top 35px
+            cursor pointer
+            position relative
+            &:hover
+                box-shadow 0 5px 10px 0 rgba(0, 0, 0, .1)
+            .wise
+                display none
+                width 100%
+                height 100%
+                position absolute
+                left 0
+                top 0
+        .tools
+            max-width 440px
+            padding-top 30px
+            text-align center
+            .wise
+                display none
+    .aside
+        width 195px
+        padding-top 80px
+        flex none
+        mip-scroll-anchor
+            display block
+            width 195px
+            position fixed
+            top 120px
+            z-index 10
+        ul
+            list-style none
+            &:before
+                content ''
+                position absolute
+                right -1px
+                top -80px
+                width 1px
+                height 80px
+                background-color #fff
+        a
+            display block
+            line-height 40px
+            height 40px
+            color 14px
+            color rgba(0, 0, 0, .54)
+            text-indent 44px
+            &.current
+                background-color rgba(0, 0, 0, .04)
+                color rgba(0, 0, 0, .88)
+            &:hover
+                background-color rgba(0, 0, 0, .02)
+                color rgba(0, 0, 0, .54)
+mip-mipengine-preview-v3
+    display none
+    position fixed
+    left 0
+    top 0
+    width 100%
+    height 100%
+    z-index 10000
+    .preview-header
+        position relative
+        z-index 20
+        height 60px
+        background-color #fff
+        box-shadow 0 6px 9px 0 rgba(0, 0, 0, .24)
+    .preivew-header-inner
+        layout()
+        position relative
+        height 100%
+        text-align center
+    .preview-close
+        cursor pointer
+        position absolute
+        right 0
+        top 0
+        font-size 30px
+        height 60px
+        line-height 60px
+        width 60px
+        text-align center
+    .preview-box
+        left 0
+        top 0
+        position absolute
+        z-index 10
+        height 100%
+        width 100%
+        padding-top 60px
+        background-color rgba(255, 255, 255, .8)
+    .preview-iframe
+        width 375px
+        height 667px
+        margin 0 auto
+        position relative
+        top 50%
+        transform translateY(-50%)
+        padding 56px 25px
+        background-color #fff
+        border 1px solid #eee
+        box-shadow 0 15px 30px 0 rgba(0, 0, 0, .2)
+        border-radius 50px
+        box-sizing content-box
+        iframe
+            margin 0
+            padding 0
+            border 1px solid rgba(156, 156, 156, .31)
+            width 100%
+            height 100%
+@media screen and (max-width screenWidth)
+    .templates
+        .aside
+            display none
+        .article
+            padding-bottom 60px
+            border-left none
+            padding-left 0
+            h2
+                font-size 24px
+                line-height 24px
+                padding-top 60px
+                & + p
+                    padding-top 16px
+            p
+                font-size 14px
+                line-height 20px
+            .img
+                max-width screenWidth
+                .wise
+                    display block
+            .tools
+                max-width screenWidth
+                padding-top 36px
+                .pc
+                    display none
+                .wise
+                    display inline-block
+
