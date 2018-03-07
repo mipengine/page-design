@@ -5,6 +5,9 @@
     "page": {
         "title": "模板"
     },
+    "header": {
+        "current": "模板"
+    },
     "templatesList": [
         {
             "title": "小说",
