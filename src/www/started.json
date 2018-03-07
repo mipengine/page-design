@@ -1,0 +1,11 @@
+{
+    "extend": [
+        "./_inc/common.json"
+    ],
+    "page": {
+        "title": "使用指南"
+    },
+    "header": {
+        "current": "指南"
+    }
+}
