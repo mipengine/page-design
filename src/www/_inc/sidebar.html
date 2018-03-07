@@ -1,0 +1,33 @@
+<mip-sidebar
+    id="sidebar"
+    side="right"
+    layout="nodisplay"
+    class="mip-hidden">
+    <ul>
+        {{each header.nav}}
+            <li>
+                <a href="{{$value.url}}"{{if $value.text == header.current}} class="active"{{/if}}>
+                    {{$value.text}}
+                </a>
+
+                {{if header.current === '组件' && $value.text === header.current}}
+                    <ul>
+                        {{each componentsList}}
+                            <li>
+                                <a href="#{{ $value.title }}">{{ $value.title }}</a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                {{else if header.current === '模板' && $value.text === header.current}}
+                    <ul>
+                        {{each templatesList}}
+                            <li>
+                                <a href="#{{ $value.title }}">{{ $value.title }}</a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                {{/if}}
+            </li>
+        {{/each}}
+  </ul>
+</mip-sidebar>
