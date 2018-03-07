@@ -53,15 +53,18 @@ artTemplate.defaults.imports.getComponentsExtensions = value => {
  */
 artTemplate.defaults.imports.getComponentsCode = value => {
     const filepath = path.resolve(__dirname, '../src/', value.replace('.html', '.code.html'));
-    const content = util.readFileSync(filepath);
+    return util.readFileSync(filepath);
+};
 
-    if (!content) {
-        return '';
-    }
-
-    const mark = hljs.highlight('html', content).value;
-
-    return `<pre><code>${mark}</code></pre>`;
+/**
+ * 注入代码高亮
+ *
+ * @param {string} content 代码内容
+ * @param {string} [type=html] 内容类型，默认为 html
+ * @return {string}
+ */
+artTemplate.defaults.imports.highlight = (content, type) => {
+    return hljs.highlight(type || 'html', content).value;
 };
 
 module.exports = options => {
