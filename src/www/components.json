@@ -15,13 +15,12 @@
     "componentsList": [
         {
             "title": "通用",
-            "id": "base",
             "descriptions": "通用的排版、布局、颜色、间距、图标等基础样式。",
             "components": [
                 {
                     "title": "标题",
                     "iframe": {
-                        "url": "components/base/base.title.html",
+                        "url": "components/base/title.html",
                         "height": 200,
                         "layout": "fixed-height"
                     }
@@ -29,7 +28,7 @@
                 {
                     "title": "栅格化",
                     "iframe": {
-                        "url": "components/base/base.grid.html",
+                        "url": "components/base/grid.html",
                         "height": 245,
                         "layout": "fixed-height"
                     }
@@ -37,7 +36,7 @@
                 {
                     "title": "按行截断",
                     "iframe": {
-                        "url": "components/base/base.clamp.html",
+                        "url": "components/base/clamp.html",
                         "height": 200,
                         "layout": "fixed-height"
                     }
@@ -46,12 +45,11 @@
         },
         {
             "title": "按钮",
-            "id": "button",
             "components": [
                 {
                     "title": "按钮标签",
                     "iframe": {
-                        "url": "components/button/button.html",
+                        "url": "components/button/base.html",
                         "height": 40,
                         "layout": "fixed-height"
                     }
@@ -59,7 +57,7 @@
                 {
                     "title": "按钮尺寸",
                     "iframe": {
-                        "url": "components/button/button-size.html",
+                        "url": "components/button/size.html",
                         "height": 200,
                         "layout": "fixed-height"
                     }
@@ -67,7 +65,7 @@
                 {
                     "title": "按钮样式",
                     "iframe": {
-                        "url": "components/button/button-style.html",
+                        "url": "components/button/style.html",
                         "height": 240,
                         "layout": "fixed-height"
                     }
@@ -77,7 +75,6 @@
 
         {
             "title": "徽章",
-            "id": "base",
             "descriptions": "能用计数器、气泡提示器。",
             "components": [
                 {
@@ -101,14 +98,13 @@
 
         {
             "title": "图标",
-            "id": "icon",
             "descriptions": "通用的 iconfont 图标",
             "components": [
                 {
                     "title": "图标",
                     "iframe": {
-                        "url": "components/icon/base.icon.html",
-                        "height": 570,
+                        "url": "components/icon/base.html",
+                        "height": 1180,
                         "layout": "fixed-height"
                     }
                 }
@@ -117,7 +113,6 @@
 
         {
             "title": "提示",
-            "id": "tips",
             "components": [
                 {
                     "title": "infobar",
@@ -139,12 +134,11 @@
         },
         {
             "title": "展开收起",
-            "id": "showmore",
             "components": [
                 {
                     "title": "展开收起",
                     "iframe": {
-                        "url": "components/showmore/showmore.html",
+                        "url": "components/showmore/base.html",
                         "height": 200
                     }
                 }
@@ -152,7 +146,6 @@
         },
         {
             "title": "滑动",
-            "id": "swipe",
             "components": [
                 {
                     "title": "图片横滑",
