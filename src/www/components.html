@@ -8,11 +8,7 @@
                     <ul>
                         {{each componentsList}}
                             <li>
-                                {{if $index === 0}}
-                                    <a href="#{{ $value.title }}" class="current" anchor="{{ $value.title }}">{{ $value.title }}</a>
-                                {{else}}
-                                    <a href="#{{ $value.title }}" anchor="{{ $value.title }}">{{ $value.title }}</a>
-                                {{/if}}
+                                <a href="#{{ $value.title }}" anchor="{{ $value.title }}">{{ $value.title }}</a>
                             </li>
                         {{/each}}
                     </ul>
@@ -66,7 +62,7 @@
                                 <div class="code">
                                     要使用{{ $item.title }}，必须将以下脚本代码插入到页面 body 标签结束前。
                                     <div class="hljs">
-                                        <pre><code>{{each $ext $text}}{{@ $text | getHighlight}}
+                                        <pre><code>{{each $ext $text}}{{@ $text | highlight}}
 {{/each}}</code></pre>
                                     </div>
                                 </div>
