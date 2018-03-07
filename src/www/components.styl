@@ -1,179 +1,116 @@
 @import './_inc/common.styl'
-
-/*fixed*/
-.header
-    position fixed
-    width 100%
-    top 0
-
-div.components-content
-    margin 60px auto 0 auto
-
-.components-nav
-    position fixed
-    width 195px
+@import './_inc/hljs.styl'
 
 .components
-    margin-left 195px
-
-
-
-
-.components-content
-    background #fff
-    width 1110px
-    margin auto
-
-.components-nav
-    margin-top 60px
-    margin-right 123px
-    -webkit-box-flex 1
-    -webkit-flex 1 1 7%
-    flex 1 1 7%
-
-.components-nav ul
-    list-style none
-
-.components-nav ul li
-    margin-bottom 10px
-    padding 10px 0px 10px 17px
-
-.components-nav ul li a
-    opacity 0.54
-    font-family PingFangSC-Regular
-    font-size 14px
-    color #000
-    line-height 14px
-
-.components-nav ul li:hover
-    background rgba(0, 0, 0, 0.02)
-    cursor pointer
-
-.components-nav ul li.current
-    background rgba(0, 0, 0, 0.04)
-
-.components-nav ul li:hover a, .template-nav ul li.current a
-    opacity 0.88
-
-.components
-    border-left 1px solid rgba(0, 0, 0, 0.08)
-    -webkit-box-flex 1
-    -webkit-flex 1 1 85%
-    flex 1 1 85%
-
-.components-list
-    padding 50px 0 0 40px
-    ul
-        list-style none
-    dt
-        font-size 16px
+    layout()
+    box-sizing content-box
+    .inner
+        display flex
+    .article
+        padding-bottom 90px
+        flex 1 1 auto
+        overflow hidden
+        padding-left 20px
+        border-left 1px solid rgba(0, 0, 0, .08)
         h2
+            padding-top 90px
             font-size 36px
-            color rgba(0, 0, 0, 0.88)
-            font-weight normal
-        .description
-            font-size 16px
-            color rgba(0, 0, 0, 0.88)
+            line-height 36px
+            font-weight 400
+            & + p
+                padding-top 20px
+        h3
+            font-size 20px
+            line-height 20px
+            padding-top 65px
+            font-weight 400
+            & + p
+                padding-top 10px
+        p
+            line-height 35px
+        .preview
+            overflow hidden
             margin-top 30px
-    dd
-        margin-bottom 90px
-        li
-            margin-top 50px
-            p
-                color rgba(0, 0, 0, 0.88)
-                margin 20px 0 30px
+            border 1px solid  #f1f1f1
+            .title
+                height 40px
+                line-height 40px
+                display flex
+                justify-content space-between
+                background-color #FAFAFA
+                padding-left 21px
+                padding-right 21px
+                &[accordionbtn]
+                    cursor pointer
+            .code
+                display none
+                padding 20px
+            .iframe
+                padding 21px
+                &.iframe-noborder
+                    padding-left 0 !important
+                    padding-right 0 !important
+        .scripttag
+            .code
+                line-height 30px
+                display block
+    aside
+        min-width 195px
+        padding-top 80px
+        flex none
+        mip-scroll-anchor
+            display block
+            position sticky
+            top 80px
+        ul
+            list-style none
+            // &:before
+            //     content ''
+            //     position absolute
+            //     right -1px
+            //     top -80px
+            //     width 1px
+            //     height 80px
+            //     background-color #fff
+        a
+            display block
+            line-height 40px
+            height 40px
+            color 14px
+            color rgba(0, 0, 0, .54)
+            text-indent 44px
+            &:hover,
+            &.current
+                background-color rgba(0, 0, 0, .04)
+                color rgba(0, 0, 0, .88)
 
-.components-preview
-    width 920px
-    border 1px solid rgba(0, 0, 0, 0.1)
-    border-radius 2px
-    .components-label
-        margin 0
-        padding 0 20px
-        line-height 40px
-        background #fafafa
-        span
-            font-size 16px
-            color rgba(0,0,0,0.88)
-        select
-            height 32px
-            margin-top 4px
-    .components-case
-        padding 20px
-        .components-code
+@media screen and (max-width screenWidth)
+    .components
+        aside
             display none
-
-.component-descripe
-    margin-top 30px
-
-.component-descripe
-    font-size 16px
-    color rgba(0, 0, 0, 0.88)
-
-.component-img
-    margin-top 45px
-    &:hover
-        box-shadow 0px 0px 10px 5px rgba(0, 0, 0, 0.1)
-
-@media screen and (max-width: 767px)
-    .components-content
-        width 100%
-        .components-nav
-            display none
-        .components
-            margin-left 0
-            padding 0 15px
-        .components-list
+        .article
+            padding-bottom 60px
+            border-left none
             padding-left 0
-            padding-top 10px
-        .components-preview
-            width 100%
-
-
-
-
-// github style
-.hljs
-    display block
-    overflow-x auto
-    padding 0.5em
-    color #333
-    background #f8f8f8
-.hljs-comment,.hljs-quote
-    color #998
-    font-style italic
-.hljs-keyword,.hljs-selector-tag,.hljs-subst
-    color #333
-    font-weight bold
-.hljs-number,.hljs-literal,.hljs-variable,.hljs-components-variable,.hljs-tag .hljs-attr
-    color #008080
-.hljs-string,.hljs-doctag
-    color #d14
-.hljs-title,.hljs-section,.hljs-selector-id
-    color #900
-    font-weight bold
-.hljs-subst
-    font-weight normal
-.hljs-type,.hljs-class .hljs-title
-    color #458
-    font-weight bold
-.hljs-tag,.hljs-name,.hljs-attribute
-    color #000080
-    font-weight normal
-.hljs-regexp,.hljs-link
-    color #009926
-.hljs-symbol,.hljs-bullet
-    color #990073
-.hljs-built_in,.hljs-builtin-name
-    color #0086b3
-.hljs-meta
-    color #999
-    font-weight bold
-.hljs-deletion
-    background #fdd
-.hljs-addition
-    background #dfd
-.hljs-emphasis
-    font-style italic
-.hljs-strong
-    font-weight bold
+            h2
+                font-size 24px
+                line-height 24px
+                padding-top 60px
+                & + p
+                    padding-top 16px
+            h3
+                font-size 18px
+                line-height 18px
+                padding-top 50px
+                & + p
+                    padding-top 5px
+            p
+                font-size 14px
+                line-height 20px
+            .preview
+                margin-top 20px
+                .title
+                    padding-left 16px
+                    padding-right 16px
+                .iframe
+                    padding 16px

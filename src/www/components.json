@@ -5,58 +5,71 @@
     "page": {
         "title": "组件"
     },
+    "header": {
+        "current": "组件"
+    },
+    "extensions": [
+        "mip-accordion",
+        "http://172.21.196.53:8000/local-extension-loader/mip-scroll-anchor.js"
+    ],
     "componentsList": [
         {
             "title": "通用",
-            "name": "base",
+            "id": "base",
             "descriptions": "通用的排版、布局、颜色、间距、图标等基础样式。",
             "components": [
                 {
                     "title": "标题",
                     "iframe": {
                         "url": "components/base/base.title.html",
-                        "height": 200
+                        "height": 200,
+                        "layout": "fixed-height"
                     }
                 },
                 {
                     "title": "栅格化",
                     "iframe": {
                         "url": "components/base/base.grid.html",
-                        "height": 245
+                        "height": 245,
+                        "layout": "fixed-height"
                     }
                 },
                 {
                     "title": "按行截断",
                     "iframe": {
                         "url": "components/base/base.clamp.html",
-                        "height": 200
+                        "height": 200,
+                        "layout": "fixed-height"
                     }
                 }
             ]
         },
         {
             "title": "按钮",
-            "name": "button",
+            "id": "button",
             "components": [
                 {
                     "title": "按钮标签",
                     "iframe": {
                         "url": "components/button/button.html",
-                        "height": 40
+                        "height": 40,
+                        "layout": "fixed-height"
                     }
                 },
                 {
                     "title": "按钮尺寸",
                     "iframe": {
                         "url": "components/button/button-size.html",
-                        "height": 200
+                        "height": 200,
+                        "layout": "fixed-height"
                     }
                 },
                 {
                     "title": "按钮样式",
                     "iframe": {
                         "url": "components/button/button-style.html",
-                        "height": 240
+                        "height": 240,
+                        "layout": "fixed-height"
                     }
                 }
             ]
@@ -64,21 +77,23 @@
 
         {
             "title": "徽章",
-            "name": "base",
+            "id": "base",
             "descriptions": "能用计数器、气泡提示器。",
             "components": [
                 {
                     "title": "标题徽章",
                     "iframe": {
                         "url": "components/badge/title.html",
-                        "height": 200
+                        "height": 200,
+                        "layout": "fixed-height"
                     }
                 },
                 {
                     "title": "徽章样式",
                     "iframe": {
                         "url": "components/badge/style.html",
-                        "height": 160
+                        "height": 160,
+                        "layout": "fixed-height"
                     }
                 }
             ]
@@ -86,14 +101,15 @@
 
         {
             "title": "图标",
-            "name": "icon",
+            "id": "icon",
             "descriptions": "通用的 iconfont 图标",
             "components": [
                 {
                     "title": "图标",
                     "iframe": {
                         "url": "components/icon/base.icon.html",
-                        "height": 570
+                        "height": 570,
+                        "layout": "fixed-height"
                     }
                 }
             ]
@@ -101,30 +117,32 @@
 
         {
             "title": "提示",
-            "name": "tips",
+            "id": "tips",
             "components": [
                 {
                     "title": "infobar",
                     "iframe": {
                         "url": "components/tips/infobar.html",
-                        "height": 40
+                        "height": 40,
+                        "layout": "fixed-height"
                     }
                 },
                 {
                     "title": "Toast",
                     "iframe": {
                         "url": "components/tips/toast.html",
-                        "height": 240
+                        "height": 240,
+                        "layout": "fixed-height"
                     }
                 }
             ]
         },
         {
             "title": "展开收起",
-            "name": "showmore",
+            "id": "showmore",
             "components": [
                 {
-                    "title": "默认",
+                    "title": "展开收起",
                     "iframe": {
                         "url": "components/showmore/showmore.html",
                         "height": 200
@@ -134,13 +152,14 @@
         },
         {
             "title": "滑动",
-            "name": "swipe",
+            "id": "swipe",
             "components": [
                 {
                     "title": "图片横滑",
                     "iframe": {
                         "url": "components/swipe/scrollbox.html",
-                        "height": 450
+                        "height": 500,
+                        "border": false
                     }
                 },
                 {

@@ -1,9 +1,21 @@
 {{extend '../../base/layout.html'}}
 
+{{set fixed = header.current !== '主页'}}
+
 {{block 'title'}}<title>{{ page.title }} - 官网</title>{{/block}}
 
 {{block 'header'}}
-    {{include './nav.html'}}
+    {{if fixed}}
+        {{include './nav.fixed.html'}}
+    {{else}}
+        {{include './nav.html'}}
+    {{/if}}
+{{/block}}
+
+{{block 'content'}}
+    <div class="main{{if fixed}} main-fixed{{/if}}">
+        {{include './content.html'}}
+    </div>
 {{/block}}
 
 {{block 'footer'}}

@@ -15,10 +15,10 @@
             },
             {
                 "text": "指南",
-                "url": "/about.html"
+                "url": "/started.html"
             },
             {
-                "text": "关于 Pro",
+                "text": "关于",
                 "url": "/about.html"
             },
             {
@@ -28,6 +28,7 @@
         ]
     },
     "extensions": [
-        "mip-sidebar"
+        "mip-sidebar",
+        "mip-fixed"
     ]
 }
