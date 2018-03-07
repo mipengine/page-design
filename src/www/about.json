@@ -3,6 +3,9 @@
         "./_inc/common.json"
     ],
     "page": {
-        "title": "使用指南"
+        "title": "关于"
+    },
+    "header": {
+        "current": "关于"
     }
 }

@@ -1,38 +1,22 @@
 @import './_inc/common.styl'
 
 .guide-content
-	width 1110px
-	margin auto
-
-.guide-content h1
-	font-size 36px
-	color #000
-	margin-top 90px
-	margin-bottom 20px
-
-.guide-content .subtitle
-	font-size 16px
-	color #999
-	margin-bottom 60px
-
-.process
-	margin-bottom 150px
-
-.process p
-	font-size 16px
-	color #000
-	margin-bottom 30px
-
-@media screen and (max-width: 767px)
-	.guide-content
-		width 100%
-		padding 20px
-		h1
-			margin 0
-			font-size 25px
-		.subtitle
-			margin 20px 0
-		.process
-			margin 0
-			p
-				margin-bottom 15px
+    layout()
+    padding-top 90px
+    padding-bottom 150px
+    h1
+        font-size 36px
+        line-height 36px
+        font-weight 400
+    p
+        padding-top 20px
+        color #999
+        line-height 16px
+    ul
+        list-style none
+        padding-top 60px
+        li
+            line-height 16px
+            padding-top 30px
+            &:first-child
+                padding-top 0
