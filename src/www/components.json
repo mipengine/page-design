@@ -10,7 +10,7 @@
     },
     "extensions": [
         "mip-accordion",
-        "http://172.21.196.53:8000/local-extension-loader/mip-scroll-anchor.js"
+        "https://c.mipcdn.com/extensions/platform/v1/mip-scroll-anchor/mip-scroll-anchor.js"
     ],
     "componentsList": [
         {
