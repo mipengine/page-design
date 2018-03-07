@@ -16,7 +16,7 @@
             </aside>
             <article class="article">
                 {{each componentsList}}
-                <section class="section" id="{{ $value.title }}">
+                <div class="section" id="{{ $value.title }}">
                     <h2>{{ $value.title }}</h2>
                     {{if $value.descriptions}}
                         <p>{{ $value.descriptions }}</p>
@@ -69,7 +69,7 @@
                             </div>
                         {{/if}}
                     {{/each}}
-                </section>
+                </div>
                 {{/each}}
             </article>
         </div>
