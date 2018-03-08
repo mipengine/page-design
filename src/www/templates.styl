@@ -39,6 +39,17 @@
             max-width 440px
             padding-top 30px
             text-align center
+            .btn,
+            button
+                width 100px
+                padding 0
+                height 30px
+                line-height 30px
+                font-size 14px
+                color #000
+                border 1px solid  #000
+                hover()
+                active()
             .wise
                 display none
     .aside
@@ -53,14 +64,14 @@
             z-index 10
         ul
             list-style none
-            &:before
-                content ''
-                position absolute
-                right -1px
-                top -80px
-                width 1px
-                height 80px
-                background-color #fff
+            // &:before
+            //     content ''
+            //     position absolute
+            //     right -1px
+            //     top -80px
+            //     width 1px
+            //     height 80px
+            //     background-color #fff
         a
             display block
             line-height 40px
@@ -68,6 +79,7 @@
             color 14px
             color rgba(0, 0, 0, .54)
             text-indent 44px
+            active()
             &.current
                 background-color rgba(0, 0, 0, .04)
                 color rgba(0, 0, 0, .88)
@@ -93,6 +105,18 @@ mip-mipengine-preview-v3
         position relative
         height 100%
         text-align center
+        .btn,
+        button
+            width 100px
+            padding 0
+            height 30px
+            line-height 30px
+            font-size 14px
+            color #000
+            border 1px solid  #000
+            hover()
+            active()
+            margin-top 15px
     .preview-close
         cursor pointer
         position absolute

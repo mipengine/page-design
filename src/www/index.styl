@@ -102,13 +102,11 @@
         border 1px solid  #333
         border-radius 50%
         text-align center
-        line-height 54px
+        line-height 50px
         width 54px
     .icon
         font-size 30px
         color #333
-    .icon-code
-        font-size 20px
     h3
         font-size 24px
         line-height 24px
@@ -175,6 +173,8 @@
                 margin-top 30px
                 border-color #000
                 color #000
+                hover()
+                active()
                 .icon
                     font-size 10px
         .img
@@ -253,6 +253,10 @@
             border-radius 6px
             padding-top 45px
             padding-bottom 30px
+            hover()
+            active()
+            &:hover
+                box-shadow 0 5px 10px 0 rgba(0, 0, 0, .1)
             .img
                 font-size 75px
                 line-height 75px
@@ -293,6 +297,8 @@
                 text-align left
                 height auto
                 padding 22px 0 22px 72px
+                &:hover
+                    box-shadow none
                 .img
                     position absolute
                     left 16px
