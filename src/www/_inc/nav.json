@@ -28,7 +28,7 @@
         ]
     },
     "extensions": [
-        "https://static.xuexb.com/js/mip-sidebar.js",
+        "mip-sidebar",
         "mip-fixed"
     ]
 }
