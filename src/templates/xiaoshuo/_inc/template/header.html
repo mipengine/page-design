@@ -1,7 +1,7 @@
 <header id="header">
     <div class="left">
         {{if header.back}}
-            <a href="{{ header.back }}"><i class="icon icon-back"></i></a>
+            <a href="{{ header.back }}"><i class="icon icon-left"></i></a>
         {{/if}}
     </div>
     <h4 class="line-clamp1">{{ header.title || '小说' }}</h4>
@@ -13,7 +13,7 @@
             <a href="#"><i class="icon icon-share"></i></a>
         {{/if}}
         {{if header.mybook}}
-            <a href="{{ header.mybook }}"><i class="iconfont">&#xe65f;</i></a>
+            <a href="{{ header.mybook }}"><i class="icon icon-mybook"></i></a>
         {{/if}}
     </div>
 </header>
