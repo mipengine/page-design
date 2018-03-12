@@ -10,8 +10,12 @@
         flex 1 1 auto
         overflow hidden
         padding-left 40px
+        .section
+            &:target
+                h2
+                    padding-top 120px
         h2
-            padding-top 90px
+            padding-top 60px
             font-size 36px
             line-height 36px
             font-weight 400
@@ -24,6 +28,8 @@
             font-weight 400
             & + p
                 padding-top 10px
+            &:target
+                padding-top 120px
         p
             line-height 35px
         .preview
