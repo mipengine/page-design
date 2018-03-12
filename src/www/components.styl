@@ -10,9 +10,8 @@
         flex 1 1 auto
         overflow hidden
         padding-left 40px
-        border-left 1px solid rgba(0,0,0,0.08)
         h2
-            padding-top 90px
+            padding-top 60px
             font-size 36px
             line-height 36px
             font-weight 400
@@ -21,7 +20,7 @@
         h3
             font-size 20px
             line-height 20px
-            padding-top 65px
+            padding-top 35px
             font-weight 400
             & + p
                 padding-top 10px
@@ -42,6 +41,7 @@
                 &[accordionbtn]
                     cursor pointer
             .code
+                background-color rgba(250, 250, 250, .5)
                 display none
                 padding 20px
             .iframe
@@ -54,39 +54,30 @@
                 line-height 30px
                 display block
     aside
-        width 195px
-        padding-top 80px
+        width 162px
         flex none
         mip-scroll-anchor
             display block
-            width 195px
+            width 162px
             position fixed
-            top 120px
+            top 100px
             z-index 10
         ul
             list-style none
-            // &:before
-            //     content ''
-            //     position absolute
-            //     right -1px
-            //     top -80px
-            //     width 1px
-            //     height 80px
-            //     background-color #fff
         a
+            font-weight 700
             display block
             line-height 40px
             height 40px
             color 14px
             color rgba(0, 0, 0, .54)
-            text-indent 44px
-            active()
+            text-indent 10px
             &.current
-                background-color rgba(0, 0, 0, .04)
                 color rgba(0, 0, 0, .88)
             &:hover
                 background-color rgba(0, 0, 0, .02)
                 color rgba(0, 0, 0, .54)
+            active()
 
 @media screen and (max-width screenWidth)
     .components

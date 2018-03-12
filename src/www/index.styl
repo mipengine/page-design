@@ -107,6 +107,8 @@
     .icon
         font-size 30px
         color #333
+        &.icon-code
+            font-size 40px
     h3
         font-size 24px
         line-height 24px
@@ -142,8 +144,9 @@
             margin 0 auto
         .icon
             font-size 25px
-        .icon-code
-            font-size 16px
+            &.icon-code
+                font-size 35px
+                margin-top -5px
         p
             color rgba(0, 0, 0, .88)
             font-size 14px
@@ -253,6 +256,7 @@
             border-radius 6px
             padding-top 45px
             padding-bottom 30px
+            transition box-shadow .3s
             active()
             &:hover
                 box-shadow 0 5px 10px 0 rgba(0, 0, 0, .1)
