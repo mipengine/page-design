@@ -9,8 +9,12 @@
         flex 1 1 auto
         overflow hidden
         padding-left 40px
+        .section
+            &:target
+                h2
+                    padding-top 120px
         h2
-            padding-top 90px
+            padding-top 60px
             font-size 36px
             line-height 36px
             font-weight 400
@@ -58,15 +62,17 @@
             display block
             width 162px
             position fixed
-            top 100px
+            top 110px
             z-index 10
         ul
             list-style none
+        li
+            padding-bottom 13px
         a
             display block
             line-height 40px
             height 40px
-            color 14px
+            font-size 14px
             color rgba(0, 0, 0, .54)
             text-indent 10px
             &:hover
