@@ -1,13 +1,13 @@
 {{if articleInfo.isLink}}
 <a data-type="mip" href="{{articleInfo.linkUrl}}">
 {{/if}}
-<div class="med-img-content mag-row mag-gap-top mag-gap-bottom">
-    <div class="mag-gap-right">
+<div class="med-img-content row gap-top gap-bottom">
+    <div class="gap-right">
         <mip-img class="med-img-content-img" src="{{ articleInfo.img }}">
     </div>
     <div class="">
-        <p class="mag-gap-top-small c-color">{{ articleInfo.name }}</p>
-        <p class="c-color-gray font-size-s"><span class="c-color-gray mag-gap-right-small">{{ articleInfo.level }}</span><span class="c-color-gray">{{ articleInfo.hospital }}</span></p>
+        <p class="gap-top-small c-color">{{ articleInfo.name }}</p>
+        <p class="c-color-gray font-size-s"><span class="c-color-gray gap-right-small">{{ articleInfo.level }}</span><span class="c-color-gray">{{ articleInfo.hospital }}</span></p>
     </div>
 </div>
 {{if articleInfo.isLink}}</a>{{/if}}

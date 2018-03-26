@@ -1,18 +1,18 @@
 {{extend '../../base/templates.html'}}
 
 {{block 'content'}}
-<div class="mag-container">
+<div class="container">
     {{include './_common/article_title_big.html'}}
     {{include './_common/article_info.html'}}
 
     <!--自定义html标签内容-->
-    <div class="article-main-content c-color mag-gap-top-large">            
+    <div class="article-main-content c-color gap-top-large">            
         {{@page.htmlContent}}
     </div>
 
     <!--自定义标签-->
     {{ if page.tags}}
-    <div class="med-article-tag mag-gap-top align-direction">
+    <div class="med-article-tag gap-top align-direction">
         {{ each page.tags }}
         <span class="tag rounded">{{ $value }}</span>
         {{/each}}

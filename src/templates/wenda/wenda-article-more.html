@@ -1,7 +1,7 @@
 {{extend '../../base/templates.html'}}
 
 {{block 'content'}}
-<div class="mag-container">
+<div class="container">
     {{include './_common/article_title_big.html'}}
     {{include './_common/article_info.html'}}
 
@@ -12,11 +12,11 @@
         </div>
     </mip-showmore>
     
-    <div on="tap:med-showmore.toggle" data-closeclass="mip-showmore-open" class="align-direction med-showmore-btn font-size-s mag-gap-top mag-gap-bottom">
+    <div on="tap:med-showmore.toggle" data-closeclass="mip-showmore-open" class="align-direction med-showmore-btn font-size-s gap-top gap-bottom">
         
         <div class="med-showmore-inner">
-            <span class="show">{{ page.showmore.hidden }}<span class="icon mag-gap-left-small"></span></span>
-            <span class="hidden">{{ page.showmore.show }}<span class="icon mag-gap-left-small"></span></span>
+            <span class="show">{{ page.showmore.hidden }}<span class="icon gap-left-small"></span></span>
+            <span class="hidden">{{ page.showmore.show }}<span class="icon gap-left-small"></span></span>
         </div>
         
     </div>

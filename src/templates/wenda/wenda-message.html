@@ -1,14 +1,14 @@
 {{extend '../../base/templates.html'}}
 
 {{block 'content'}}
-<div class="mag-container">
+<div class="container">
     <!--友情提示-->
     {{include './_common/message_tip.html'}}
 
     <!--消息对话-->
     <div class="med-message-content">
         {{each message.messageList}}
-            <section class="med-message-text mag-gap-top-large {{if $value.user == 'user'}} med-message-user {{else}} med-message-doctor {{/if}}">
+            <section class="med-message-text gap-top-large {{if $value.user == 'user'}} med-message-user {{else}} med-message-doctor {{/if}}">
                 <div class="{{ if $value.user == 'doctor'}} med-message-text-left {{else if $value.user == 'user'}} med-message-text-right {{/if}}">
                     {{ if $value.user == 'doctor'}} <div class="angle-border"></div> {{/if}}
                     <div class="angle"></div>
@@ -33,7 +33,7 @@
                             controls
                             layout="container"
                             >
-                                <div class="med-mip-audio-controller mag-gap-top-large" controller>
+                                <div class="med-mip-audio-controller gap-top-large" controller>
                                     {{if $value.user == 'user'}}<span class="med-mip-audio-time font-size-s c-color-gray audio-time-total" total-time></span>{{/if}}
                                     <div class="mip-audio-play-pause audio-control" play-button>
                                         <span class="med-mip-audio-icon"></span>

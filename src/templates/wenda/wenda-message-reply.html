@@ -1,7 +1,7 @@
 {{extend '../../base/templates.html'}}
 
 {{block 'content'}}
-<div class="mag-container">
+<div class="container">
     <!--友情提示-->
     {{include './_common/message_tip.html'}}
 
@@ -10,7 +10,7 @@
             
     <div class="med-message-content">
         {{each message.messageList}}
-            <section class="med-message-text mag-gap-top-large {{if $value.user == 'user'}} med-message-user {{else}} med-message-doctor {{/if}}">
+            <section class="med-message-text gap-top-large {{if $value.user == 'user'}} med-message-user {{else}} med-message-doctor {{/if}}">
                 <div class="{{ if $value.user == 'doctor'}} med-message-text-left {{else if $value.user == 'user'}} med-message-text-right {{/if}}">
                     {{ if $value.user == 'doctor'}} <div class="angle-border"></div> {{/if}}
                     <div class="angle"></div>
@@ -35,7 +35,7 @@
                             controls
                             layout="container"
                             >
-                                <div class="med-mip-audio-controller mag-gap-top-large" controller>
+                                <div class="med-mip-audio-controller gap-top-large" controller>
                                     {{if $value.user == 'user'}}<span class="med-mip-audio-time font-size-s c-color-gray audio-time-total" total-time></span>{{/if}}
                                     <div class="mip-audio-play-pause audio-control" play-button>
                                         <span class="med-mip-audio-icon"></span>
@@ -50,11 +50,11 @@
     </div>
     </mip-showmore>
 
-    <div on="tap:med-showmore.toggle" data-closeclass="mip-showmore-open" class="align-direction med-showmore-btn font-size-s mag-gap-top mag-gap-bottom">
+    <div on="tap:med-showmore.toggle" data-closeclass="mip-showmore-open" class="align-direction med-showmore-btn font-size-s gap-top gap-bottom">
             
         <div class="med-showmore-inner">
-            <span class="show">{{ page.showmore.hidden }}<span class="icon mag-gap-left-small"></span></span>
-            <span class="hidden">{{ page.showmore.show }}<span class="icon mag-gap-left-small"></span></span>
+            <span class="show">{{ page.showmore.hidden }}<span class="icon gap-left-small"></span></span>
+            <span class="hidden">{{ page.showmore.show }}<span class="icon gap-left-small"></span></span>
         </div>
         
     </div>
