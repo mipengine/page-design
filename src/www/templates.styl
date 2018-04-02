@@ -1,117 +1,183 @@
 @import './_inc/common.styl'
 
-.template-content 
-    background #fff
-    width 1110px
-    margin auto
-
-.template-nav
-    margin-top 60px
-    margin-right 123px
-    -webkit-box-flex 1
-    -webkit-flex 1 1 7%
-    flex 1 1 7%
-
-.template-nav ul
-    list-style none
-    font-size 14px
-    color rgba(0, 0, 0, 0.88)
-
-.template-nav ul li
-    margin-bottom 40px
-
 .templates
-    border-left 1px solid rgba(0, 0, 0, 0.08)
-    -webkit-box-flex 1
-    -webkit-flex 1 1 85%
-    flex 1 1 85%
-
-.templates-list
-    padding 50px 0 0 40px
-    dt
-        font-size 16px
+    layout()
+    .inner
+        display flex
+    .article
+        padding-bottom 90px
+        flex 1 1 auto
+        overflow hidden
+        padding-left 40px
+        .section
+            &:target
+                h2
+                    padding-top 120px
         h2
+            padding-top 60px
             font-size 36px
-            color #000
-    dd
-        margin-bottom 90px
-
-.template-descripe
-    margin-top 30px
-
-.template-descripe
-    font-size 16px
-    color rgba(0, 0, 0, 0.88)
-
-.template-img
-    margin-top 45px
-    &:hover
-        box-shadow 0px 0px 10px 5px rgba(0, 0, 0, 0.1)
-
-.template-control
-    width 440px
-    text-align center
-    margin-top 30px
-    a
-        width 100px
-        height 30px
-        line-height 28px
-        &:nth-child(2)
-            margin-left 27px
-        &:hover
-            background-color rgba(0, 0, 0, 0.02)
-        &:active
-            background-color rgba(0, 0, 0, 0.05)
-
-.template-preview
-    position fixed
-    top 0
-    left 0
-    width 100%
-    height 100%
-    z-index 9999
-    display none
-
-.template-preview-mask
-    width 100%
-    height 100%
-    background-color rgba(255,255,255,0.8)
-
-.template-preview-mask-main
-    width 370px
-    height 688px
-    margin auto
-    position relative
-    top 50%
-    transform translateY(-50%)
-    padding 45px 25px
-    border 1px solid rgba(0, 0, 0, 0.1)
-    background-color #fff
-    border-radius 40px
-    iframe
-        border 1px solid rgba(156, 156, 156, 0.31)
-
-.template-preview-control
-    width 100%
-    margin auto
-    height 60px
-    background #000
-    .template-preview-control-main
-        width 1110px
-        height 100%
-        margin auto
-        color #fff
-        align-items center
-        a
-            color #fff
-            height 31px
-            width 100px
-            border-color #fff
+            line-height 36px
+        p
+            padding-top 20px
+            line-height 35px
+        .img
+            border 1px solid  #eee
+            border-radius 9px
+            max-width 440px
+            overflow hidden
+            margin-top 35px
+            cursor pointer
+            position relative
+            &:hover
+                box-shadow 0 5px 10px 0 rgba(0, 0, 0, .1)
+            .wise
+                display none
+                width 100%
+                height 100%
+                position absolute
+                left 0
+                top 0
+        .tools
+            max-width 440px
+            padding-top 30px
             text-align center
+            .btn,
+            button
+                width 100px
+                padding 0
+                height 30px
+                line-height 30px
+                font-size 14px
+                color #000
+                border 1px solid  #000
+                hover()
+                active()
+            .wise
+                display none
+    .aside
+        flex none
+        width 162px
+        mip-scroll-anchor
+            display block
+            width 162px
+            position fixed
+            top 110px
+            z-index 10
+        ul
+            list-style none
+        li
+            padding-bottom 13px
+        a
+            display block
+            line-height 40px
+            height 40px
+            font-size 14px
+            color rgba(0, 0, 0, .54)
+            text-indent 10px
+            &:hover
+                background-color rgba(0, 0, 0, .02)
+                color rgba(0, 0, 0, .54)
+            &.current
+                font-weight 700
+                color rgba(0, 0, 0, .88)
+            active()
+mip-mipengine-preview-v3
+    display none
+    position fixed
+    left 0
+    top 0
+    width 100%
+    height 100%
+    z-index 10000
+    .preview-header
+        position relative
+        z-index 20
+        height 60px
+        background-color #fff
+        box-shadow 0 6px 9px 0 rgba(0, 0, 0, .24)
+    .preivew-header-inner
+        layout()
+        position relative
+        height 100%
+        text-align center
+        .btn,
+        button
+            width 100px
+            padding 0
+            height 30px
+            line-height 30px
+            font-size 14px
+            color #000
+            border 1px solid  #000
+            hover()
+            active()
+            margin-top 15px
+    .preview-close
+        cursor pointer
+        position absolute
+        right 0
+        top 0
+        font-size 24px
+        height 60px
+        line-height 60px
+        width 60px
+        text-align center
+        hover()
+        active()
+    .preview-box
+        left 0
+        top 0
+        position absolute
+        z-index 10
+        height 100%
+        width 100%
+        padding-top 60px
+        background-color rgba(255, 255, 255, .8)
+    .preview-iframe
+        width 375px
+        height 667px
+        margin 0 auto
+        position relative
+        top 50%
+        transform translateY(-50%)
+        padding 56px 25px
+        background-color #fff
+        border 1px solid #eee
+        box-shadow 0 15px 30px 0 rgba(0, 0, 0, .2)
+        border-radius 50px
+        box-sizing content-box
+        iframe
             margin 0
-            line-height 29px
-            margin-right 45px
-        .preview-btn
-            font-size 16px
-            color rgba(255, 255, 255, 0.7)
+            padding 0
+            border 1px solid rgba(156, 156, 156, .31)
+            width 100%
+            height 100%
+@media screen and (max-width screenWidth)
+    .templates
+        .aside
+            display none
+        .article
+            padding-bottom 60px
+            border-left none
+            padding-left 0
+            h2
+                font-size 24px
+                line-height 24px
+                padding-top 60px
+                & + p
+                    padding-top 16px
+            p
+                font-size 14px
+                line-height 20px
+            .img
+                max-width screenWidth
+                .wise
+                    display block
+            .tools
+                max-width screenWidth
+                padding-top 36px
+                .pc
+                    display none
+                .wise
+                    display inline-block
 

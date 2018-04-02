@@ -1,101 +1,118 @@
 @import './_inc/common.styl'
-
-.components-content 
-    background #fff
-    width 1110px
-    margin auto
-
-.components-nav
-    margin-top 60px
-    margin-right 123px
-    -webkit-box-flex 1
-    -webkit-flex 1 1 7%
-    flex 1 1 7%
-
-.components-nav ul
-    list-style none
-    font-size 14px
-    color rgba(0, 0, 0, 0.88)
-
-.components-nav ul li
-    margin-bottom 40px
-
+@import './_inc/hljs.styl'
 
 .components
-    border-left 1px solid rgba(0, 0, 0, 0.08)
-    -webkit-box-flex 1
-    -webkit-flex 1 1 85%
-    flex 1 1 85%
-
-.components-list
-    padding 50px 0 0 40px
-    ul
-        list-style none
-    dt
-        font-size 16px
+    layout()
+    .inner
+        display flex
+    .article
+        padding-bottom 90px
+        flex 1 1 auto
+        overflow hidden
+        padding-left 40px
+        .section
+            &:target
+                h2
+                    padding-top 120px
         h2
+            padding-top 60px
             font-size 36px
-            color rgba(0, 0, 0, 0.88)
-    dd
-        margin-bottom 90px
+            line-height 36px
+            & + p
+                padding-top 20px
+        h3
+            font-size 20px
+            line-height 20px
+            padding-top 35px
+            font-weight 400
+            & + p
+                padding-top 10px
+            &:target
+                padding-top 120px
+        p
+            line-height 35px
+        .preview
+            overflow hidden
+            margin-top 30px
+            border 1px solid  #f1f1f1
+            .title
+                height 40px
+                line-height 40px
+                display flex
+                justify-content space-between
+                background-color #FAFAFA
+                padding-left 21px
+                padding-right 21px
+                &[accordionbtn]
+                    cursor pointer
+            .code
+                background-color rgba(250, 250, 250, .5)
+                display none
+                padding 20px
+            .iframe
+                padding 21px
+                &.iframe-noborder
+                    padding-left 0 !important
+                    padding-right 0 !important
+        .scripttag
+            .code
+                line-height 30px
+                display block
+    aside
+        width 162px
+        flex none
+        mip-scroll-anchor
+            display block
+            width 162px
+            position fixed
+            top 110px
+            z-index 10
+        ul
+            list-style none
+        li
+            padding-bottom 13px
+        a
+            display block
+            line-height 40px
+            height 40px
+            font-size 14px
+            color rgba(0, 0, 0, .54)
+            text-indent 10px
+            &:hover
+                background-color rgba(0, 0, 0, .02)
+                color rgba(0, 0, 0, .54)
+            &.current
+                font-weight 700
+                color rgba(0, 0, 0, .88)
+            active()
 
-.component-descripe
-    margin-top 30px
-
-.component-descripe
-    font-size 16px
-    color rgba(0, 0, 0, 0.88)
-
-.component-img
-    margin-top 45px
-    &:hover
-        box-shadow 0px 0px 10px 5px rgba(0, 0, 0, 0.1)
-
-
-
-
-// github style
-.hljs
-    display block
-    overflow-x auto
-    padding 0.5em
-    color #333
-    background #f8f8f8
-.hljs-comment,.hljs-quote
-    color #998
-    font-style italic
-.hljs-keyword,.hljs-selector-tag,.hljs-subst
-    color #333
-    font-weight bold
-.hljs-number,.hljs-literal,.hljs-variable,.hljs-components-variable,.hljs-tag .hljs-attr
-    color #008080
-.hljs-string,.hljs-doctag
-    color #d14
-.hljs-title,.hljs-section,.hljs-selector-id
-    color #900
-    font-weight bold
-.hljs-subst
-    font-weight normal
-.hljs-type,.hljs-class .hljs-title
-    color #458
-    font-weight bold
-.hljs-tag,.hljs-name,.hljs-attribute
-    color #000080
-    font-weight normal
-.hljs-regexp,.hljs-link
-    color #009926
-.hljs-symbol,.hljs-bullet
-    color #990073
-.hljs-built_in,.hljs-builtin-name
-    color #0086b3
-.hljs-meta
-    color #999
-    font-weight bold
-.hljs-deletion
-    background #fdd
-.hljs-addition
-    background #dfd
-.hljs-emphasis
-    font-style italic
-.hljs-strong
-    font-weight bold
+@media screen and (max-width screenWidth)
+    .components
+        aside
+            display none
+        .article
+            padding-bottom 60px
+            border-left none
+            padding-left 0
+            h2
+                font-size 24px
+                line-height 24px
+                padding-top 60px
+                & + p
+                    padding-top 16px
+            h3
+                font-size 18px
+                line-height 18px
+                padding-top 50px
+                & + p
+                    padding-top 5px
+            p
+                font-size 14px
+                line-height 20px
+            .preview
+                margin-top 20px
+                .title
+                    padding-left 16px
+                    padding-right 16px
+                .iframe
+                    padding 16px

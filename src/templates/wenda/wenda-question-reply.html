@@ -1,44 +1,44 @@
 {{extend '../../base/templates.html'}}
 
 {{block 'content'}}
-<div class="mag-container">
+<div class="container">
     <!-- 问题信息 -->
     <div class="med-question-base">
-        <h2 class="mag-gap-top">{{ page.questionInfo.title }} </h2>
-        <p class="font-size-s c-color-gray">{{ page.questionInfo.time }} <span class="mag-gap-left-small">{{ page.questionInfo.views }}</span></p>
-        <div class="mag-gap-top mag-gap-bottom mag-line-clamp{{ page.questionInfo.clamp }}">{{ page.questionInfo.content }}</div>
+        <h2 class="gap-top">{{ page.questionInfo.title }} </h2>
+        <p class="font-size-s c-color-gray">{{ page.questionInfo.time }} <span class="gap-left-small">{{ page.questionInfo.views }}</span></p>
+        <div class="gap-top gap-bottom line-clamp{{ page.questionInfo.clamp }}">{{ page.questionInfo.content }}</div>
     </div>
 
     <!-- 回答信息 -->
     <div class="med-question-answer">
-        <p class="mag-gap-top">{{ page.answer.title }} <span>{{ if page.answer.number > 0}} ({{ page.answer.number }})  {{/if}}</span></p>
+        <p class="gap-top">{{ page.answer.title }} <span>{{ if page.answer.number > 0}} ({{ page.answer.number }})  {{/if}}</span></p>
 
 
-        <mip-showmore maxheight='400' animatetime='.3' id="med-showmore" bottomshadow='1' class="mag-gap-top">
+        <mip-showmore maxheight='400' animatetime='.3' id="med-showmore" bottomshadow='1' class="gap-top">
 
         <!-- 循环回答列表 -->
         {{each page.answer.answerList}}
-            <div class="med-img-content mag-row mag-line-bottom">
-                <div class="mag-span2">
+            <div class="med-img-content row line-bottom">
+                <div class="span2">
                     <mip-img class="med-img-content-img" src="{{ $value.imgUrl }}">
                 </div>
-                <div class="mag-span10">
-                    <p class="mag-gap-top-small">{{ $value.name }} {{if $value.tag}}<span class="c-text-box c-text-box-wenda">{{ $value.tag }} </span>{{/if}}</p>
-                    <p class="c-color-gray font-size-xs"><span class="mag-gap-right-small">{{ $value.level }}</span><span>{{ $value.hospital }}</span></p>
-                    <p class="mag-gap-top mag-gap-bottom-small mag-line-clamp4">{{ $value.content }}</p>
+                <div class="span10">
+                    <p class="gap-top-small">{{ $value.name }} {{if $value.tag}}<span class="c-text-box c-text-box-wenda">{{ $value.tag }} </span>{{/if}}</p>
+                    <p class="c-color-gray font-size-xs"><span class="gap-right-small">{{ $value.level }}</span><span>{{ $value.hospital }}</span></p>
+                    <p class="gap-top gap-bottom-small line-clamp4">{{ $value.content }}</p>
                     <p class="font-size-s">{{ $value.time }}</p>
 
                     {{if $value.more}}
-                        <div class="med-question-answer-more mag-gap-top-small">
+                        <div class="med-question-answer-more gap-top-small">
                             {{each $value.more v}}
-                                <div class="med-question-answeru-user mag-gap-bottom">
+                                <div class="med-question-answeru-user gap-bottom">
 
                                     {{if v.role == 'user'}}
-                                        <p class="mag-gap-bottom-small med-question-user-color">患者追问：</p>
+                                        <p class="gap-bottom-small med-question-user-color">患者追问：</p>
                                     {{else if v.role == 'doctor'}}
-                                        <p class="mag-gap-bottom-small med-question-doctor-color">医生答复：</p>
+                                        <p class="gap-bottom-small med-question-doctor-color">医生答复：</p>
                                     {{/if}}
-                                    <p class="mag-gap-top-small mag-gap-bottom-small font-size-s">{{ v.content }}</p>
+                                    <p class="gap-top-small gap-bottom-small font-size-s">{{ v.content }}</p>
                                     <p class="c-color-gray font-size-s">{{ v.time }}</p>
                                 </div>
                             {{/each}}

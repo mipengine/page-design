@@ -1,2 +1,18 @@
+@import './variables.styl'
 @import './nav.styl'
 @import './footer.styl'
+
+body
+    min-width 320px
+.main-fixed
+    margin-top 60px
+#sidebar
+    z-index 19999 !important
+    > ul
+        padding-top 50px
+.MIP-SIDEBAR-MASK
+    z-index 19998 !important
+
+@media screen and (max-width screenWidth)
+    .main-fixed
+        margin-top 44px

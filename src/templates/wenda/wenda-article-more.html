@@ -1,24 +1,20 @@
 {{extend '../../base/templates.html'}}
 
 {{block 'content'}}
-<div class="mag-container">
+<div class="container">
     {{include './_common/article_title_big.html'}}
     {{include './_common/article_info.html'}}
 
     <mip-showmore maxheight='{{ page.maxHeight }}' animatetime='.3' id="med-showmore" bottomshadow='1' class="med-article-showmore-gap">
         <!--自定义html标签内容-->
-        <div class="article-main-content c-color">                
+        <div class="article-main-content c-color">
         {{@page.htmlContent}}
         </div>
     </mip-showmore>
-    
-    <div on="tap:med-showmore.toggle" data-closeclass="mip-showmore-open" class="align-direction med-showmore-btn font-size-s mag-gap-top mag-gap-bottom">
-        
-        <div class="med-showmore-inner">
-            <span class="show">{{ page.showmore.hidden }}<span class="icon mag-gap-left-small"></span></span>
-            <span class="hidden">{{ page.showmore.show }}<span class="icon mag-gap-left-small"></span></span>
-        </div>
-        
+
+    <div on="tap:med-showmore.toggle" data-closeclass="details-open" class="details">
+        <div class="details-tip-expand">{{ page.showmore.hidden }}<i class="icon icon-up"></i></div>
+        <div class="details-tip-close">{{ page.showmore.show }}<i class="icon icon-down"></i></div>
     </div>
 </div>
 <mip-fixed type="bottom" class="med-ask-btn">

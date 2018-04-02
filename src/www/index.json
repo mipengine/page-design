@@ -4,5 +4,8 @@
     ],
     "page": {
         "title": "主页"
+    },
+    "header": {
+        "current": "主页"
     }
 }

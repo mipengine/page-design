@@ -1,47 +1,58 @@
 {{extend './_inc/layout.html'}}
 
 {{block 'content'}}
-<div class="mag-row template-content">
-    <div class="template-nav">
-        <ul>
-            {{each templatesList}}
-                <li><a href="#{{ $value.name }}">{{ $value.title }}</a></li>
-            {{/each}}
-        </ul>
-    </div>
     <div class="templates">
-        <!-- <h1>模板列表</h1> -->
-        <div class="templates-list">
-            <dl>
+        <div class="inner">
+            <aside class="aside">
+                <mip-scroll-anchor data-current-class="current">
+                    <ul>
+                        {{each templatesList}}
+                            <li>
+                                <a href="#{{ $value.title }}" anchor="{{ $value.title }}">{{ $value.title }}</a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </mip-scroll-anchor>
+            </aside>
+            <article class="article">
                 {{each templatesList}}
-                    <dt><h2 id="{{ $value.name }}">{{ $value.title }}</h2></dt>
-                    <dd>
-                        <div class="template-descripe">{{ $value.descriptions }}</div>
-                        <mip-img class="template-img" src="/html/{{ $value.img }}" width="440" height="783"></mip-img>
-                        <div class="template-control">
-                            <a class="rounded tag" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'preview', $value.name) }}" href="/html/{{ $value.url }}"  data-type="mip" target="_blank">预览</a>
-                            <a class="rounded tag" data-stats-baidu-obj="{{ $imports.getBaiduStatsEvent('click', 'tpl', 'down', $value.name) }}" href="/archive/{{ $value.name }}.zip">下载</a>
+                    <section class="section" id="{{ $value.title }}">
+                        <h2>{{ $value.title }}</h2>
+                        <p>{{ $value.descriptions }}</p>
+                        <div class="img">
+                            <mip-img
+                                on="tap:preview{{ $index }}.open(/html/{{ $value.url }})"
+                                layout="responsive"
+                                src="../html/{{ $value.img }}"
+                                width="440"
+                                height="783"
+                            ></mip-img>
+                            <a href="/html/{{ $value.url }}" data-type="mip" class="wise"></a>
                         </div>
-                    </dd>
+                        <div class="tools">
+                            <button class="btn-outline pc" on="tap:preview{{ $index }}.open(/html/{{ $value.url }})">预览</button>
+                            <a href="/html/{{ $value.url }}" data-type="mip" class="btn btn-outline wise">预览</a>
+                            <a href="/archive/{{ $value.name }}.zip" class="btn btn-outline">下载</a>
+                        </div>
+
+                        <mip-mipengine-preview-v3 id="preview{{ $index }}" layout="nodisplay" mode="mobile">
+                            <div class="preview-header">
+                                <div class="preivew-header-inner">
+                                    <a href="/archive/{{ $value.name }}.zip" class="btn btn-outline">下载</a>
+                                    <div class="preview-close" on="tap:preview{{ $index }}.close" title="点击关闭预览">
+                                        <i class="icon icon-close1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="preview-box">
+                                <div class="preview-iframe" iframe>
+                                </div>
+                            </div>
+                        </mip-mipengine-preview-v3>
+                    </section>
                 {{/each}}
-            </dl>
+            </article>
         </div>
     </div>
-</div>
-<!-- <div class="template-preview">
-    <div class="template-preview-control">
-        <div class="mag-row template-preview-control-main">
-            <span class="preview-label">预览</span>
-            <div>
-                <a class="rounded tag" href="">下载</a>
-                <a href="javascript:void(0);" onclick="javascript:document.querySelector('.template-preview').style.display='none';">X</a>
-            </div>
-        </div>
-    </div>
-    <div class="template-preview-mask" onclick="javascript:document.querySelector('.template-preview').style.display='none';">
-        <div class="template-preview-mask-main">
-            <iframe src="https://www.mipengine.org/" width="100%" height="100%"></iframe>
-        </div>
-    </div>
-</div> -->
+
 {{/block}}

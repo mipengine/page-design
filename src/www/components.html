@@ -1,51 +1,77 @@
 {{extend './_inc/layout.html'}}
 
 {{block 'content'}}
-<div class="mag-row components-content">
-    <div class="components-nav">
-        <ul>
-            {{each componentsList}}
-                <li><a href="#{{ $value.name }}">{{ $value.title }}</a></li>
-            {{/each}}
-        </ul>
-    </div>
-
     <div class="components">
-        <!-- <h1>模板列表</h1> -->
-        <div class="components-list">
-             <dl>
-            {{each componentsList}}
-                <dt><h2 id="{{ $value.name }}">{{ $value.title }}</h2></dt>
-                <dd>
-                    {{each $value.components val}}
-                        <ul>
-                            <li><mip-iframe height="{{ val.iframe.height }}" width="100" src="/html/{{ val.iframe.url }}" layout="fixed-height"></mip-iframe></li>
-                            {{ set ext = $imports.getComponentsExtensions(val.iframe.url) }}
-                            {{if ext && ext.length}}
-                                <li>
-                                    依赖组件代码：
-                                </li>
-                                <li>
-                                    {{each ext text}}
-                                        <pre><code>{{text}}</code></pre>
-                                    {{/each}}
-                                </li>
-                            {{/if}}
+        <div class="inner">
+            <aside>
+                <mip-scroll-anchor data-current-class="current">
+                    <ul>
+                        {{each componentsList}}
+                            <li>
+                                <a href="#{{ $value.title }}" anchor="{{ $value.title }}">{{ $value.title }}</a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </mip-scroll-anchor>
+            </aside>
+            <article class="article">
+                {{each componentsList}}
+                <div class="section" id="{{ $value.title }}">
+                    <h2>{{ $value.title }}</h2>
+                    {{if $value.descriptions}}
+                        <p>{{ $value.descriptions }}</p>
+                    {{/if}}
 
+                    {{each $value.components $item $itemIndex}}
+                        {{ set $code = $imports.getComponentsCode($item.iframe.url) }}
+                        {{ set $ext = $imports.getComponentsExtensions($item.iframe.url) }}
 
-                            {{ set code = $imports.getComponentsCode(val.iframe.url) }}
-                            {{if code}}
-                                <li>代码：</li>
-                                <li>
-                                    {{@ code }}
-                                </li>
+                        <h3 id="{{ $item.title }}">{{ $item.title }}</h3>
+                        <div class="preview">
+                            {{if $code}}
+                                <mip-accordion type="manual" sessions-key="pro_{{ $index }}_{{ $itemIndex }}">
+                                    <section>
+                                        <div class="title" accordionbtn>
+                                            <span>示例</span>
+                                            <span class="show-more">HTML<i class="gap-left-small icon icon-down"></i></span>
+                                            <span class="show-less">HTML<i class="gap-left-small icon icon-up"></i></span>
+                                        </div>
+                                        <div class="code" accordionbox>
+                                            <div class="hljs"><pre><code>{{@ $code | highlight }}</code></pre></div>
+                                        </div>
+                                    </section>
+                                    <div class="iframe{{if $item.iframe.border === false}} iframe-noborder{{/if}}">
+                                        <mip-iframe height="{{ $item.iframe.height }}" width="840" src="/html/{{ $item.iframe.url }}" layout="{{ $item.iframe.layout || 'responsive' }}"></mip-iframe>
+                                    </div>
+                                </mip-accordion>
+                            {{else}}
+                                <div class="title">
+                                    <span>示例</span>
+                                </div>
+                                <div class="iframe{{if $item.iframe.border === false}} iframe-noborder{{/if}}">
+                                    <mip-iframe height="{{ $item.iframe.height }}" width="840" src="/html/{{ $item.iframe.url }}" layout="{{ $item.iframe.layout || 'responsive' }}"></mip-iframe>
+                                </div>
                             {{/if}}
-                        </ul>
+                        </div>
+
+                        {{if $ext && $ext.length}}
+                            <div class="preview scripttag">
+                                <div class="title">
+                                    <span>所需脚本</span>
+                                </div>
+                                <div class="code">
+                                    要使用{{ $item.title }}，必须将以下脚本代码插入到页面 body 标签结束前。
+                                    <div class="hljs">
+                                        <pre><code>{{each $ext $text}}{{@ $text | highlight}}
+{{/each}}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        {{/if}}
                     {{/each}}
-                </dd>
-            {{/each}}
-        </dl>
+                </div>
+                {{/each}}
+            </article>
         </div>
     </div>
-</div>
 {{/block}}
