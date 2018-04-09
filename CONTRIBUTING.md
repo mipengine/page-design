@@ -156,14 +156,14 @@ page.lang | 页面语言 | 字符串 | zh-cn
 <a id="async-data"></a>
 ### 异步数据
 
-由于丰富的组件、模板可能需要请求后端异步接口，mipgo支持配置 JSON 静态数据和高级 `node server` 中间件形式的异步接口，如：
+由于丰富的组件、模板可能需要请求后端异步接口，mipx 支持配置 JSON 静态数据和高级 `node server` 中间件形式的异步接口，如：
 
 文件路径 | 说明 | 对应链接
 --- | --- | ---
-`src/templates/模板名/api/接口名称.json` | 静态的接口数据 | `https://www.mipgo.org/html/templates/模板名/api/接口名称.json`
-`src/components/组件名/api/接口名称.json` | 静态的接口数据 | `https://www.mipgo.org/html/components/组件名/api/接口名称.json`
-`src/templates/模板名/api/中间件.js` | 高级 `node server` 中间件 | `https://www.mipgo.org/html/templates/模板名/api/中间件.json`
-`src/templates/组件名/api/中间件.js` | 高级 `node server` 中间件 | `https://www.mipgo.org/html/templates/组件名/api/中间件.json`
+`src/templates/模板名/api/接口名称.json` | 静态的接口数据 | `https://x.mipengine.org/html/templates/模板名/api/接口名称.json`
+`src/components/组件名/api/接口名称.json` | 静态的接口数据 | `https://x.mipengine.org/html/components/组件名/api/接口名称.json`
+`src/templates/模板名/api/中间件.js` | 高级 `node server` 中间件 | `https://x.mipengine.org/html/templates/模板名/api/中间件.json`
+`src/templates/组件名/api/中间件.js` | 高级 `node server` 中间件 | `https://x.mipengine.org/html/templates/组件名/api/中间件.json`
 
 #### 中间件示例
 

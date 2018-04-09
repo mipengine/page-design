@@ -17,7 +17,7 @@ module.exports = options => {
         }
 
         // 替换本地api路径
-        const reg = /https:\/\/www\.mipgo\.org\/html\/(www|templates|components)\/([\w\-]+)\/api\/([\w\-]+)\.json/g;
+        const reg = /https:\/\/x\.mipengine\.org\/html\/(www|templates|components)\/([\w\-]+)\/api\/([\w\-]+)\.json/g;
         file.contents = new Buffer(file.contents.toString().replace(reg, './api/$3.json'));
         cb(null, file);
     });
