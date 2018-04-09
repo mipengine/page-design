@@ -143,7 +143,7 @@ $ npm run lint
 变量名 | 说明 | 类型 | 默认值
 --- | --- | --- | ---
 extend | 继承的数据文件地址，将按顺序的去合并数据，支持递归依赖，使用 [deepmerge](https://www.npmjs.com/package/deepmerge) 处理合并 | 数组、字符串 | -
-extensions | 依赖组件，写组件名或者组件的 HTTPS 链接 | 数组 | []
+extensions | 依赖组件，组件名 | 数组 | []
 page.title | 页面标题 | 字符串 | Hello World
 page.canonical | 页面 `canonical` 链接 | 字符串 | https://www.mipengine.org
 page.lang | 页面语言 | 字符串 | zh-cn
@@ -156,14 +156,14 @@ page.lang | 页面语言 | 字符串 | zh-cn
 <a id="async-data"></a>
 ### 异步数据
 
-由于丰富的组件、模板可能需要请求后端异步接口，mipgo支持配置 JSON 静态数据和高级 `node server` 中间件形式的异步接口，如：
+由于丰富的组件、模板可能需要请求后端异步接口，mipx 支持配置 JSON 静态数据和高级 `node server` 中间件形式的异步接口，如：
 
 文件路径 | 说明 | 对应链接
 --- | --- | ---
-`src/templates/模板名/api/接口名称.json` | 静态的接口数据 | `https://www.mipgo.org/html/templates/模板名/api/接口名称.json`
-`src/components/组件名/api/接口名称.json` | 静态的接口数据 | `https://www.mipgo.org/html/components/组件名/api/接口名称.json`
-`src/templates/模板名/api/中间件.js` | 高级 `node server` 中间件 | `https://www.mipgo.org/html/templates/模板名/api/中间件.json`
-`src/templates/组件名/api/中间件.js` | 高级 `node server` 中间件 | `https://www.mipgo.org/html/templates/组件名/api/中间件.json`
+`src/templates/模板名/api/接口名称.json` | 静态的接口数据 | `https://x.mipengine.org/html/templates/模板名/api/接口名称.json`
+`src/components/组件名/api/接口名称.json` | 静态的接口数据 | `https://x.mipengine.org/html/components/组件名/api/接口名称.json`
+`src/templates/模板名/api/中间件.js` | 高级 `node server` 中间件 | `https://x.mipengine.org/html/templates/模板名/api/中间件.json`
+`src/templates/组件名/api/中间件.js` | 高级 `node server` 中间件 | `https://x.mipengine.org/html/templates/组件名/api/中间件.json`
 
 #### 中间件示例
 
