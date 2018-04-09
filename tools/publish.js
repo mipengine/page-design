@@ -13,11 +13,6 @@ gulp.task('publish', () => {
     const pkg = require('../package.json');
     delete pkg.devDependencies;
     delete pkg.config;
-    pkg.dependencies = {
-        'express': '*',
-        'express-api-require': '*',
-        'res-json': '*'
-    };
     pkg.scripts = {
         start: 'node server.js'
     };
