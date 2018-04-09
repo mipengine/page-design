@@ -8,7 +8,9 @@
     "build": "gulp --gulpfile tools/gulpfile.js build",
     "preinstall": "node tools/check-node-version.js",
     "commitmsg": "validate-commit-msg",
-    "validator": "gulp --gulpfile tools/gulpfile.js validator"
+    "validator": "gulp --gulpfile tools/gulpfile.js validator",
+    "predeploy": "npm run build",
+    "deploy": "bash tools/deploy.sh"
   },
   "repository": {
     "type": "git",
