@@ -21,4 +21,4 @@ app.use(api({
 // 托管静态文件
 app.use(express.static('./'));
 
-app.listen(8080, () => console.log('mipx app listening on port 8080!'));
+app.listen(18080, () => console.log('mipx app listening on port 18080!'));
