@@ -10,7 +10,7 @@ const validate = require('gulp-mip-validator').validate;
 const config = require('./config');
 
 gulp.task('miphtml:validate', () => {
-    // return gulp
-    //     .src(`${config.dest.path}/**/*.html`)
-    //     .pipe(validate());
+    return gulp
+        .src(`${config.dest.path}/**/*.html`)
+        .pipe(validate());
 });
