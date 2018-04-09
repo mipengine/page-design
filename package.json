@@ -1,6 +1,6 @@
 {
   "name": "page-design",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "使用 MIP 组件和 mag design 构建精美的 MIP 页面",
   "scripts": {
     "lint": "fecs check tools/ --rule",
