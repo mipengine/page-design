@@ -21,13 +21,6 @@
             "img": "templates/xiaoshuo/img/logo.jpg"
         },
         {
-            "title": "新闻",
-            "name": "news",
-            "descriptions": "简洁的新闻模板，适合于图文为主的站点风格。",
-            "url": "templates/news/news.html",
-            "img": "templates/news/img/logo.png"
-        },
-        {
             "title": "通用问答",
             "name": "wenda",
             "descriptions": "通用问答模板，可以覆盖常用的消息对话、评论等。",
