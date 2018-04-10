@@ -6,13 +6,26 @@
 'use strict';
 
 const hljs = require('highlight.js');
+const marked = require('marked');
+const fs = require('fs');
 const path = require('path');
 const util = require('./util');
 const artTemplate = require('art-template');
 const through2 = require('through2');
 const gutil = require('gulp-util');
 
+const renderer = new marked.Renderer();
 const PluginError = gutil.PluginError;
+
+/**
+ * 高亮代码
+ *
+ * @param  {string} content 内容
+ * @param  {string | undefined} lang 语言名称
+ * @return {string}
+ */
+renderer.code = (content, lang) =>
+    `<pre><code class="hljs lang-${lang || ''}">${hljs.highlightAuto(content).value}</code></pre>`;
 
 artTemplate.defaults.extname = '.html';
 artTemplate.defaults.minimize = false;
@@ -43,6 +56,18 @@ artTemplate.defaults.imports.getBaiduStatsEvent = function (type) {
 artTemplate.defaults.imports.getComponentsExtensions = value => {
     const filepath = path.resolve(__dirname, '../src/', value.replace('.html', '.json'));
     return util.getExtensionsUrl(util.mergeJSON(filepath).extensions);
+};
+
+/**
+ * 解析 md 文件为 HTML 代码
+ *
+ * @param {string} file markdown 文件路径，以 src 为基础路径
+ * @return {string}
+ */
+artTemplate.defaults.imports.markdownFileToHtml = file => {
+    const filepath = path.resolve(__dirname, '../src/', file);
+    const content = fs.readFileSync(filepath).toString();
+    return marked(content, {renderer});
 };
 
 /**
