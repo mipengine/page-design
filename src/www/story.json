@@ -1,0 +1,11 @@
+{
+    "extend": [
+        "./_inc/common.json"
+    ],
+    "page": {
+        "title": "小故事"
+    },
+    "header": {
+        "current": "小故事"
+    }
+}
