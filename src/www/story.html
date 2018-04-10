@@ -1,0 +1,9 @@
+{{extend './_inc/layout.html'}}
+
+{{block 'content'}}
+    <div class="story">
+        <div class="markdown-body">
+            {{@ $imports.markdownFileToHtml('www/_story.md') }}
+        </div>
+    </div>
+{{/block}}

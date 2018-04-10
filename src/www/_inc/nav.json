@@ -10,6 +10,10 @@
                 "url": "/templates.html#top"
             },
             {
+                "text": "小故事",
+                "url": "/story.html"
+            },
+            {
                 "text": "指南",
                 "url": "/started.html"
             },
