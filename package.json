@@ -75,7 +75,7 @@
   },
   "dependencies": {
     "express": "^4.16.3",
-    "express-api-require": "^0.0.1",
+    "express-api-require": "^0.0.2",
     "marked": "^0.3.19",
     "res-json": "^1.0.1"
   }
