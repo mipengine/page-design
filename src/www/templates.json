@@ -25,7 +25,7 @@
             "name": "wenda",
             "descriptions": "通用问答模板，可以覆盖常用的消息对话、评论等。",
             "url": "templates/wenda/wenda.html",
-            "img": "templates/wenda/img/logo.jpg"
+            "img": "templates/wenda/img/logo.png"
         }
     ]
 }
