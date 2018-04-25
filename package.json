@@ -1,6 +1,6 @@
 {
   "name": "page-design",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "使用 MIP 组件和 mag design 构建精美的 MIP 页面",
   "scripts": {
     "lint": "fecs check tools/ --rule",
@@ -8,9 +8,7 @@
     "build": "gulp --gulpfile tools/gulpfile.js build",
     "preinstall": "node tools/check-node-version.js",
     "commitmsg": "validate-commit-msg",
-    "validator": "gulp --gulpfile tools/gulpfile.js validator",
-    "predeploy": "npm run build",
-    "deploy": "bash tools/deploy.sh"
+    "validator": "gulp --gulpfile tools/gulpfile.js validator"
   },
   "repository": {
     "type": "git",

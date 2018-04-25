@@ -21,4 +21,5 @@ app.use(api({
 // 托管静态文件
 app.use(express.static('./'));
 
+// 百度BAE必须绑定这个端口 18080
 app.listen(18080, () => console.log('mipx app listening on port 18080!'));
