@@ -3,14 +3,15 @@
         "./_inc/common.json"
     ],
     "page": {
+        "canonical": "https://x.mipengine.org/templates.html",
         "title": "模板"
     },
     "header": {
         "current": "模板"
     },
     "extensions": [
-        "https://c.mipcdn.com/extensions/platform/v1/mip-scroll-anchor/mip-scroll-anchor.js",
-        "https://c.mipcdn.com/extensions/platform/v1/mip-mipengine-preview-v3/mip-mipengine-preview-v3.js"
+        "mip-scroll-anchor",
+        "mip-mipengine-preview-v3"
     ],
     "templatesList": [
         {

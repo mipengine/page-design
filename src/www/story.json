@@ -3,6 +3,7 @@
         "./_inc/common.json"
     ],
     "page": {
+        "canonical": "https://x.mipengine.org/story.html",
         "title": "小故事"
     },
     "header": {
