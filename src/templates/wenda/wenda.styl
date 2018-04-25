@@ -1,8 +1,55 @@
-a
-    color #333
-    text-decoration underline
-ul
-    list-style inside
-    padding-left 10px
-    li
-        line-height 30px
+h4
+    line-height 44px
+    text-align center
+    border-bottom 1px solid #ccc
+    margin-bottom 12px
+li
+    font-size 0
+    display flex
+    a
+        color #333
+        text-decoration underline
+        margin-right 12px
+        margin-bottom 12px
+        flex 1 1 auto
+        width 0
+        position relative
+        &:first-child
+            margin-left 12px
+        svg
+            display block
+            margin 0 auto 10px
+        &.wenda-text
+            background-color #5EE4D4
+        &.wenda-text-showmore
+            background-color #5ADCCD
+        &.wenda-text-tag
+            background-color #48D0C1
+        &.wenda-audio
+            background-color #67DADA
+        &.wenda-video
+            background-color #1DCDCD
+        &.wenda-ask
+            background-color #69C7E1
+        &.wenda-ask-showmore
+            background-color #59BCD8
+            flex 2 0 auto
+        &.wenda-conversation
+            background-color #6EA8E8
+        &.wenda-conversation-showmore
+            background-color #5C9ADD
+
+.wenda-article-icon
+    margin 40px 10px 60px
+    display block
+
+.wenda-article-descri
+    display block
+    text-align center
+    font-size 14px
+    position absolute
+    bottom 14px
+    color white
+    width 100%
+    text-align center
+
