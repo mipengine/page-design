@@ -1,19 +1,19 @@
 <header id="header">
     <div class="left">
         {{if header.back}}
-            <a href="{{ header.back }}"><i class="icon icon-left"></i></a>
+            <a data-type="mip" data-title="" href="{{ header.back }}"><i class="icon icon-left"></i></a>
         {{/if}}
     </div>
     <h4 class="line-clamp1">{{ header.title || '小说' }}</h4>
     <div class="right text-right">
         {{if header.search}}
-            <a href="{{ header.search }}"><i class="icon icon-search"></i></a>
+            <a data-type="mip" data-title="" href="{{ header.search }}"><i class="icon icon-search"></i></a>
         {{/if}}
         {{if header.share}}
-            <a href="#"><i class="icon icon-share"></i></a>
+            <a data-type="mip" data-title="" href="#"><i class="icon icon-share"></i></a>
         {{/if}}
         {{if header.mybook}}
-            <a href="{{ header.mybook }}"><i class="icon icon-mybook"></i></a>
+            <a data-type="mip" data-title="" href="{{ header.mybook }}"><i class="icon icon-mybook"></i></a>
         {{/if}}
     </div>
 </header>
