@@ -1,9 +1,89 @@
 {{extend './_inc/layout.html'}}
 
 {{block 'content'}}
-    <div class="story">
-        <div class="markdown-body">
-            {{@ $imports.markdownFileToHtml('www/_story.md') }}
+    <div class="banner">
+        <div class="inner">
+            <div class="inner-bg"></div>
+            <div class="group"></div>
+            <h2> </h2>
+            <p class="brief-title">一种开放式的富媒体内容格式</p>
+            <p class="brief-content">基于MIP框架的可能性，开发者可快速创建多元化的故事内容，给用户带来全屏沉浸式的新浏览体验。</p>
+            <div class="start">
+                <a href="https://www.mipengine.org/examples/mip-extensions/mip-story.html" target="_blank">制作一个小故事
+                    <i class="icon go"></i>
+                </a>
+            </div>
+        </div>
+        <div class="show"></div>
+    </div>
+    <div class="intro">
+        <div class="inner">
+            <h3>小故事的优势</h3>
+            <ul>
+                {{ each intro }}
+                    <li>
+                        <div class="intro-icon"></div>
+                        <div class="intro-detail">
+                            <div class="intro-title">{{ $value.title }}</div>
+                            <div class="intro-content">{{ $value.content }}</div>
+                        </div>
+                    </li>
+                {{ /each }}
+            </ul>
         </div>
     </div>
+    <div class="case">
+        <div class="inner">
+            <h3>优秀小故事展示</h3>
+            <mip-wqz-preview>
+                <mip-wqz-slide id="el" data-slide-preview="4" data-slide-phone-preview="3" data-slide-space="10" >
+                    {{ each cases }}
+                        <div class="slide-item" data-item preview data-preview-link="{{ $value.target }}">
+                            <a href="{{ $value.target }}"></a>
+                            <mip-img src="{{ $value.pic }}" width="560" height="960" layout="responsive">
+                            </mip-img>
+                            <h4>{{ $value.title }}</h4>
+                            <p>{{ $value.detail }}</p>
+                        </div>
+                    {{ /each }}
+                </mip-wqz-slide>
+            </mip-wqz-preview>
+        </div>
+    </div>
+    <div class="guide">
+        <div class="inner">
+            <h3>小故事指导支持</h3>
+            <ul>
+                {{ each guide }}
+                    <li>
+                        <a href="{{ $value.link }}" target="_blank">
+                            <div class="intro-icon"></div>
+                            <div class="intro-detail">
+                                <div class="intro-title">{{ $value.title }}</div>
+                                <div class="intro-content">{{ $value.content }}</div>
+                            </div>
+                        </a>
+                    </li>
+                {{ /each }}
+            </ul>
+        </div>
+    </div>
+    <div class="partner">
+        <div class="inner">
+            <h3>合作伙伴</h3>
+            <ul>
+                {{each partners}}
+                    <li>
+                        <a href="{{ $value.link }}" target="_blank">
+                            <mip-img width="140" height="40" layout="responsive" src="{{ $value.logo }}" alt="{{ $value.name }}"></mip-img>
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+{{/block}}
+
+{{block 'scripts'}}
+    {{include '../base/inc/scripts.html'}}
 {{/block}}
