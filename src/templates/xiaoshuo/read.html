@@ -73,12 +73,14 @@
         <div class="mip-xiaoshuo-read-control" control>
             <div class="mip-xiaoshuo-read-control-page">
                 <a href="#" class="mip-xiaoshuo-read-prev disabled"><i class="icon gap-right-small icon-left"></i>上一章</a>
-                <a href="read.html" class="mip-xiaoshuo-read-next">下一章<i class="icon gap-left-small icon-right"></i></a>
+                <!--data-type="mip" 用于两个MIP页之间跳转，应保证落地页同样为MIP页-->
+                <a data-type="mip" data-title="下一章" href="read.html" class="mip-xiaoshuo-read-next">下一章<i class="icon gap-left-small icon-right"></i></a>
             </div>
             <div class="mip-xiaoshuo-read-control-nav">
                 <ul>
                     <li>
-                        <a href="catalog.html">
+                        <!--data-type="mip" 用于两个MIP页之间跳转，应保证落地页同样为MIP页-->
+                        <a href="catalog.html" data-type="mip" data-title="目录">
                             <i class="icon icon-menulist"></i>
                             <p class="gap-top-small">目录</p>
                         </a>
