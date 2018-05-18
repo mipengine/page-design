@@ -29,45 +29,45 @@
             "detail": "运动员的异样职业生涯"
         },
         {
-            "target": "https://www.mipengine.org/story/hawking.html",
+            "target": "https://m.baidu.com/mip/c/s/service.dandelion.youku.com/baidu_story/page.htm%3Fid%3D12?story=1&word=%E6%9E%81%E9%99%90%E6%8C%91%E6%88%98%E7%AC%AC%E5%9B%9B%E5%AD%A3&title=%E6%9E%81%E9%99%90%E6%8C%91%E6%88%98%E7%AC%AC%E5%9B%9B%E5%AD%A3&lid=11209764442727282592&referlid=11209764442727282592&ms=1&frsrcid=37229&frorder=2",
             "pic": "./img/story/case4.jpg",
-            "title": "《斯蒂芬·霍金》",
-            "detail": "快速了解物理界伟人的一生"
+            "title": "《极限挑战》",
+            "detail": "爆笑回归男人帮集体下乡"
         }
     ],
     "intro": [
         {
             "title": "身临其境",
-            "content": "为开发者提供更多创造性的机会，设计灵活，交互新颖；有趣的故事内容＋全屏填充式沉浸浏览更加引人入胜"
+            "content": "设计灵活，交互新颖，有趣的故事内容＋沉浸浏览体验让用户身临其境"
         },
         {
             "title": "快速便捷",
-            "content": "是基于mip框架开发构建的，页面加载速度更快，为用户提供流畅的阅读体验"
+            "content": "基于mip框架构建，开发成本较低且简单易上手，同时页面加载速度更快，为用户提供流畅的阅读体验"
         },
         {
             "title": "开放共享",
-            "content": "面向广泛有创意的开发者，可以跨站点开发嵌入优质内容并分享到各媒体平台，而不局限于单一的生态系统"
+            "content": "基于web开放生态，面向广泛有创意的站长或开发者，可以开发嵌入优质内容并在各平台发布、分享"
         },
         {
             "title": "强势曝光",
-            "content": "关联故事主题 query，在移动端百度搜索结果中持续特型展示，为开发者建设品牌形象提升品牌曝光"
+            "content": "优质内容主题的小故事将获得在百度搜索中特型展示机会，为优秀开发者提供流量扶持和品牌曝光"
         }
     ],
     "guide":[
         {
             "title": "创意指导",
             "content": "如何构思一个引人入胜的小故事",
-            "link": "https://www.mipengine.org/examples/mip-extensions/mip-story.html"
+            "link": "#guide"
         },
         {
             "title": "开发指导",
             "content": "如何创建开发一个小故事",
-            "link": "https://www.mipengine.org/examples/mip-extensions/mip-story.html"
+            "link": "#guide"
         },
         {
             "title": "工具指导",
             "content": "小故事开发工具详细了解",
-            "link": "https://www.mipengine.org/examples/mip-extensions/mip-story.html"
+            "link": "#guide"
         }
     ],
     "partners":[
