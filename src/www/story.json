@@ -4,9 +4,97 @@
     ],
     "page": {
         "canonical": "https://x.mipengine.org/story.html",
-        "title": "小故事"
+        "title": "小故事_基于MIP的移动原生优质内容新产品_MIP"
     },
     "header": {
         "current": "小故事"
-    }
+    },
+    "cases": [
+        {
+            "target": "https://m.baidu.com/mip/c/s/mipstatic.baidu.com/static/mip-static/mip-story/story-cherry/cherry.html?story=1&word=%E6%A8%B1%E8%8A%B1&title=%E6%A8%B1%E8%8A%B1&lid=6236951910748148648&referlid=6236951910748148648&ms=1&frsrcid=37243&frorder=2",
+            "pic": "./img/story/case1.jpg",
+            "title": "《邂逅樱花》",
+            "detail": "相约淋一场樱花雨"
+        },
+        {
+            "target": "https://venyxiong.github.io/web/demo/story.html",
+            "pic": "./img/story/case2.jpg",
+            "title": "《第九十届奥斯卡》",
+            "detail": "不看发布会也能全知晓"
+        },
+        {
+            "target": "https://m.baidu.com/mip/c/mipstatic.baidu.com/static/mip-static/mip-story/story-film/figure-the-queen.html?story=1&word=%E6%88%91%E8%8A%B1%E6%A0%B7%E5%A5%B3%E7%8E%8B&title=%E6%88%91%E8%8A%B1%E6%A0%B7%E5%A5%B3%E7%8E%8B&lid=8760863021277090307&referlid=8760863021277090307&ms=1&frsrcid=37186&frorder=2",
+            "pic": "./img/story/case3.jpg",
+            "title": "《我花样女王》",
+            "detail": "运动员的异样职业生涯"
+        },
+        {
+            "target": "https://m.baidu.com/mip/c/s/service.dandelion.youku.com/baidu_story/page.htm%3Fid%3D12?story=1&word=%E6%9E%81%E9%99%90%E6%8C%91%E6%88%98%E7%AC%AC%E5%9B%9B%E5%AD%A3&title=%E6%9E%81%E9%99%90%E6%8C%91%E6%88%98%E7%AC%AC%E5%9B%9B%E5%AD%A3&lid=11209764442727282592&referlid=11209764442727282592&ms=1&frsrcid=37229&frorder=2",
+            "pic": "./img/story/case4.jpg",
+            "title": "《极限挑战》",
+            "detail": "爆笑回归男人帮集体下乡"
+        }
+    ],
+    "intro": [
+        {
+            "title": "身临其境",
+            "content": "设计灵活，交互新颖，有趣的故事内容＋沉浸浏览体验让用户身临其境"
+        },
+        {
+            "title": "快速便捷",
+            "content": "基于mip框架构建，开发成本较低且简单易上手，同时页面加载速度更快，为用户提供流畅的阅读体验"
+        },
+        {
+            "title": "开放共享",
+            "content": "基于web开放生态，面向广泛有创意的站长或开发者，可以开发嵌入优质内容并在各平台发布、分享"
+        },
+        {
+            "title": "强势曝光",
+            "content": "优质内容主题的小故事将获得在百度搜索中特型展示机会，为优秀开发者提供流量扶持和品牌曝光"
+        }
+    ],
+    "guide":[
+        {
+            "title": "创意指导",
+            "content": "如何构思一个引人入胜的小故事",
+            "link": "#guide"
+        },
+        {
+            "title": "开发指导",
+            "content": "如何创建开发一个小故事",
+            "link": "#guide"
+        },
+        {
+            "title": "工具指导",
+            "content": "小故事开发工具详细了解",
+            "link": "#guide"
+        }
+    ],
+    "partners":[
+        {
+            "name": "天极网",
+            "logo": "./img/story/101.png",
+            "link": "http://www.yesky.com/"
+        },
+        {
+            "name": "优酷网",
+            "logo": "./img/story/102.png",
+            "link": "http://www.youku.com/"
+        },
+        {
+            "name": "中国日报网",
+            "logo": "./img/story/103.png",
+            "link": "http://world.chinadaily.com.cn/"
+        },
+        {
+            "name": "网通社",
+            "logo": "./img/story/104.png",
+            "link": "http://auto.news18a.com/"
+        }
+    ],
+    "extensions": [
+        "mip-scrollbox",
+        "mip-wqz-slide",
+        "mip-wqz-preview"
+    ]
 }

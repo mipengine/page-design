@@ -1,8 +1,358 @@
 @import './_inc/common.styl'
-@import './_inc/hljs.styl'
-@import './_inc/markdown.styl'
 
-.story
+body
+    overflow-x: hidden
+.inner
     layout()
-    padding-top 30px
-    padding-bottom 30px
+    h3
+        padding-top 100px
+        font-size 30px
+        color #000000
+    ul
+        margin-top 40px
+        display flex
+        justify-content space-between
+    li
+        list-style none
+        width 270px
+        height 360px
+        border 1px solid #F1F1F1
+        border-radius 6px
+        text-align center
+        transition all .1s
+        margin 0 0.5%
+        &:hover
+            box-shadow 0 5px 10px 0 rgba(0, 0, 0, .1)
+        &:nth-child(1)
+            .intro-icon
+                background-image url('./img/story/intro1x2.png')
+        &:nth-child(2)
+            .intro-icon
+                background-image url('./img/story/intro2x2.png')
+        &:nth-child(3)
+            .intro-icon
+                background-image url('./img/story/intro3x2.png')
+        &:nth-child(4)
+            .intro-icon
+                background-image url('./img/story/intro4x2.png')
+        .intro-icon
+            height 180px
+            background-position center center 
+            background-repeat no-repeat
+            background-size auto 80px
+        .intro-title
+            font-size 24px
+            color #000000
+            line-height 37px
+            margin-bottom 10px
+        .intro-content
+            width 200px
+            margin 0 auto
+            font-size 14px
+            line-height 22px
+            color #666666
+
+.banner
+    box-sizing content-box
+    position relative
+    height 490px
+    overflow visible
+    color #ffffff
+    background url(./img/story/bj.png) center bottom no-repeat
+    background-size cover
+    .inner
+        padding-left 65px
+        position relative
+        z-index 10
+        top 44%
+        transform translateY(-50%)
+        .inner-bg
+            width 2000px
+            height 600px
+            position absolute
+            left 50%
+            top 50%
+            transform translate(-50%,-50%)
+            background url(./img/story/innerbg.png) center bottom no-repeat
+    .group
+        display none
+    h2
+        font-size 60px
+        color #FFFFFF
+        letter-spacing 6px
+        font-weight bold
+    .brief-title, .brief-content
+        width 416px
+        opacity 0.8
+        font-family PingFangSC
+        font-size 16px
+    .brief-title
+        margin 20px 0px 10px 0px
+        font-size 23px
+    .start
+        padding-top 30px
+        position relative
+        z-index 9
+        a
+            display inline-block
+            width 180px
+            height 40px
+            line-height 40px
+            text-align center
+            background-image linear-gradient(270deg, #ECF6FF 0%, #FFFFFF 100%)
+            border-radius 3px
+            color #4D5ABC
+            i
+                display: inline-block
+                width 18px
+                height 14px
+                background url('./img/story/start.png') 0 0 no-repeat
+                background-size cover
+    .show
+        position absolute
+        left 50%
+        top 60px
+        margin-left 200px
+        width 235px
+        height 450px
+        background url('./img/story/show.png') center center no-repeat
+        background-size cover
+
+.case
+    mip-wqz-slide
+        text-align center
+        .slide-button
+            margin-top -100px
+
+    .slide-item
+        &:hover
+            mip-img
+                box-shadow: 0 6px 20px rgba(0,0,0,0.05)
+    h3
+        margin-bottom 40px
+    mip-img
+        cursor pointer
+    h4
+        font-weight normal
+        font-size 20px
+        margin: 26px 0 10px 0
+    p
+        font-size 18px
+        max-width 180px
+        overflow hidden
+        text-overflow ellipsis
+        white-space nowrap
+        opacity .6
+        margin 0 auto
+    a
+        display none
+        width 100%
+        height 100%
+        position absolute
+        left 0
+        top 0
+        z-index 9
+.guide
+    li
+        width 32%
+        height 250px
+        &:nth-child(1)
+            .intro-icon
+                background-image url('./img/story/guide1.png')
+        &:nth-child(2)
+            .intro-icon
+                background-image url('./img/story/guide2.png')
+        &:nth-child(3)
+            .intro-icon
+                background-image url('./img/story/guide3.png')
+         a
+            display block
+            width 100%
+            height 100%
+        .intro-icon
+            height 140px
+            background-size auto 75px
+        .intro-title    
+            font-size 20px
+        .intro-content
+            font-size 16px
+            width 230px
+.partner
+    margin-bottom 80px
+    ul
+        flex-wrap wrap
+    li
+        width 24%
+        height 100px
+        margin-bottom 10px
+        a
+            display flex
+            width 100%
+            height 100%
+            justify-content center
+            align-items center
+            mip-img
+                width 60%
+ 
+@media screen and (max-width 600px)
+    .inner
+        layout()
+        width 100%
+        padding 0 27px
+        h3
+            padding-top 30px
+            font-size 32px
+            text-align center
+        ul
+            margin-top 10px
+            flex-wrap wrap
+        li
+            width 47%
+            margin-bottom 3%
+            height 230px
+            .intro-icon
+                height 100px
+                background-size auto 50px
+            .intro-title
+                font-size 15px
+                line-height 31px
+                margin-bottom 0
+            .intro-content
+                width 140px
+                font-size 12px
+                line-height 18px
+    .banner
+        height 560px
+        background url(./img/story/bgm.png) center bottom no-repeat
+        background-size 100% 100%
+        .inner
+            padding-left 0
+            padding-right 0
+            top 270px
+            transform none
+        .group
+            display block
+            position absolute
+            left 50%
+            margin-left -146px
+            top -224px
+            width 293px
+            height 234px
+            background url('./img/story/Group.png') 0 0 no-repeat
+            background-size cover
+        h2, p, div
+            width 250px
+        h2
+            font-size 34px
+            letter-spacing 4px
+            padding-top: 23px;
+        .brief-title, .brief-content
+            font-size 12px
+            width 250px
+        .brief-title
+            font-size 13px
+            margin 10px 0
+        .show
+            display none
+        .start
+            padding-top 20px
+            a
+                font-size 14px
+                width 100%
+                height 40px
+                line-height 40px
+                text-align center
+            .icon
+                font-size 10px
+    .guide
+        li
+            width 100%
+            height 80px
+            .intro-icon
+                float left
+                width 80px
+                height 80px
+                background-size auto 40px
+            .intro-title
+                text-align left
+                font-size 16px
+                padding-top 20px
+                line-height 1.5
+            .intro-content
+                text-align left
+                width 100%
+                font-size 12px
+                line-height 1.5
+    .case
+        .inner
+            padding 0
+        a
+            display: block
+        mip-wqz-slide
+            .slide-container
+                overflow auto!important
+                &::-webkit-scrollbar
+                    display:none
+            .slide-button
+                display: none
+        .slide-item
+            width 120px!important
+            &:nth-child(1)
+                margin-left 17px
+            &:last-child
+                padding-right 17px
+                box-sizing: content-box
+            h4
+                font-size 13px
+                margin: 14px 0 4px 0
+            p
+                font-size 12px
+                max-width  108px
+                padding-bottom 10px
+
+    .partner
+        margin-bottom 30px
+        li
+            width 30%
+            height 40px
+            margin-bottom 10px
+    #preview-wrap
+        display: none!important
+    mip-wqz-slide
+        .slide-item
+            width 120px
+
+@media screen and (max-width 320px)
+    .intro
+        .inner
+            ul
+                justify-content center
+                li
+                    width 80%
+    .partner
+        .inner
+            ul
+                justify-content space-around
+                li
+                    width 40%
+    
+.place-holder
+    height 600px
+
+
+// 临时
+.slide-button
+    opacity 0!important
+#preview-phone
+    &::after
+        content '点击屏幕上图案浏览更多内容'
+        display block
+        width 100%
+        height 20px
+        line-height 20px
+        color #ffffff
+        position absolute
+        top 100%
+        left 0
+        text-align center
+        padding-top 20px
