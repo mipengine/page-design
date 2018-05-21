@@ -57,12 +57,12 @@
         {
             "title": "创意指导",
             "content": "如何构思一个引人入胜的小故事",
-            "link": "#guide"
+            "link": "https://www.mipengine.org/doc/story/idea.html"
         },
         {
             "title": "开发指导",
             "content": "如何创建开发一个小故事",
-            "link": "#guide"
+            "link": "https://www.mipengine.org/doc/story/entry.html"
         },
         {
             "title": "工具指导",
