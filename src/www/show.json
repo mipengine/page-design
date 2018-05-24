@@ -1,0 +1,46 @@
+{
+    "extend": [
+        "./_inc/common.json"
+    ],
+    "page": {
+        "canonical": "https://x.mipengine.org/case.html",
+        "title": "优秀案例展示_MIP"
+    },
+    "header": {
+        "current": "优秀案例"
+    },
+    "cases": [
+        {
+            "target": "https://weecoffee-lighthouse.oott123.com",
+            "pic": "./img/show/case1_wecoffee.jpg",
+            "title": "《微咖啡》",
+            "detail": "烂漫流觞 轻度时光"
+        },
+        {
+            "target": "https://m.baidu.com/mip/c/mip.geekpark.net/",
+            "pic": "./img/show/case2_geekpark.jpg",
+            "title": "《极客公园》",
+            "detail": "举目商业 尽在极客"
+        },
+        {
+            "target": "###",
+            "pic": "./img/show/case3.jpg",
+            "title": "",
+            "noPreview": true,
+            "preview": "",
+            "detail": ""
+        },
+        {
+            "target": "###",
+            "pic": "./img/show/case3.jpg",
+            "title": "",
+            "noPreview": true,
+            "detail": ""
+        }
+    ],
+    "extensions": [
+        "mip-scrollbox",
+        "mip-wqz-slide",
+        "mip-wqz-preview"
+    ]
+}

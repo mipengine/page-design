@@ -1,0 +1,32 @@
+{{extend './_inc/layout.html'}}
+
+{{block 'content'}}
+
+<div class="case">
+    <div class="inner">
+        <h3>优秀案例展示</h3>
+        <mip-wqz-preview>
+            <mip-wqz-slide id="el" data-slide-preview="4" data-slide-phone-preview="3" data-slide-space="10" >
+                {{ each cases }}
+
+                <div class="slide-item" data-item
+                     {{ if !$value.noPreview }}
+                     preview
+                     {{ /if }}
+                     data-preview-link="{{ $value.target }}">
+                    <a href="{{ $value.target }}"></a>
+                    <mip-img src="{{ $value.pic }}" width="560" height="960" layout="responsive">
+                    </mip-img>
+                    <h4>{{ $value.title }}</h4>
+                    <p>{{ $value.detail }}</p>
+                </div>
+                {{ /each }}
+            </mip-wqz-slide>
+        </mip-wqz-preview>
+    </div>
+</div>
+{{/block}}
+
+{{block 'scripts'}}
+{{include '../base/inc/scripts.html'}}
+{{/block}}
