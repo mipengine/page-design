@@ -13,7 +13,7 @@
         {
             "target": "https://weecoffee-lighthouse.oott123.com",
             "pic": "./img/show/case1_wecoffee.jpg",
-            "title": "《微咖啡》",
+            "title": "《咖啡厅演示》",
             "detail": "烂漫流觞 轻度时光"
         },
         {
@@ -23,12 +23,10 @@
             "detail": "举目商业 尽在极客"
         },
         {
-            "target": "###",
-            "pic": "./img/show/case3.jpg",
-            "title": "",
-            "noPreview": true,
-            "preview": "",
-            "detail": ""
+            "target": "https://m.baidu.com/paw/c/s/www.chuangyejia.vip/mip/index",
+            "pic": "./img/show/case3_chuangyejia.jpg",
+            "title": "《创业家》",
+            "detail": "人生就是一场创业"
         },
         {
             "target": "###",
