@@ -7,5 +7,8 @@
     },
     "page": {
         "title": "最新章节_小说网"
-    }
+    },
+    "extensions": [
+        "mip-catalog-reverse"
+    ]
 }

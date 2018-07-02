@@ -8,13 +8,17 @@
             </div>
             <div class="span6 text-right">
                 <!--data-type="mip" 用于两个MIP页之间跳转，应保证落地页同样为MIP页-->
-                <a data-type="mip" data-title="小说正文页" href="catalog.html?order=desc" class="catalog-order"><i class="icon icon-order"></i>倒序</a>
+                <a data-type="mip" data-title="小说正文页"  href="###" class="catalog-order">
+                    <mip-catalog-reverse>
+                        <i class="icon icon-order"></i>倒序
+                    </mip-catalog-reverse>
+                </a>
             </div>
         </div>
 
         <!-- 章节显示列表，循环 li 标签 -->
         <div class="catalog-list">
-            <ul>
+            <ul class="catalog-li">
                 <li>
                     <!--data-type="mip" 用于两个MIP页之间跳转，应保证落地页同样为MIP页-->
                     <a data-type="mip" data-title="小说正文页" href="read.html" class="block">
