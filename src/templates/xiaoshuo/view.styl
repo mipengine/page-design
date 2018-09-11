@@ -1,11 +1,19 @@
 @import './_inc/styl/base.styl'
 
+html,body
+    background-color #fff
+    div.gap-top 
+        p.line-clamp1,span.line-clamp1
+            font-size 14px
+            margin-bottom 0
 h4
     font-weight normal
 .detail-info
-    p
+    p.line-clamp1
         color #555
+        line-height .15rem
         font-size 14px
+        margin-bottom 0
     .gap-top-large
         margin-top .2rem
     .row-bottom
@@ -16,8 +24,7 @@ h4
         line-height .38rem
         div
             line-height .1rem
-.detail-desc
-    
+.detail-desc   
     .gap-top-small
         margin-top .1rem
 
@@ -36,4 +43,4 @@ h4
     .content
         font-size: 14px;
         color: #555555;
-        line-height: 14px;
+        line-height: .2rem;
