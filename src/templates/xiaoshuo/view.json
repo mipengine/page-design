@@ -3,7 +3,8 @@
     "header": {
         "title": "神武天帝",
         "share": true,
-        "search": null
+        "search": null,
+        "pageType": "detail"
     },
     "page": {
         "title": "神武天帝_小说网"

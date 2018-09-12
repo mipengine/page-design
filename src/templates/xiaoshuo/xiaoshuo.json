@@ -6,7 +6,8 @@
         "share": null,
         "title": "小说网",
         "search": null,
-        "mybook": "mybook.html"
+        "mybook": "mybook.html",
+        "pageType": "bookMall"
     },
     "page": {
         "title": "首页_小说网"

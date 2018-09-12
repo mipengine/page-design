@@ -3,7 +3,8 @@
         "./_inc/json/base.json"
     ],
     "header": {
-        "title": "我的书架"
+        "title": "我的书架",
+        "pageType": "bookrack"
     },
     "page": {
         "title": "我的书架_小说网"
