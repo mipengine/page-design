@@ -1,10 +1,42 @@
 @import './_inc/styl/base.styl'
 
+html,body
+    background-color #fff
+    div.gap-top 
+        p.line-clamp1,span.line-clamp1
+            font-size 14px
+            margin-bottom 0
+h4
+    font-weight normal
 .detail-info
-    p
-        color #555
-
+    p.line-clamp1
+        color #000
+        line-height .16rem
+        font-size 14px
+        margin-bottom 15px
+    .gap-top-large
+        margin-top .2rem
+    .row-bottom
+        margin-bottom -.06rem
+    .btn
+        font-size 14px
+        height .38rem
+        line-height .38rem
+        border-radius 3px
+        div
+            line-height .1rem
+.detail-desc
+    padding-top .05rem
+    padding-bottom .05rem
+    mip-showmore.linear-gradient:after
+        background transparent
+    .details
+        line-height .25rem
+        display block !important
+        height .35rem
 .detail-catalog
+    padding-top .05rem
+    padding-bottom .05rem
     li
         border-bottom 1px solid #f1f1f1
         &:last-child
@@ -14,4 +46,15 @@
         span
             color #999
             width 100px
-
+.detail-desc
+    .content
+        font-size 14px
+        color #555555
+        line-height .24rem
+    .details-tip-close, .details-tip-expand
+        font-size 14px
+        color #555
+.detail-recommend
+    padding-top .05rem
+    .gap-top
+         margin-top .08rem 

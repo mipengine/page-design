@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     {{block 'title'}}<title>{{ page.title || 'Hello World' }}</title>{{/block}}
-    <link rel="stylesheet" href="https://c.mipcdn.com/static/v1/mip.css">
+    <link rel="stylesheet" href="https://c.mipcdn.com/static/v2/mip.css">
     <link rel="stylesheet" href="https://c.mipcdn.com/static/mag-design/2.0.2/mag-design.min.css">
     <link rel="canonical" href="{{ page.canonical || 'https://www.mipengine.org/' }}">
     {{block 'style'}}
@@ -13,6 +13,29 @@
         </style>
     {{/if}}
     {{/block}}
+    
+    <script type="application/ld+json">
+      {
+        "mipShellConfig": {
+          "currentPage": {
+            "chapter": 1,
+            "page": 1,
+            "isLastPage": false,
+            "chapterName": "%E7%AC%AC%E4%B8%80%E7%AB%A0+%E5%B0%8F%E4%BA%8C%E4%B8%8A%E9%85%92"
+          },
+          "previousPage": {
+            "url": "",
+            "chapter": "",
+            "page": ""
+          },
+          "nextPage": {
+            "url": "http://www.xmkanshu.com/book/mip/read?bkid=189169121&crid=1&fr=bdgfh&mip=1&pg=2",
+            "chapter": 1,
+            "page": 2
+          }
+        }
+      }
+    </script>
     <noscript>
         <style mip-officialrelease>
             body {
@@ -23,4 +46,5 @@
             }
         </style>
     </noscript>
+     
 </head>
