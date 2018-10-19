@@ -11,6 +11,6 @@
     },
     "extensions": [
         "mip-catalog-reverse",
-        "https://c.mipcdn.com/static/v2/mip-history/mip-history.js"
+        "https://c.mipcdn.com/static/v1/mip-history/mip-history.js"
     ]
 }
