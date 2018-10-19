@@ -10,6 +10,7 @@
         "title": "最新章节_小说网"
     },
     "extensions": [
-        "mip-catalog-reverse"
+        "mip-catalog-reverse",
+        "https://c.mipcdn.com/static/v2/mip-history/mip-history.js"
     ]
 }
