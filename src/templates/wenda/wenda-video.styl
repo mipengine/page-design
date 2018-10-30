@@ -1,14 +1,19 @@
 @import './_common/common.styl'
 @import './_common/article_title.styl'
 @import './_common/article_info.styl'
-
-.med-video-main 
+.med-img-content
+    display none
+.med-normal-title
+    font-family: PingFangSC-Medium;
+    font-size: 20px;
+    color: #000;
+.med-video-main
     margin -.2rem -.17rem 0
-    video 
+    video
         object-fit fill
-.med-video-reco 
+.med-video-reco
     padding-top 20px
-    &:before 
+    &:before
         content ''
         display block
         width 100%
@@ -16,9 +21,9 @@
         background #f1f1f1
         width 120%
         margin-left -10%
-.med-video-reco-left 
+.med-video-reco-left
     position relative
-.med-video-reco-time 
+.med-video-reco-time
     position absolute
     right 3px
     bottom 3px
@@ -29,19 +34,35 @@
     color #fff
     border-radius 10px
     text-indent 10px
-.med-video-reco-icon 
+.med-video-reco-icon
     display inline-block
     border-top 5px solid transparent
     border-left 8px solid #fff
     border-bottom 5px solid transparent
     width 0
     height 0
-.med-video-item 
+.med-video-item
     padding-bottom 12px
     padding-top 15px
-    &:last-child 
+    &:last-child
         border-bottom none
-.container 
+.container
     margin-top 0
-
-
+.counter
+    position relative
+    line-height 20px
+    font-family PingFangSC-Medium
+    font-size 18px
+    color #999
+.green
+    color #4DB93B
+.methods-detail
+    margin-top 12px
+.exp-img-opt
+    line-height 1.44
+    margin-top 12px
+    overflow hidden
+    position relative
+    max-height 496.8px
+.hidden
+    display none
