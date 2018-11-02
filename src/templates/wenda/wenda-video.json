@@ -11,7 +11,7 @@
         "videoTime" : "2017-11-08",
         "videoViews" : "2345人阅读",
         "videoPoster" : "https://hiphotos.baidu.com/baike/whcrop%3D640%2C360/sign=ba3aa3989082d158bbd70ff3ef7a24ee/9a504fc2d56285358eeef7579cef76c6a7ef63bd.jpg",
-        "videoSrc" : "https://ksv-video-publish.cdn.bcebos.com/286283b7d8003c25196e0ae43672e944179e4c84.mp4?auth_key=1535096133-0-0-f697369f5bff75ca8a695b4a3d8134f9",
+        "videoSrc" : "https://gss0.bdstatic.com/-b1Caiqa0d9Bmcmop9aC2jh9h2w8e4_h7sED0YQ_t9iCPK/mda-gjkt21pkrsd8ae5y/mda-gjkt21pkrsd8ae5y.mp4",
         "videoWidth" : "640",
         "videoHeight" : "360",
         "videoLayout" : "responsive",
@@ -29,7 +29,7 @@
             "list" : [
                 {
                     "href" : "/html/templates/wenda/wenda-article.html",
-                    "src" : "https://imgsa.baidu.com/exp/w=640/sign=ced7dbc9dd58ccbf1bbcb63e29d8bcd4/9345d688d43f8794d9cb3a55de1b0ef41bd53a90.jpg",
+                    "src" : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541164431367&di=932c0043e6c7a91b698b9c74727d05ea&imgtype=0&src=http%3A%2F%2Fimg2.a0bi.com%2Fupload%2Fttq%2F20150224%2F1424757539646.jpg",
                     "countTop" : "1",
                     "countBottom" : "5",
                     "hrefTitle" : "testTitle",
@@ -42,7 +42,7 @@
                 },
                 {
                     "href" : "/html/templates/wenda/wenda-article.html",
-                    "src" : "https://imgsa.baidu.com/exp/pic/item/95afee1f3a292df5c6bbde6eb0315c6034a87315.jpg",
+                    "src" : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541164431367&di=932c0043e6c7a91b698b9c74727d05ea&imgtype=0&src=http%3A%2F%2Fimg2.a0bi.com%2Fupload%2Fttq%2F20150224%2F1424757539646.jpg",
                     "countTop" : "2",
                     "countBottom" : "5",
                     "hrefTitle" : "testTitle",
@@ -55,7 +55,7 @@
                 },
                 {
                     "href" : "/html/templates/wenda/wenda-article.html",
-                    "src" : "https://imgsa.baidu.com/exp/w=640/sign=613d85b6f0039245a1b5e20bb795a4a8/a50f4bfbfbedab64a1bc3ebbfb36afc378311efa.jpg",
+                    "src" : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541164431367&di=932c0043e6c7a91b698b9c74727d05ea&imgtype=0&src=http%3A%2F%2Fimg2.a0bi.com%2Fupload%2Fttq%2F20150224%2F1424757539646.jpg",
                     "countTop" : "3",
                     "countBottom" : "5",
                     "hrefTitle" : "testTitle",
@@ -68,7 +68,7 @@
                 },
                 {
                     "href" : "/html/templates/wenda/wenda-article.html",
-                    "src" : "https://imgsa.baidu.com/exp/w=640/sign=2f7e1cfec5ea15ce41eee30d86013a25/3801213fb80e7bec78a2719a232eb9389b506b54.jpg",
+                    "src" : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541164431367&di=932c0043e6c7a91b698b9c74727d05ea&imgtype=0&src=http%3A%2F%2Fimg2.a0bi.com%2Fupload%2Fttq%2F20150224%2F1424757539646.jpg",
                     "countTop" : "4",
                     "countBottom" : "5",
                     "hrefTitle" : "testTitle",
@@ -81,7 +81,7 @@
                 },
                 {
                     "href" : "/html/templates/wenda/wenda-article.html",
-                    "src" : "https://imgsa.baidu.com/exp/w=640/sign=0d313b55de1b0ef46ce89b5aedc551a1/aec379310a55b3194237f10e4fa98226cefc17fa.jpg",
+                    "src" : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541164431367&di=932c0043e6c7a91b698b9c74727d05ea&imgtype=0&src=http%3A%2F%2Fimg2.a0bi.com%2Fupload%2Fttq%2F20150224%2F1424757539646.jpg",
                     "countTop" : "5",
                     "countBottom" : "5",
                     "hrefTitle" : "testTitle",

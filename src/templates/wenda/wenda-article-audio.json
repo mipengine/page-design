@@ -17,12 +17,12 @@
         "tags": ["感冒", "发烧", "鼻涕"],
         "button":"查看详情",
         "audio": {
-            "src": "https://hualv-media-out.oss-cn-beijing.aliyuncs.com/audio/3af11a8e-2672-4165-8fb0-f16d9caf40b7.mp3",
+            "src": "https://mip-doc.bj.bcebos.com/guitar.mp3",
             "text": ""
         }
     },
     "articleInfo": {
-        "img": "https://imgt.66law.cn/upload/t/201804/20/111027584.jpg",
+        "img": "https://bbs.huabaike.com/uc_server/avatar.php?uid=99746&size=middle",
         "name": "主讲律师：赵术全律师",
         "level": "专职律师",
         "hospital": "天津行通律师事务所",

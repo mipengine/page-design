@@ -24,10 +24,12 @@
         <div>
             <div class="row med-video-item">
                 <div class="span8">
-                    <span class="counter"><span class="green"> {{$value.countTop}}</span>/{{$value.countBottom}}</span>
+                    <span class="counter">
+                        <span class="green"> {{$value.countTop}}</span>/{{$value.countBottom}}
+                    </span>
                     <p class="line-clamp2 font-size-l methods-detail">{{ $value.title }}</p>
                     <div class="exp-img-opt">
-                      <mip-img src={{$value.src}}></mip-img>
+                      <mip-img src="{{$value.src}}"></mip-img>
                     </div>
                 </div>
             </div>
