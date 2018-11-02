@@ -2,13 +2,22 @@
 @import './_common/article_title_big.styl'
 @import './_common/article_info.styl'
 
-.med-showmore 
-    p 
+h2
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    height: 40px;
+    color: #55c658;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 40px;
+.med-showmore
+    p
         margin 10px
-.med-showmore-btn 
+.med-showmore-btn
     display block !important
     position relative
-    .icon 
+    .icon
         display inline-block
         width 6px
         height 6px
@@ -18,20 +27,20 @@
         transform rotate(315deg)
         -webkit-transform rotate(315deg)
         margin-bottom 3px
-.mip-showmore-open 
-    .icon 
+.mip-showmore-open
+    .icon
         transform rotate(135deg)
         -webkit-transform rotate(135deg)
         margin-bottom 0
-    .show 
+    .show
         display block
-    .hidden 
+    .hidden
         display none
 .med-article-showmore-gap .article-main-content p:first-child,
-.med-article-showmore-gap .article-main-content div:first-child 
+.med-article-showmore-gap .article-main-content div:first-child
     margin-top 0
 /* 展开更多 */
-.show 
+.show
     display none
-.hidden 
+.hidden
     display block
