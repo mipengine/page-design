@@ -2,66 +2,66 @@
     "page": {
         "title": "医疗行业新模板",
         "questionInfo" : {
-            "title" : "感冒了怎么办？",
+            "title" : "杜鹃养殖方法和心得？",
             "time" : "2017-09-21",
             "views" : "2342人阅读",
-            "content" : "问题描述:(女，27岁)怀孕三月领九天，今天突然打喷嚏，鼻子不通气，应该是感冒了吧。躺下睡觉睡笔记不通气，好穷。怀孕三月领九天，今天突然打喷嚏，鼻子不通气，应该是感冒了吧。躺下睡觉睡笔记不通气，好穷。",
+            "content" : "杜鹃花，花枝优美，花色艳丽，花期又长，在我国民间有“花中西施”的美誉，喜欢花的我当然也不会错过，结合我多年养护总结出的经验分享给大家，希望对大家能有所帮助，通常养死杜鹃六大原因：排水不畅、通风不良，土壤酸碱度不当、光照不适，基肥不当，病虫害防护。",
             "clamp" : 4
         },
         "answer" : {
-            "title" : "医生回答",  
+            "title" : "花友回答",
             "number" : "5",      
             "showall" : "0",     
             "answerList" : [
                 {
-                    "imgUrl" : "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
-                    "name" : "于雷1",
-                    "tag" : "权威回答",
-                    "level" : "主治医师",
-                    "hospital" : "深圳第三人民医院",
+                    "imgUrl" : "https://bbs.huabaike.com/uc_server/avatar.php?uid=87205&size=middle",
+                    "name" : "江灏",
+                    "tag" : "热门回答",
+                    "level" : "养花大师",
+                    "hospital" : "北京花店1",
                     "time" : "2017-09-21",
-                    "content" : "病情分析：感冒一般分为两种：病毒性感冒和细菌性感冒。哈哈哈，恭喜你得了细菌性感冒。",
+                    "content" : "杜鹃室内温度最低温度不能低于5℃，否则停止生长，它是怕冷还不耐高温哦",
                     "more" : [
                         {   
                             "role" : "user",
                             "time" : "2017-09-22",
-                            "content" : "22病情分析：感冒一般分为两种：病毒性感冒和细菌性感冒。哈哈哈，恭喜你得了细菌性感冒。"
+                            "content" : "现在的阳光温度和浇水量是多少呢？"
                         },
                         {
                             "role" : "doctor",
                             "time" : "2017-09-22",
-                            "content" : "22病情分析：感冒一般分为两种：病毒性感冒和细菌性感冒。哈哈哈，恭喜你得了细菌性感冒。"
+                            "content" : "浇水杜鹃花浇水是一项很重要的工作。因为杜鹃花的根系比较细弱，既伯涝，又不耐旱，过干或过湿对植株生长都可能造成掉叶至死亡，因而要特别注意控制水量"
                         },
                         {
                             "role" : "user",
                             "time" : "2017-09-22",
-                            "content" : "22病情分析：感冒一般分为两种：病毒性感冒和细菌性感冒。哈哈哈，恭喜你得了细菌性感冒。"
+                            "content" : "浇水杜鹃花浇水是一项很重要的工作。因为杜鹃花的根系比较细弱，既伯涝，又不耐旱，过干或过湿对植株生长都可能造成掉叶至死亡，因而要特别注意控制水量"
                         }
                     ]
                 },
                 {
-                    "imgUrl" : "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
+                    "imgUrl" : "https://bbs.huabaike.com/uc_server/avatar.php?uid=99746&size=middle",
                     "name" : "于雷2",
-                    "level" : "主治医师",
-                    "hospital" : "深圳第三人民医院",
+                    "level" : "花匠学徒",
+                    "hospital" : "深圳花店",
                     "time" : "2017-09-21",
-                    "content" : "病情分析：感冒一般分为两种：病毒性感冒和细菌性感冒。哈哈哈，恭喜你得了细菌性感冒。病情分析：感冒一般分为两种：病毒性感冒和细菌性感冒。哈哈哈，恭喜你得了细菌性感冒。"
+                    "content" : "光照：避免强光照射，散射光，光线不宜过强保持通风，湿度要偏高，达到75％为最佳，北方空气干燥，还应用细眼喷壶向花叶喷洒清水，对花盆周围的地面也要喷些，以增加空气湿度。"
                 },
                 {
-                    "imgUrl" : "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
+                    "imgUrl" : "https://bbs.huabaike.com/uc_server/avatar.php?uid=87205&size=middle",
                     "name" : "于雷3",
-                    "level" : "主治医师",
-                    "hospital" : "深圳第三人民医院",
+                    "level" : "花匠学徒",
+                    "hospital" : "天津花店",
                     "time" : "2017-09-21",
-                    "content" : "病情分析：感冒一般分为两种：病毒性感冒和细菌性感冒。哈哈哈，恭喜你得了细菌性感冒。"
+                    "content" : "杜鹃室内温度最低温度不能低于5℃，否则停止生长，它是怕冷还不耐高温哦"
                 },
                 {
-                    "imgUrl" : "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
+                    "imgUrl" : "https://bbs.huabaike.com/uc_server/avatar.php?uid=99746&size=middle",
                     "name" : "于雷4",
-                    "level" : "主治医师",
-                    "hospital" : "深圳第三人民医院",
+                    "level" : "花匠学徒",
+                    "hospital" : "天津花店1",
                     "time" : "2017-09-21",
-                    "content" : "病情分析：感冒一般分为两种：病毒性感冒和细菌性感冒。哈哈哈，恭喜你得了细菌性感冒。"
+                    "content" : "浇水杜鹃花浇水是一项很重要的工作。因为杜鹃花的根系比较细弱，既伯涝，又不耐旱，过干或过湿对植株生长都可能造成掉叶至死亡，因而要特别注意控制水量"
                 }
             ]
 

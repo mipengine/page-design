@@ -1,33 +1,33 @@
 {
     "page": {
-        "title": "医疗行业新模板",
+        "title": "问答行业新模板",
         "name": "",
-        "articleTitle": "心脏病吃什么比较好",
+        "articleTitle": "杜鹃养殖方法和心得？",
         "articleTime": "2017-11-08",
         "articleViews": "2345人阅读",
         "authorDetail": {
-            "img": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
-            "name": "于雷",
-            "level": "主治医师",
-            "hospital": "北大口腔医院"
+            "img": "https://m.huabaike.com/Home/View/Yuanlin/images/bg_banner/1.jpg",
+            "name": "江灏",
+            "level": "讲师",
+            "hospital": "从事园林文化方向教育多年"
         },
-        "htmlContent": "<p>心脏病是一类比较常见的循环系统疾病。循环系统由心脏、血管和调节血液循环的神经体液组织构成，循环系统疾病也称为心血管病，包括上述所有组织器官的疾病，在内科疾病中属于常见病，其中以心脏病最为多见，能显著地影响患者的劳动力。</p><div>心脏病是一类比较常见的循环系统疾病。循环系统由心脏、血管和调节血液循环的神经体液组织构成，循环系统疾病也称为心血管病，包括上述所有组织器官的疾病，在内科疾病中属于常见病，其中以心脏病最为多见，能显著地影响患者的劳动力。</div>",
+        "htmlContent": "<p>杜鹃花，花枝优美，花色艳丽，花期又长，在我国民间有“花中西施”的美誉，喜欢花的我当然也不会错过，结合我多年养护总结出的经验分享给大家，希望对大家能有所帮助，通常养死杜鹃六大原因：排水不畅、通风不良，土壤酸碱度不当、光照不适，基肥不当，病虫害防护。</p>",
         "maxHeight": "250",
-        "tags": ["生病", "心脏病", "心跳"],
+        "tags": ["杨树", "桃树"],
         "button":"快速咨询"
     },
     "articleInfo": {
-        "img": "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
-        "name": "李四",
-        "level": "教授",
-        "hospital": "北京大学人民医院",
+        "img": "https://m.huabaike.com/Home/View/Yuanlin/images/bg_banner/1.jpg",
+        "name": "江灏",
+        "level": "讲师",
+        "hospital": "从事园林文化方向教育多年",
         "isMarginTop": "20px",
         "isMarginBottom": "10px",
         "isLink": true,
         "linkUrl": "www.baidu.com"
     },
     "article_title": {
-        "title" : "痤疮怎么办的一般应对方法？",
+        "title" : "杜鹃养殖方法和心得？",
         "time" : "2017-11-11",
         "views" : "235人阅读"
     }

@@ -7,54 +7,93 @@
     "page": {
         "title": "医疗行业新模板",
         "name" : "",
-        "videoTitle" : "心脏病吃什么比较好",
+        "videoTitle" : "Ps如何重置工作区",
         "videoTime" : "2017-11-08",
         "videoViews" : "2345人阅读",
-        "videoPoster" : "http://t11.baidu.com/it/u=1570504525,715922932&fm=80&w=500&h=282&img.JPEG",
+        "videoPoster" : "https://hiphotos.baidu.com/baike/whcrop%3D640%2C360/sign=ba3aa3989082d158bbd70ff3ef7a24ee/9a504fc2d56285358eeef7579cef76c6a7ef63bd.jpg",
         "videoSrc" : "https://gss0.bdstatic.com/-b1Caiqa0d9Bmcmop9aC2jh9h2w8e4_h7sED0YQ_t9iCPK/mda-gjkt21pkrsd8ae5y/mda-gjkt21pkrsd8ae5y.mp4",
         "videoWidth" : "640",
         "videoHeight" : "360",
         "videoLayout" : "responsive",
         "videoDetail" : {
-            "img" : "https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/ps_wenda/pic/item/0e2442a7d933c895291245a8db1373f0830200f1.jpg",
+            "img" : "https://hiphotos.baidu.com/baike/whcrop%3D640%2C360/sign=ba3aa3989082d158bbd70ff3ef7a24ee/9a504fc2d56285358eeef7579cef76c6a7ef63bd.jpg",
             "name" : "于雷",
             "level" : "主治医师",
             "hospital" : "北大第一医院",
             "clamp" : "4",
-            "text" : "概览：北京大学人民医院西直门院区位于北京市西直门南大街11号，白塔寺院区位于西城区阜成门内大街133号，始建于1918年，是一所集医疗、教学、科研为一体的三级甲等综合医院，是北京市医保定点医院，国家卫生计生委委管医院，北京大学附属医院，北京大学第二临床医学院，先后获得“全国卫生系统思想政治工作先进单位”、“全国医院（卫生）文化建设优秀成果奖”、“全国医院（卫生）文化建设先进集体”、“全国医药卫生系统创先争优活动先进集体”、“首都文明单位标兵”、“首都医药卫生文化建设先进单位”、“北京大学党务和思想政治工作先进集体”、“北京大学统战工作先进党委”等荣誉"
+            "text" : "PS界面太乱，想恢复到默认工作区？别急，本次就给大家介绍PS如何重置工作区，快来学习吧。"
         },
         "videoReco":{
-            "title" : "相关视频",
+            "title" : "方法/步骤",
+            "nextTitle" : "相关经验",
             "list" : [
                 {
                     "href" : "/html/templates/wenda/wenda-article.html",
+                    "src" : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541164431367&di=932c0043e6c7a91b698b9c74727d05ea&imgtype=0&src=http%3A%2F%2Fimg2.a0bi.com%2Fupload%2Fttq%2F20150224%2F1424757539646.jpg",
+                    "countTop" : "1",
+                    "countBottom" : "5",
                     "hrefTitle" : "testTitle",
                     "imgUrl" : "https://image.39.net/auth/t/213.jpg",
                     "time" : "05:38",
-                    "title" : "糖尿病怎么治疗啊",
+                    "title" : "方法一：打开PS，单击“编辑”，然后点击“首选项”。",
                     "source" : "腾讯视频",
-                    "number" : "2341人评论"
+                    "number" : "2341人评论",
+                    "nextDetail" : "在Illustrator如何重置和存储工作区"
                 },
                 {
                     "href" : "/html/templates/wenda/wenda-article.html",
+                    "src" : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541164431367&di=932c0043e6c7a91b698b9c74727d05ea&imgtype=0&src=http%3A%2F%2Fimg2.a0bi.com%2Fupload%2Fttq%2F20150224%2F1424757539646.jpg",
+                    "countTop" : "2",
+                    "countBottom" : "5",
                     "hrefTitle" : "testTitle",
                     "imgUrl" : "http://pimg.39.net/PictureLib/A/f76/20161215/org_830165.jpg",
                     "time" : "12:03",
-                    "title" : "什么是糖尿病？",
+                    "title" : "在“首选项”中，我们点击“界面”。",
                     "source" : "搜狐视频",
-                    "number" : "232人评论"
+                    "number" : "232人评论",
+                    "nextDetail" : "轻松学PS之混合颜色带--合成多重曝光"
                 },
                 {
                     "href" : "/html/templates/wenda/wenda-article.html",
+                    "src" : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541164431367&di=932c0043e6c7a91b698b9c74727d05ea&imgtype=0&src=http%3A%2F%2Fimg2.a0bi.com%2Fupload%2Fttq%2F20150224%2F1424757539646.jpg",
+                    "countTop" : "3",
+                    "countBottom" : "5",
                     "hrefTitle" : "testTitle",
                     "imgUrl" : "https://image.39.net/auth/t/10030.jpg",
                     "time" : "15:22",
-                    "title" : "糖尿病患者什么时候需要使用胰岛素？？胰岛素是胰腺里面胰岛细胞分泌的一种激素，不仅有降低血糖的功效，还能促进人体三大营养素脂肪、糖原、",
+                    "title" : "这样我们就可以设置重置工作区了。",
                     "source" : "爱奇艺",
-                    "number" : "341人评论"
+                    "number" : "341人评论",
+                    "nextDetail" : "如何用Ps进行多重曝光"
+                },
+                {
+                    "href" : "/html/templates/wenda/wenda-article.html",
+                    "src" : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541164431367&di=932c0043e6c7a91b698b9c74727d05ea&imgtype=0&src=http%3A%2F%2Fimg2.a0bi.com%2Fupload%2Fttq%2F20150224%2F1424757539646.jpg",
+                    "countTop" : "4",
+                    "countBottom" : "5",
+                    "hrefTitle" : "testTitle",
+                    "imgUrl" : "https://image.39.net/auth/t/10030.jpg",
+                    "time" : "15:22",
+                    "title" : "方法二：双击打开PS，按住“Ctrl”+“K”，这样会出现“首选项”对话框。",
+                    "source" : "爱奇艺",
+                    "number" : "341人评论",
+                    "nextDetail" : "PS如何重置设置"
+                },
+                {
+                    "href" : "/html/templates/wenda/wenda-article.html",
+                    "src" : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541164431367&di=932c0043e6c7a91b698b9c74727d05ea&imgtype=0&src=http%3A%2F%2Fimg2.a0bi.com%2Fupload%2Fttq%2F20150224%2F1424757539646.jpg",
+                    "countTop" : "5",
+                    "countBottom" : "5",
+                    "hrefTitle" : "testTitle",
+                    "imgUrl" : "https://image.39.net/auth/t/10030.jpg",
+                    "time" : "15:22",
+                    "title" : "点击左侧的“界面”，就可以设置重置工作区了。",
+                    "source" : "爱奇艺",
+                    "number" : "341人评论",
+                    "nextDetail" : "PS怎样对图层重命名"
                 }
             ]
         },
-        "button":"快速咨询"
+        "button":"查看详情"
     }
 }
